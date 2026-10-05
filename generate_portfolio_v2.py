@@ -506,6 +506,130 @@ portfolio_html = f'''<!DOCTYPE html>
     font-family: 'Space Grotesk', sans-serif;
   }}
 
+  /* FEATURED VIDEOS SECTION */
+  .video-grid {{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }}
+  .video-card {{
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    display: flex;
+    flex-direction: column;
+    transition: all 0.25s ease;
+  }}
+  .video-card:hover {{
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--accent-border);
+  }}
+  .video-thumb {{
+    position: relative;
+    width: 100%;
+    height: 220px;
+    background: #18221b;
+    overflow: hidden;
+    display: block;
+  }}
+  .video-thumb-img {{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+  }}
+  .video-card:hover .video-thumb-img {{
+    transform: scale(1.06);
+  }}
+  .video-play-overlay {{
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.2) 60%, rgba(0,0,0,0.1) 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 14px;
+  }}
+  .video-play-btn {{
+    align-self: center;
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.95);
+    color: var(--accent-dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+    transition: all 0.25s ease;
+  }}
+  .video-card:hover .video-play-btn {{
+    transform: scale(1.15);
+    background: var(--accent);
+    color: #fff;
+  }}
+  .video-badge-views {{
+    align-self: flex-start;
+    background: rgba(0,0,0,0.7);
+    backdrop-filter: blur(8px);
+    color: #fff;
+    font-size: 0.76rem;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: var(--radius-full);
+  }}
+  .video-card-body {{
+    padding: 20px 22px 22px 22px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1;
+  }}
+  .video-meta-top {{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    gap: 8px;
+    flex-wrap: wrap;
+  }}
+  .video-source-pill {{
+    font-size: 0.72rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: var(--accent-text);
+    background: var(--accent-soft);
+    padding: 3px 10px;
+    border-radius: var(--radius-full);
+    border: 1px solid var(--accent-border);
+  }}
+  .video-hospital-tag {{
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: var(--accent);
+    font-family: 'Space Grotesk', sans-serif;
+  }}
+  .video-card-title {{
+    font-size: 1.15rem;
+    font-weight: 800;
+    color: var(--text-primary);
+    line-height: 1.35;
+    margin-bottom: 8px;
+  }}
+  .video-card-desc {{
+    font-size: 0.88rem;
+    color: var(--text-secondary);
+    line-height: 1.55;
+    margin-bottom: 18px;
+    flex: 1;
+  }}
+
   /* CASE STUDIES GRID */
   .case-grid {{
     display: grid;
@@ -974,6 +1098,9 @@ portfolio_html = f'''<!DOCTYPE html>
     .evidence-grid {{
       grid-template-columns: repeat(2, 1fr);
     }}
+    .video-grid {{
+      grid-template-columns: 1fr;
+    }}
     .case-grid {{
       grid-template-columns: 1fr;
     }}
@@ -1018,7 +1145,8 @@ portfolio_html = f'''<!DOCTYPE html>
       </div>
     </a>
     <ul class="nav-menu">
-      <li><a href="#evidence" class="nav-link">Minh chứng thực tế <span class="nav-badge-pill">6 Proofs</span></a></li>
+      <li><a href="#evidence" class="nav-link">Minh chứng thực tế <span class="nav-badge-pill">7 Proofs</span></a></li>
+      <li><a href="#videos" class="nav-link">🎬 Video đã làm <span class="nav-badge-pill" style="background:#e0f2fe; color:#0369a1;">3 Kênh</span></a></li>
       <li><a href="#projects" class="nav-link">Dự án &amp; Case Studies</a></li>
       <li><a href="#about" class="nav-link">Năng lực cốt lõi</a></li>
       <li><a href="#skills" class="nav-link">Công cụ &amp; AI</a></li>
@@ -1047,13 +1175,16 @@ portfolio_html = f'''<!DOCTYPE html>
         Hơn <strong>3 năm kinh nghiệm thực chiến</strong> bao quát từ xây dựng chiến lược Content &amp; Short-form Video (Reels, TikTok) đến tối ưu chiến dịch Paid Ads, truyền thông Healthcare &amp; FMCG. Mọi kết quả đều được kiểm chứng bằng số liệu và sản phẩm truyền thông thực tế.
       </p>
       <div class="hero-cta-group">
-        <a href="#evidence" class="btn btn-primary" style="padding: 12px 26px; font-size: 0.95rem;">
-          <span>🔍 Xem Minh Chứng Thực Tế</span>
+        <a href="#evidence" class="btn btn-primary" style="padding: 12px 24px; font-size: 0.95rem;">
+          <span>🔍 Xem Minh Chứng</span>
         </a>
-        <a href="#projects" class="btn btn-secondary" style="padding: 12px 22px;">
+        <a href="#videos" class="btn btn-secondary" style="padding: 12px 22px; font-size: 0.95rem;">
+          <span>🎬 Xem Video Đã Làm</span>
+        </a>
+        <a href="#projects" class="btn btn-outline" style="padding: 12px 20px;">
           <span>Dự án Case Studies</span>
         </a>
-        <a href="tel:0363123121" class="btn btn-outline" style="padding: 12px 20px;">
+        <a href="tel:0363123121" class="btn btn-outline" style="padding: 12px 18px;">
           <span>📞 0363 123 121</span>
         </a>
       </div>
@@ -1245,8 +1376,108 @@ portfolio_html = f'''<!DOCTYPE html>
   </div>
 </section>
 
+<!-- FEATURED VIDEOS & CHANNELS (VIDEO THỰC TẾ) -->
+<section id="videos" class="section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag" style="background: #e0f2fe; color: #0369a1; border-color: #bae6fd;">Sản Phẩm Video Thực Tế</span>
+      <h2 class="section-title">Video &amp; Kênh Truyền Thông Đã Thực Hiện</h2>
+      <p class="section-subtitle">Trực tiếp xem các sản phẩm video ngắn, phóng sự y tế và chiến dịch truyền thông đa kênh do Hoàng Cẩm lên kịch bản, quay dựng và trực tiếp quản trị.</p>
+    </div>
+
+    <div class="video-grid">
+      <!-- VIDEO 1: MEDDC TRUYỀN THÔNG SỐ BỆNH VIỆN -->
+      <div class="video-card">
+        <a href="https://www.facebook.com/share/14tuJtmuRGS/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" class="video-thumb">
+          <img src="data:image/jpeg;base64,{medtv_b64}" alt="Kênh MEDDC Truyền thông số Bệnh viện" class="video-thumb-img">
+          <div class="video-play-overlay">
+            <span class="video-badge-views">🔥 98.4K+ Views • +880% Tương tác</span>
+            <div class="video-play-btn">▶</div>
+            <div style="font-size: 0.76rem; color: #fff; text-align: center; text-shadow: 0 1px 4px rgba(0,0,0,0.8);">Bấm mở xem trên Facebook ↗</div>
+          </div>
+        </a>
+        <div class="video-card-body">
+          <div>
+            <div class="video-meta-top">
+              <span class="video-source-pill">Facebook Video • B2B Healthcare</span>
+              <span class="video-hospital-tag">🏥 BV Nhi Đồng 1 &amp; BV 175</span>
+            </div>
+            <h3 class="video-card-title">Kênh MEDDC — Truyền Thông Số Bệnh Viện (MEDTV)</h3>
+            <p class="video-card-desc">
+              Dự án kết nối nhãn hàng quốc tế (Comfort, ColosBaby, Gaviscon...) với các bệnh viện đầu ngành qua chuỗi Reels giáo dục sức khỏe và phóng sự y tế tiếp cận 98.4K+ lượt xem.
+            </p>
+          </div>
+          <div>
+            <a href="https://www.facebook.com/share/14tuJtmuRGS/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="width: 100%; padding: 11px; font-size: 0.88rem;">
+              <span>▶ Xem Video Kênh MEDDC trên Facebook ↗</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- VIDEO 2: THÂN TÂM HOME HEALTHCARE -->
+      <div class="video-card">
+        <a href="https://www.facebook.com/share/1HcnkPgAuy/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" class="video-thumb">
+          <img src="data:image/jpeg;base64,{workflow_b64}" alt="Kênh Thân Tâm Chăm sóc sức khỏe tại nhà" class="video-thumb-img">
+          <div class="video-play-overlay">
+            <span class="video-badge-views">🩺 Chăm Sóc Sức Khỏe Tại Nhà</span>
+            <div class="video-play-btn">▶</div>
+            <div style="font-size: 0.76rem; color: #fff; text-align: center; text-shadow: 0 1px 4px rgba(0,0,0,0.8);">Bấm mở xem trên Facebook ↗</div>
+          </div>
+        </a>
+        <div class="video-card-body">
+          <div>
+            <div class="video-meta-top">
+              <span class="video-source-pill">Facebook Video • Y Tế Gia Đình</span>
+              <span class="video-hospital-tag">📍 TP. Hồ Chí Minh</span>
+            </div>
+            <h3 class="video-card-title">Thân Tâm — Chăm Sóc Sức Khỏe &amp; Người Cao Tuổi</h3>
+            <p class="video-card-desc">
+              Chuỗi nội dung video ngắn hướng dẫn chăm sóc y tế tại gia, giải đáp quy trình điều dưỡng chuyên sâu, tạo dựng niềm tin và sự gắn kết bền vững với khách hàng.
+            </p>
+          </div>
+          <div>
+            <a href="https://www.facebook.com/share/1HcnkPgAuy/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="width: 100%; padding: 11px; font-size: 0.88rem;">
+              <span>▶ Xem Video Kênh Thân Tâm trên Facebook ↗</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- VIDEO 3: OPV PHARMACEUTICAL -->
+      <div class="video-card">
+        <a href="https://www.facebook.com/share/1CR4mtMRDN/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" class="video-thumb">
+          <img src="data:image/jpeg;base64,{opv_b64}" alt="Kênh Dược phẩm OPV Pharmaceutical" class="video-thumb-img">
+          <div class="video-play-overlay">
+            <span class="video-badge-views">💊 21.6K+ Followers • Reach +30%</span>
+            <div class="video-play-btn">▶</div>
+            <div style="font-size: 0.76rem; color: #fff; text-align: center; text-shadow: 0 1px 4px rgba(0,0,0,0.8);">Bấm mở xem trên Facebook ↗</div>
+          </div>
+        </a>
+        <div class="video-card-body">
+          <div>
+            <div class="video-meta-top">
+              <span class="video-source-pill">Facebook Media • Dược Phẩm</span>
+              <span class="video-hospital-tag">🌿 OPV Pharmaceutical</span>
+            </div>
+            <h3 class="video-card-title">OPV Pharmaceutical — Video &amp; Truyền Thông Thương Hiệu</h3>
+            <p class="video-card-desc">
+              Sản xuất video sản phẩm và nội dung bài viết chuẩn SEO Y Dược, kết hợp vận hành quảng cáo Paid-Ads đa kênh, thúc đẩy nhận diện dòng sản phẩm mới tăng trưởng 25–30%.
+            </p>
+          </div>
+          <div>
+            <a href="https://www.facebook.com/share/1CR4mtMRDN/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="width: 100%; padding: 11px; font-size: 0.88rem;">
+              <span>▶ Xem Video Kênh OPV trên Facebook ↗</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- PROJECTS & CASE STUDIES -->
-<section id="projects" class="section">
+<section id="projects" class="section section-alt">
   <div class="container">
     <div class="section-header">
       <span class="section-tag">Case Studies Trọng Điểm</span>
@@ -1302,6 +1533,14 @@ portfolio_html = f'''<!DOCTYPE html>
             <span class="metric-item">📈 Tương tác: <strong class="metric-badge">+880.5%</strong></span>
             <span class="metric-item">👥 Followers: <strong class="metric-badge">+547% trong 28 ngày</strong></span>
           </div>
+          <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-top: 14px;">
+            <a href="https://www.facebook.com/share/14tuJtmuRGS/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" style="padding: 8px 14px; font-size: 0.82rem;">
+              <span>▶ Xem Video Kênh MEDDC ↗</span>
+            </a>
+            <a href="https://www.facebook.com/share/1HcnkPgAuy/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="padding: 8px 14px; font-size: 0.82rem;">
+              <span>▶ Xem Kênh Thân Tâm ↗</span>
+            </a>
+          </div>
         </div>
       </div>
 
@@ -1325,6 +1564,11 @@ portfolio_html = f'''<!DOCTYPE html>
           <div class="case-metrics-banner">
             <span class="metric-item">🚀 Tiếp cận tự nhiên: <strong class="metric-badge">+25 – 30%</strong></span>
             <span class="metric-item">📊 Tăng trưởng người theo dõi: <strong class="metric-badge">Từ 2-3% lên 7-8%</strong></span>
+          </div>
+          <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-top: 14px;">
+            <a href="https://www.facebook.com/share/1CR4mtMRDN/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" style="padding: 8px 14px; font-size: 0.82rem;">
+              <span>▶ Xem Video &amp; Kênh OPV Pharmaceutical ↗</span>
+            </a>
           </div>
         </div>
       </div>
@@ -1620,7 +1864,7 @@ portfolio_html = f'''<!DOCTYPE html>
     medtv: {{
       src: "data:image/jpeg;base64,{medtv_b64}",
       title: "📈 Minh Chứng: Báo Cáo Tăng Trưởng Meta Suite Kênh MEDTV",
-      caption: "Dashboard trực tiếp từ Meta Suite ghi nhận chiến dịch Reels giáo dục sức khỏe đạt 98.474 lượt xem, tương tác tăng trưởng đột biến +880.5% và follower tăng +547% trong vòng 28 ngày triển khai dự án B2B Healthcare."
+      caption: "Dashboard trực tiếp từ Meta Suite ghi nhận chiến dịch Reels giáo dục sức khỏe đạt 98.474 lượt xem, tương tác tăng trưởng đột biến +880.5% và follower tăng +547% trong vòng 28 ngày triển khai dự án B2B Healthcare.<div style='margin-top: 14px; display: flex; gap: 8px; flex-wrap: wrap;'><a href='https://www.facebook.com/share/14tuJtmuRGS/?mibextid=wwXIfr' target='_blank' rel='noopener noreferrer' class='btn btn-primary' style='padding: 8px 16px; font-size: 0.85rem;'>▶ Mở Xem Video Kênh MEDDC (Facebook) ↗</a><a href='https://www.facebook.com/share/1HcnkPgAuy/?mibextid=wwXIfr' target='_blank' rel='noopener noreferrer' class='btn btn-outline' style='padding: 8px 16px; font-size: 0.85rem;'>▶ Xem Kênh Thân Tâm ↗</a></div>"
     }},
     workflow: {{
       src: "data:image/jpeg;base64,{workflow_b64}",
@@ -1630,7 +1874,7 @@ portfolio_html = f'''<!DOCTYPE html>
     opv: {{
       src: "data:image/jpeg;base64,{opv_b64}",
       title: "🚀 Minh Chứng: Dashboard Paid Ads &amp; Tăng Trưởng SEO Dược Phẩm OPV",
-      caption: "Báo cáo chiến dịch Paid Advertising đa kênh (Facebook, TikTok Ads) và biểu đồ lượng tìm kiếm tự nhiên (Organic Reach) tăng 25–30%, tỷ lệ người theo dõi mới tăng từ 2% lên 8% sau 2 tháng tối ưu."
+      caption: "Báo cáo chiến dịch Paid Advertising đa kênh (Facebook, TikTok Ads) và biểu đồ lượng tìm kiếm tự nhiên (Organic Reach) tăng 25–30%, tỷ lệ người theo dõi mới tăng từ 2% lên 8% sau 2 tháng tối ưu.<div style='margin-top: 14px;'><a href='https://www.facebook.com/share/1CR4mtMRDN/?mibextid=wwXIfr' target='_blank' rel='noopener noreferrer' class='btn btn-primary' style='padding: 8px 16px; font-size: 0.85rem;'>▶ Mở Xem Video &amp; Kênh OPV (Facebook) ↗</a></div>"
     }},
     dental: {{
       src: "data:image/jpeg;base64,{dental_b64}",

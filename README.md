@@ -22,8 +22,13 @@
    * ⭐ **Trải Nghiệm Khách Hàng Nha Khoa Kim:** Đánh giá hài lòng **CSAT 4.9/5 sao** và quy trình chăm sóc chuyên sâu.
    * 📜 **Bằng Cấp & Chứng Chỉ:** Cử nhân ĐH Sài Gòn, TOEIC Speaking & Writing, Tin học MOS.
 
-3. **Tính Năng Tương Tác:**
-   * **Lightbox Modal:** Bấm vào ảnh minh chứng bất kỳ để phóng to độ nét cao kèm mô tả số liệu chi tiết.
+3. **Video Thực Tế & Kênh Truyền Thông Trực Tiếp:**
+   * 🏥 **Kênh MEDDC — Truyền Thông Số Bệnh Viện (MEDTV):** [Xem trên Facebook](https://www.facebook.com/share/14tuJtmuRGS/?mibextid=wwXIfr)
+   * 🩺 **Thân Tâm — Chăm Sóc Sức Khỏe Tại Nhà:** [Xem trên Facebook](https://www.facebook.com/share/1HcnkPgAuy/?mibextid=wwXIfr)
+   * 💊 **OPV Pharmaceutical — Video & Truyền Thông Dược Phẩm:** [Xem trên Facebook](https://www.facebook.com/share/1CR4mtMRDN/?mibextid=wwXIfr)
+
+4. **Tính Năng Tương Tác:**
+   * **Lightbox Modal:** Bấm vào ảnh minh chứng bất kỳ để phóng to độ nét cao kèm mô tả số liệu chi tiết và nút mở video.
    * **Filter Tabs:** Bộ lọc dự án và minh chứng mượt mà không tải lại trang.
    * **Tải CV PDF Trực Tiếp:** Tích hợp nút tải bản Đầy đủ (A4 2 trang) và bản Ẩn danh bảo mật thông tin.
 
