@@ -246,16 +246,16 @@ portfolio_html = f'''<!DOCTYPE html>
     margin-bottom: 36px;
   }}
   .hero-stats-row {{
-    display: flex;
-    gap: 18px;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
     border-top: 1px solid var(--border-color);
     padding-top: 24px;
   }}
   .stat-card {{
     background: var(--bg-card);
     border: 1px solid var(--border-color);
-    padding: 12px 18px;
+    padding: 14px 16px;
     border-radius: var(--radius-md);
     box-shadow: var(--shadow-sm);
     display: flex;
@@ -1009,19 +1009,22 @@ portfolio_html = f'''<!DOCTYPE html>
     display: none;
     align-items: center;
     justify-content: center;
-    padding: 24px;
+    padding: 20px;
   }}
   .lightbox-modal.active {{
     display: flex;
   }}
   .lightbox-container {{
-    max-width: 900px;
+    max-width: 860px;
     width: 100%;
+    max-height: 90vh;
     background: #fff;
     border-radius: var(--radius-md);
     overflow: hidden;
     box-shadow: 0 25px 60px rgba(0,0,0,0.5);
     position: relative;
+    display: flex;
+    flex-direction: column;
     animation: modalScale 0.25s cubic-bezier(0.16, 1, 0.3, 1);
   }}
   @keyframes modalScale {{
@@ -1030,15 +1033,17 @@ portfolio_html = f'''<!DOCTYPE html>
   }}
   .lightbox-img-wrap {{
     width: 100%;
-    max-height: 540px;
-    background: #000;
+    max-height: 52vh;
+    background: #0d120f;
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
+    flex-shrink: 0;
   }}
   .lightbox-img {{
     max-width: 100%;
-    max-height: 540px;
+    max-height: 52vh;
     object-fit: contain;
     display: block;
   }}
@@ -1046,9 +1051,11 @@ portfolio_html = f'''<!DOCTYPE html>
     padding: 20px 24px;
     background: #fff;
     border-top: 1px solid var(--border-color);
+    overflow-y: auto;
+    flex: 1;
   }}
   .lightbox-title {{
-    font-size: 1.2rem;
+    font-size: 1.15rem;
     font-weight: 800;
     color: var(--text-primary);
     margin-bottom: 6px;
@@ -1059,7 +1066,7 @@ portfolio_html = f'''<!DOCTYPE html>
   .lightbox-caption {{
     font-size: 0.9rem;
     color: var(--text-secondary);
-    line-height: 1.5;
+    line-height: 1.55;
   }}
   .lightbox-close {{
     position: absolute;
@@ -1068,13 +1075,13 @@ portfolio_html = f'''<!DOCTYPE html>
     width: 36px;
     height: 36px;
     border-radius: 50%;
-    background: rgba(0,0,0,0.6);
+    background: rgba(0,0,0,0.65);
     color: #fff;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     border: none;
     transition: background 0.2s;
     z-index: 10;
@@ -1083,51 +1090,382 @@ portfolio_html = f'''<!DOCTYPE html>
     background: rgba(0,0,0,0.9);
   }}
 
+  /* MOBILE TOGGLE & DRAWER */
+  .nav-actions {{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }}
+  .nav-cv-btn {{
+    padding: 8px 16px;
+    font-size: 0.85rem;
+  }}
+  .brand-name {{
+    font-size: 1.05rem;
+    font-weight: 800;
+    line-height: 1.2;
+    color: var(--text-primary);
+  }}
+  .brand-sub {{
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: var(--accent);
+    letter-spacing: 0.5px;
+  }}
+  .mobile-toggle-btn {{
+    display: none;
+    width: 40px;
+    height: 40px;
+    background: #FFFFFF;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+    padding: 0;
+    transition: all 0.2s ease;
+  }}
+  .mobile-toggle-btn span {{
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: var(--text-primary);
+    border-radius: 2px;
+    transition: all 0.25s ease;
+  }}
+  .mobile-toggle-btn:hover {{
+    background: var(--accent-soft);
+    border-color: var(--accent-border);
+  }}
+  .mobile-toggle-btn.active span:nth-child(1) {{
+    transform: translateY(7px) rotate(45deg);
+  }}
+  .mobile-toggle-btn.active span:nth-child(2) {{
+    opacity: 0;
+  }}
+  .mobile-toggle-btn.active span:nth-child(3) {{
+    transform: translateY(-7px) rotate(-45deg);
+  }}
+
+  .mobile-drawer {{
+    position: fixed;
+    inset: 0;
+    z-index: 3000;
+    visibility: hidden;
+    pointer-events: none;
+    transition: visibility 0.3s ease;
+  }}
+  .mobile-drawer.active {{
+    visibility: visible;
+    pointer-events: auto;
+  }}
+  .mobile-drawer-backdrop {{
+    position: absolute;
+    inset: 0;
+    background: rgba(18, 24, 21, 0.65);
+    backdrop-filter: blur(4px);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }}
+  .mobile-drawer.active .mobile-drawer-backdrop {{
+    opacity: 1;
+  }}
+  .mobile-drawer-content {{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 320px;
+    max-width: 86vw;
+    height: 100%;
+    background: #FFFFFF;
+    box-shadow: -10px 0 35px rgba(0,0,0,0.18);
+    display: flex;
+    flex-direction: column;
+    transform: translateX(100%);
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    z-index: 1;
+    overflow-y: auto;
+  }}
+  .mobile-drawer.active .mobile-drawer-content {{
+    transform: translateX(0);
+  }}
+  .mobile-drawer-header {{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 20px;
+    border-bottom: 1px solid var(--border-color);
+  }}
+  .mobile-drawer-close {{
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: var(--accent-soft);
+    border: none;
+    font-size: 1.3rem;
+    color: var(--text-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }}
+  .mobile-nav-list {{
+    list-style: none;
+    padding: 16px 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    flex: 1;
+  }}
+  .mobile-nav-link {{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 14px;
+    border-radius: var(--radius-sm);
+    color: var(--text-primary);
+    font-weight: 700;
+    font-size: 0.95rem;
+    transition: background 0.2s ease;
+    text-decoration: none;
+  }}
+  .mobile-nav-link:hover, .mobile-nav-link:active {{
+    background: var(--accent-soft);
+    color: var(--accent-dark);
+  }}
+  .mobile-drawer-footer {{
+    padding: 18px 20px;
+    border-top: 1px solid var(--border-color);
+    background: var(--bg-card-sub);
+  }}
+
   /* RESPONSIVE */
   @media (max-width: 992px) {{
+    .nav-menu {{
+      display: none;
+    }}
+    .mobile-toggle-btn {{
+      display: flex;
+    }}
     .hero-grid {{
       grid-template-columns: 1fr;
       text-align: center;
+      gap: 32px;
+    }}
+    .hero-avatar-wrap {{
+      order: -1;
+      margin: 0 auto;
+    }}
+    .hero-avatar-card {{
+      width: 240px;
+    }}
+    .hero-avatar-img {{
+      height: 280px;
     }}
     .hero-desc {{
       margin: 0 auto 24px auto;
     }}
-    .hero-cta-group, .hero-stats-row {{
+    .hero-cta-group {{
       justify-content: center;
+    }}
+    .hero-stats-row {{
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
     }}
     .evidence-grid {{
       grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
     }}
     .video-grid {{
       grid-template-columns: 1fr;
+      gap: 20px;
     }}
     .case-grid {{
       grid-template-columns: 1fr;
+      gap: 20px;
     }}
     .about-grid {{
       grid-template-columns: 1fr;
+      gap: 16px;
     }}
     .bento-card-span2 {{
       grid-column: span 1;
     }}
     .skills-grid {{
       grid-template-columns: 1fr;
+      gap: 20px;
     }}
     .contact-card {{
       grid-template-columns: 1fr;
-      padding: 32px 20px;
+      padding: 30px 20px;
+      gap: 28px;
+    }}
+  }}
+
+  @media (max-width: 768px) {{
+    .container {{
+      padding: 0 16px;
+    }}
+    .section {{
+      padding: 50px 0;
+    }}
+    .section-title {{
+      font-size: 1.85rem;
+    }}
+    .section-subtitle {{
+      font-size: 0.95rem;
+    }}
+    .section-header {{
+      margin-bottom: 28px;
+    }}
+    .hero-title {{
+      font-size: 2.1rem;
+      line-height: 1.22;
+    }}
+    .proof-filter-bar {{
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      justify-content: flex-start;
+      padding: 4px 16px 14px 16px;
+      margin-left: -16px;
+      margin-right: -16px;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+    }}
+    .proof-filter-bar::-webkit-scrollbar {{
+      display: none;
+    }}
+    .proof-tab-btn {{
+      flex-shrink: 0;
+      white-space: nowrap;
+      font-size: 0.82rem;
+      padding: 8px 14px;
     }}
   }}
 
   @media (max-width: 640px) {{
-    .hero-title {{
-      font-size: 2.2rem;
-    }}
-    .nav-menu {{
-      display: none;
-    }}
     .evidence-grid {{
       grid-template-columns: 1fr;
+      gap: 16px;
+    }}
+    .hero-avatar-card {{
+      width: 210px;
+    }}
+    .hero-avatar-img {{
+      height: 250px;
+    }}
+    .case-card {{
+      padding: 20px 16px;
+    }}
+    .case-title {{
+      font-size: 1.15rem;
+    }}
+    .case-metrics-banner {{
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 6px;
+    }}
+    .bento-card {{
+      padding: 20px 16px;
+    }}
+    .skill-box {{
+      padding: 20px 16px;
+    }}
+    .video-card-body {{
+      padding: 16px;
+    }}
+    .video-title {{
+      font-size: 1.05rem;
+    }}
+    .footer .container > div {{
+      flex-direction: column;
+      text-align: center;
+      gap: 12px;
+    }}
+    .lightbox-modal {{
+      padding: 12px;
+    }}
+    .lightbox-container {{
+      max-height: 92vh;
+      border-radius: var(--radius-sm);
+    }}
+    .lightbox-img-wrap {{
+      max-height: 38vh;
+    }}
+    .lightbox-img {{
+      max-height: 38vh;
+    }}
+    .lightbox-info {{
+      padding: 16px 14px;
+    }}
+    .lightbox-title {{
+      font-size: 1rem;
+    }}
+    .lightbox-caption {{
+      font-size: 0.82rem;
+    }}
+    .lightbox-close {{
+      top: 10px;
+      right: 10px;
+      width: 32px;
+      height: 32px;
+      font-size: 1.1rem;
+    }}
+  }}
+
+  @media (max-width: 480px) {{
+    .hero-title {{
+      font-size: 1.68rem;
+      line-height: 1.25;
+    }}
+    .hero-desc {{
+      font-size: 0.92rem;
+    }}
+    .hero-badge {{
+      font-size: 0.68rem;
+      padding: 5px 12px;
+      letter-spacing: 0.2px;
+      white-space: normal;
+      line-height: 1.4;
+    }}
+    .hero-cta-group {{
+      flex-direction: column;
+      width: 100%;
+      gap: 10px;
+    }}
+    .hero-cta-group .btn {{
+      width: 100%;
+      justify-content: center;
+    }}
+    .hero-stats-row {{
+      grid-template-columns: repeat(2, 1fr);
+      gap: 8px;
+    }}
+    .stat-card {{
+      padding: 10px 10px;
+    }}
+    .stat-num {{
+      font-size: 1.28rem;
+    }}
+    .stat-label {{
+      font-size: 0.7rem;
+    }}
+    .stat-verified {{
+      font-size: 0.64rem;
+    }}
+    .brand-sub {{
+      display: none;
+    }}
+    .brand-name {{
+      font-size: 0.92rem;
+    }}
+    .nav-cv-btn {{
+      display: none;
+    }}
+    .contact-card {{
+      padding: 22px 14px;
     }}
   }}
 </style>
@@ -1140,8 +1478,8 @@ portfolio_html = f'''<!DOCTYPE html>
     <a href="#" class="brand-logo">
       <div class="brand-badge">HC</div>
       <div>
-        <div>LÊ THỊ HOÀNG CẨM</div>
-        <div style="font-size: 0.72rem; font-weight: 700; color: var(--accent); letter-spacing: 0.5px;">MARKETING EXECUTIVE</div>
+        <div class="brand-name">LÊ THỊ HOÀNG CẨM</div>
+        <div class="brand-sub">MARKETING EXECUTIVE</div>
       </div>
     </a>
     <ul class="nav-menu">
@@ -1152,13 +1490,51 @@ portfolio_html = f'''<!DOCTYPE html>
       <li><a href="#skills" class="nav-link">Công cụ &amp; AI</a></li>
       <li><a href="#contact" class="nav-link">Liên hệ</a></li>
     </ul>
-    <div style="display: flex; gap: 8px;">
-      <a href="CV_Le_Thi_Hoang_Cam_A4_2Trang.pdf" target="_blank" class="btn btn-primary" style="padding: 8px 16px; font-size: 0.85rem;">
+    <div class="nav-actions">
+      <a href="CV_Le_Thi_Hoang_Cam_A4_2Trang.pdf" target="_blank" class="btn btn-primary nav-cv-btn">
         <span>📄 Tải CV PDF</span>
       </a>
+      <button class="mobile-toggle-btn" id="mobileToggleBtn" onclick="toggleMobileMenu()" aria-label="Mở menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </div>
   </div>
 </nav>
+
+<!-- MOBILE DRAWER -->
+<div id="mobileDrawer" class="mobile-drawer">
+  <div class="mobile-drawer-backdrop" onclick="closeMobileMenu()"></div>
+  <div class="mobile-drawer-content">
+    <div class="mobile-drawer-header">
+      <div class="brand-logo">
+        <div class="brand-badge">HC</div>
+        <div>
+          <div style="font-weight: 800; font-size: 0.95rem; color: var(--text-primary);">LÊ THỊ HOÀNG CẨM</div>
+          <div style="font-size: 0.7rem; font-weight: 700; color: var(--accent);">MARKETING EXECUTIVE</div>
+        </div>
+      </div>
+      <button class="mobile-drawer-close" onclick="closeMobileMenu()">&times;</button>
+    </div>
+    <ul class="mobile-nav-list">
+      <li><a href="#evidence" onclick="closeMobileMenu()" class="mobile-nav-link">🔍 Minh chứng thực tế <span class="nav-badge-pill">7 Proofs</span></a></li>
+      <li><a href="#videos" onclick="closeMobileMenu()" class="mobile-nav-link">🎬 Video đã làm <span class="nav-badge-pill" style="background:#e0f2fe; color:#0369a1;">3 Kênh</span></a></li>
+      <li><a href="#projects" onclick="closeMobileMenu()" class="mobile-nav-link">💼 Dự án &amp; Case Studies</a></li>
+      <li><a href="#about" onclick="closeMobileMenu()" class="mobile-nav-link">⭐ Năng lực cốt lõi</a></li>
+      <li><a href="#skills" onclick="closeMobileMenu()" class="mobile-nav-link">🛠 Công cụ &amp; AI</a></li>
+      <li><a href="#contact" onclick="closeMobileMenu()" class="mobile-nav-link">📞 Liên hệ ứng tuyển</a></li>
+    </ul>
+    <div class="mobile-drawer-footer">
+      <a href="CV_Le_Thi_Hoang_Cam_A4_2Trang.pdf" target="_blank" class="btn btn-primary" style="width: 100%; justify-content: center; font-size: 0.9rem; padding: 12px;">
+        <span>📄 Tải CV Đầy Đủ (Có Ảnh &amp; SĐT)</span>
+      </a>
+      <a href="CV_Le_Thi_Hoang_Cam_AnDanh.pdf" target="_blank" class="btn btn-secondary" style="width: 100%; justify-content: center; font-size: 0.9rem; padding: 12px; margin-top: 10px;">
+        <span>🔒 Tải Bản Ẩn Danh (Blind CV)</span>
+      </a>
+    </div>
+  </div>
+</div>
 
 <!-- HERO SECTION -->
 <section class="hero-section">
@@ -1928,6 +2304,26 @@ portfolio_html = f'''<!DOCTYPE html>
         card.style.display = 'none';
       }}
     }});
+  }}
+
+  function toggleMobileMenu() {{
+    const drawer = document.getElementById('mobileDrawer');
+    const btn = document.getElementById('mobileToggleBtn');
+    drawer.classList.toggle('active');
+    btn.classList.toggle('active');
+    if (drawer.classList.contains('active')) {{
+      document.body.style.overflow = 'hidden';
+    }} else {{
+      document.body.style.overflow = 'auto';
+    }}
+  }}
+
+  function closeMobileMenu() {{
+    const drawer = document.getElementById('mobileDrawer');
+    const btn = document.getElementById('mobileToggleBtn');
+    if (drawer) drawer.classList.remove('active');
+    if (btn) btn.classList.remove('active');
+    document.body.style.overflow = 'auto';
   }}
 </script>
 
