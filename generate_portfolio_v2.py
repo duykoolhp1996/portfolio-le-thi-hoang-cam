@@ -1839,7 +1839,7 @@ portfolio_html = f'''<!DOCTYPE html>
         Sáng tạo nội dung chạm <span class="highlight">insight</span>, dữ liệu chứng minh <span class="highlight">hiệu quả</span>.
       </h1>
       <p class="hero-desc">
-        Hơn <strong>3 năm kinh nghiệm thực chiến</strong> bao quát từ xây dựng chiến lược Content &amp; Short-form Video (Reels, TikTok) đến tối ưu chiến dịch Paid Ads, truyền thông Healthcare &amp; FMCG. Mọi kết quả đều được kiểm chứng bằng số liệu và sản phẩm truyền thông thực tế.
+        Hơn <strong>3 năm kinh nghiệm thực chiến</strong> tự chủ quy trình sản xuất Content &amp; Short-form Video (Reels, TikTok), quản trị tương tác Fanpage và truyền thông Y Tế &amp; Làm Đẹp. Mọi kết quả đều được kiểm chứng bằng số liệu và sản phẩm truyền thông thực tế.
       </p>
       <div class="hero-cta-group">
         <a href="#evidence" class="btn btn-primary" style="padding: 12px 24px; font-size: 0.95rem;">
@@ -1864,7 +1864,7 @@ portfolio_html = f'''<!DOCTYPE html>
         </div>
         <div class="stat-card">
           <span class="stat-num">98.4K+</span>
-          <span class="stat-label">Views chiến dịch Healthcare</span>
+          <span class="stat-label">Views kênh mới MEDDC</span>
           <span class="stat-verified">✓ Báo cáo Meta Suite</span>
         </div>
         <div class="stat-card">
@@ -1874,8 +1874,8 @@ portfolio_html = f'''<!DOCTYPE html>
         </div>
         <div class="stat-card">
           <span class="stat-num">+30%</span>
-          <span class="stat-label">Reach tự nhiên đa kênh</span>
-          <span class="stat-verified">✓ Chiến dịch OPV Pharma</span>
+          <span class="stat-label">Reach tự nhiên Fanpage</span>
+          <span class="stat-verified">✓ Quản trị Fanpage OPV</span>
         </div>
       </div>
     </div>
@@ -1906,7 +1906,7 @@ portfolio_html = f'''<!DOCTYPE html>
     <div class="proof-filter-bar">
       <button class="proof-tab-btn active" onclick="filterEvidence('all')">Tất cả minh chứng (7)</button>
       <button class="proof-tab-btn" onclick="filterEvidence('content')">🎬 Video &amp; KOC Review</button>
-      <button class="proof-tab-btn" onclick="filterEvidence('data')">📈 Báo Cáo Dữ Liệu Ads &amp; GMV</button>
+      <button class="proof-tab-btn" onclick="filterEvidence('data')">📈 Báo Cáo Tăng Trưởng &amp; GMV</button>
       <button class="proof-tab-btn" onclick="filterEvidence('credentials')">📜 Bằng Cấp &amp; Dịch Vụ</button>
     </div>
 
@@ -1916,14 +1916,14 @@ portfolio_html = f'''<!DOCTYPE html>
       <!-- PROOF 1: TIKTOK SHOP AFFILIATE GMV -->
       <div class="evidence-card" data-evidence="data" onclick="openLightbox('affiliate')">
         <div class="evidence-thumb-wrap">
-          <span class="evidence-pill-tag">TikTok Shop Affiliate</span>
+          <span class="evidence-pill-tag">Creator &amp; KOC Affiliate</span>
           <img class="evidence-img" src="data:image/jpeg;base64,{affiliate_b64}" alt="Minh chứng GMV TikTok Shop Affiliate">
           <div class="evidence-zoom-overlay">🔍 Bấm xem ảnh phóng to</div>
         </div>
         <div class="evidence-content">
           <div>
-            <h3 class="evidence-title">Dashboard Tiếp Thị Liên Kết (Affiliate)</h3>
-            <p class="evidence-caption">Báo cáo thực tế ghi nhận GMV đạt 239,9M đ (+4,000%), 3.3K sản phẩm bán ra, 1.3M lượt hiển thị và 34.7K lượt click vào sản phẩm.</p>
+            <h3 class="evidence-title">Dashboard TikTok Shop (Creator &amp; KOC là 1)</h3>
+            <p class="evidence-caption">Creator và KOC là một: Báo cáo thực tế kênh cá nhân ghi nhận GMV đạt 239,9M đ (+4,000%), 3.3K sản phẩm bán ra, 1.3M lượt hiển thị và 34.7K click.</p>
           </div>
           <div>
             <span class="evidence-stat-badge">💰 GMV 239,9M đ • 3,3K Đơn • 1,3M Views</span>
@@ -1934,14 +1934,14 @@ portfolio_html = f'''<!DOCTYPE html>
       <!-- PROOF 2: KOC BEAUTY REVIEW -->
       <div class="evidence-card" data-evidence="content" onclick="openLightbox('koc')">
         <div class="evidence-thumb-wrap">
-          <span class="evidence-pill-tag">KOC Beauty Reviewer</span>
+          <span class="evidence-pill-tag">Content Creator &amp; KOC Reviewer</span>
           <img class="evidence-img" src="data:image/jpeg;base64,{koc_b64}" alt="Minh chứng video KOC Review mỹ phẩm">
           <div class="evidence-zoom-overlay">🔍 Bấm xem ảnh phóng to</div>
         </div>
         <div class="evidence-content">
           <div>
             <h3 class="evidence-title">Sản Phẩm Video KOC Review Đa Nền Tảng</h3>
-            <p class="evidence-caption">Hợp tác cùng các nhãn hàng quốc tế L’Oréal, Vichy, Eucerin, SVR. Video đạt tỷ lệ tương tác cao với hơn 15.000 views/tháng.</p>
+            <p class="evidence-caption">Creator &amp; KOC là một: Tự quay dựng review chân thực cho các nhãn hàng L’Oréal, Vichy, Eucerin, SVR; duy trì 15.000+ views/tháng.</p>
           </div>
           <div>
             <span class="evidence-stat-badge">👀 15.000+ Views/tháng • 800 Profile Visits</span>
@@ -1952,14 +1952,14 @@ portfolio_html = f'''<!DOCTYPE html>
       <!-- PROOF 3: MEDTV HEALTHCARE VIRAL METRICS -->
       <div class="evidence-card" data-evidence="data" onclick="openLightbox('medtv')">
         <div class="evidence-thumb-wrap">
-          <span class="evidence-pill-tag">Báo Cáo Tăng Trưởng Meta</span>
+          <span class="evidence-pill-tag">Kênh Mới Tạo • Báo Cáo Meta</span>
           <img class="evidence-img" src="data:image/jpeg;base64,{medtv_b64}" alt="Minh chứng báo cáo kênh MEDTV">
           <div class="evidence-zoom-overlay">🔍 Bấm xem ảnh phóng to</div>
         </div>
         <div class="evidence-content">
           <div>
-            <h3 class="evidence-title">Báo Cáo Kênh MEDTV &amp; Giáo Dục Sức Khỏe</h3>
-            <p class="evidence-caption">Dashboard thống kê chiến dịch B2B kết nối Comfort, ColosBaby với BV Nhi Đồng 1, BV 175. Tăng trưởng vượt bậc trong 28 ngày.</p>
+            <h3 class="evidence-title">Báo Cáo Kênh MEDDC &amp; Giáo Dục Sức Khỏe</h3>
+            <p class="evidence-caption">Kênh mới thành lập khi mới vào công ty: Dashboard ghi nhận dự án B2B kết nối Comfort, ColosBaby với BV Nhi Đồng 1, BV 175 tăng trưởng vượt bậc trong 28 ngày.</p>
           </div>
           <div>
             <span class="evidence-stat-badge">🔥 98.474 Views • +880.5% Tương tác</span>
@@ -1967,35 +1967,35 @@ portfolio_html = f'''<!DOCTYPE html>
         </div>
       </div>
 
-      <!-- PROOF 3: VIDEO PRODUCTION WORKFLOW -->
+      <!-- PROOF 4: VIDEO PRODUCTION WORKFLOW -->
       <div class="evidence-card" data-evidence="content" onclick="openLightbox('workflow')">
         <div class="evidence-thumb-wrap">
-          <span class="evidence-pill-tag">Quy Trình Sáng Tạo Video</span>
+          <span class="evidence-pill-tag">Kênh Chính Thân Tâm • 100% Media</span>
           <img class="evidence-img" src="data:image/jpeg;base64,{workflow_b64}" alt="Quy trình dựng video và kịch bản phân cảnh">
           <div class="evidence-zoom-overlay">🔍 Bấm xem ảnh phóng to</div>
         </div>
         <div class="evidence-content">
           <div>
-            <h3 class="evidence-title">Kịch Bản Phân Cảnh &amp; Dựng Video CapCut Pro</h3>
-            <p class="evidence-caption">Tự chủ toàn bộ quy trình: Lên ý tưởng storyboard, chuẩn bị đạo cụ quay chụp, dựng timeline video ngắn và tối ưu âm thanh.</p>
+            <h3 class="evidence-title">Kịch Bản Phân Cảnh &amp; Dựng Video Kênh Thân Tâm</h3>
+            <p class="evidence-caption">Kênh quản trị chính: Tự chủ toàn bộ quy trình storyboard, thu âm mic Rode, dựng CapCut Pro hướng dẫn điều dưỡng y tế tại nhà ở TP.HCM.</p>
           </div>
           <div>
-            <span class="evidence-stat-badge">🎬 Quy Trình Tự Chủ 100% Media</span>
+            <span class="evidence-stat-badge">🎬 Kênh Quản Trị Chính • 100% Media</span>
           </div>
         </div>
       </div>
 
-      <!-- PROOF 4: OPV PHARMA FANPAGE MANAGEMENT -->
+      <!-- PROOF 5: OPV PHARMA FANPAGE MANAGEMENT -->
       <div class="evidence-card" data-evidence="data" onclick="openLightbox('opv')">
         <div class="evidence-thumb-wrap">
-          <span class="evidence-pill-tag">Quản Trị Fanpage &amp; Content</span>
+          <span class="evidence-pill-tag">Quản Trị Fanpage OPV</span>
           <img class="evidence-img" src="data:image/jpeg;base64,{opv_b64}" alt="Báo cáo hiệu quả Fanpage Dược phẩm OPV">
           <div class="evidence-zoom-overlay">🔍 Bấm xem ảnh phóng to</div>
         </div>
         <div class="evidence-content">
           <div>
             <h3 class="evidence-title">Quản Trị Fanpage &amp; Nội Dung Dược Phẩm OPV</h3>
-            <p class="evidence-caption">Lập kế hoạch nội dung chuẩn Y Dược, trực tiếp quản lý và chăm sóc Fanpage OPV, thúc đẩy lượng tiếp cận tự nhiên của trang tăng 25–30%.</p>
+            <p class="evidence-caption">Quản trị Fanpage là chính (không làm Brand Mkt): Lập kế hoạch nội dung chuẩn SEO Y Dược, chăm sóc tương tác cộng đồng giúp Reach tự nhiên của trang tăng 25–30%.</p>
           </div>
           <div>
             <span class="evidence-stat-badge">🌿 Reach tự nhiên Page +30% • Follower +8%</span>
@@ -2162,14 +2162,14 @@ portfolio_html = f'''<!DOCTYPE html>
         </div>
         <div class="case-body">
           <div class="case-meta-row">
-            <span class="case-category-tag">Beauty &amp; Influencer KOC</span>
+            <span class="case-category-tag">Creator &amp; KOC Là Một • Beauty Review</span>
             <span class="case-timeline">09/2024 – Hiện tại</span>
           </div>
-          <h3 class="case-title" onclick="openVideoModal('koc')" title="Bấm xem chi tiết dự án KOC">Sáng Tạo Nội Dung Đa Nền Tảng &amp; KOC Reviewer</h3>
-          <div class="case-brands">✨ L’Oréal • Vichy • Eucerin • SVR</div>
+          <h3 class="case-title" onclick="openVideoModal('koc')" title="Bấm xem chi tiết dự án KOC">Content Creator &amp; KOC Reviewer (2 Trong 1)</h3>
+          <div class="case-brands">✨ Độc Lập • Hợp tác: L’Oréal • Vichy • Eucerin • SVR</div>
           <ul class="case-bullets">
-            <li>Tự chủ 100% quy trình từ ý tưởng, kịch bản, quay chụp đến dựng video ngắn review mỹ phẩm chuẩn visual cao cấp.</li>
-            <li>Hợp tác nhận PR kit, sản xuất video trải nghiệm sản phẩm theo brief nhãn hàng và tham gia sự kiện ra mắt độc quyền.</li>
+            <li><strong>Creator &amp; KOC là một thể thống nhất:</strong> Tự chủ 100% quy trình từ ý tưởng, kịch bản, quay chụp đến dựng video ngắn review mỹ phẩm trên iPhone; hợp tác nhận PR kit từ nhãn hàng uy tín.</li>
+            <li><strong>Chuyển đổi thực tế:</strong> Vừa xây dựng uy tín review vừa gắn link TikTok Shop Affiliate, đạt GMV 239.9M đ với 3.300+ đơn hàng và duy trì 15.000+ views/tháng.</li>
           </ul>
           <div class="case-metrics-banner">
             <span class="metric-item">👀 Views trung bình: <strong class="metric-badge">15.000 / tháng (+30%)</strong></span>
@@ -2233,8 +2233,8 @@ portfolio_html = f'''<!DOCTYPE html>
           <h3 class="case-title" onclick="openVideoModal('medtv')" title="Bấm xem chi tiết video MEDDC">Kênh MEDDC — Truyền Thông Số Bệnh Viện (Mới Khởi Tạo)</h3>
           <div class="case-brands">🏥 Comfort • ColosBaby • Gaviscon x BV Nhi Đồng 1, BV 175</div>
           <ul class="case-bullets">
-            <li><strong>Dự án mới:</strong> Kênh mới thành lập khi tham gia dự án, kết nối nhãn hàng quốc tế với các bệnh viện đầu ngành qua chuỗi Reels giáo dục sức khỏe.</li>
-            <li><strong>Thực thi &amp; Kết quả:</strong> Xây dựng chuỗi Reels giáo dục sức khỏe đạt tốc độ viral tự nhiên cao, tiếp cận 98.4K+ lượt xem và tương tác tăng trưởng +880.5%.</li>
+            <li><strong>Kênh mới thành lập:</strong> Kênh được khởi tạo ngay khi vừa gia nhập công ty, xây dựng nội dung từ số 0 kết nối nhãn hàng lớn với bệnh viện qua chuỗi Reels y tế.</li>
+            <li><strong>Thực thi &amp; Kết quả:</strong> Chuỗi Reels giáo dục sức khỏe đạt tốc độ viral tự nhiên cao, tiếp cận 98.4K+ lượt xem và tương tác tăng trưởng +880.5%.</li>
           </ul>
           <div class="case-metrics-banner">
             <span class="metric-item">🔥 Video Views: <strong class="metric-badge">98.474 lượt</strong></span>
@@ -2260,14 +2260,14 @@ portfolio_html = f'''<!DOCTYPE html>
         </div>
         <div class="case-body">
           <div class="case-meta-row">
-            <span class="case-category-tag">Pharma Marketing &amp; Fanpage Management</span>
+            <span class="case-category-tag">Quản Trị Fanpage &amp; Nội Dung Y Dược</span>
             <span class="case-timeline">12/2024 – 02/2026</span>
           </div>
-          <h3 class="case-title" onclick="openVideoModal('opv')" title="Bấm xem chi tiết dự án OPV">Quản Trị Fanpage &amp; Kế Hoạch Content Dược Phẩm</h3>
+          <h3 class="case-title" onclick="openVideoModal('opv')" title="Bấm xem chi tiết dự án OPV">Quản Trị Fanpage &amp; Kế Hoạch Content Dược Phẩm OPV</h3>
           <div class="case-brands">💊 Công ty Cổ phần Dược phẩm OPV</div>
           <ul class="case-bullets">
-            <li>Lập kế hoạch nội dung định kỳ và biên soạn bài viết, kịch bản video chuẩn SEO Y Dược theo đúng quy định truyền thông Dược phẩm.</li>
-            <li>Trực tiếp quản lý và chăm sóc Fanpage OPV, tương tác cộng đồng người theo dõi, phối hợp cùng Designer sản xuất tư liệu và theo dõi báo cáo trang.</li>
+            <li><strong>Quản trị Fanpage là chính:</strong> Trực tiếp chăm sóc, kiểm duyệt và phản hồi tương tác cộng đồng trên Fanpage OPV (không phụ trách Brand Mkt hay chạy Ads).</li>
+            <li><strong>Nội dung chuẩn SEO:</strong> Lập kế hoạch nội dung và biên soạn bài viết chuẩn SEO Y Dược theo quy chuẩn ngành, phối hợp cùng Designer làm ảnh tư liệu giúp tăng tiếp cận tự nhiên 25–30%.</li>
           </ul>
           <div class="case-metrics-banner">
             <span class="metric-item">🚀 Tiếp cận tự nhiên: <strong class="metric-badge">+25 – 30%</strong></span>
@@ -2446,10 +2446,10 @@ portfolio_html = f'''<!DOCTYPE html>
         <div class="competency-item">
           <div class="competency-item-top">
             <span class="competency-item-icon">📊</span>
-            <h4 class="competency-item-title">Vận Hành &amp; Đo Lường Paid-Ads Đa Kênh</h4>
+            <h4 class="competency-item-title">Quản Trị Kênh &amp; Đo Lường Tăng Trưởng (Social Media Growth)</h4>
           </div>
           <p class="competency-item-desc">
-            Thành thạo Meta Ads, TikTok Ads, Meta Suite; đọc hiểu dữ liệu CPC, CPM, CTR và A/B testing tối ưu chi phí.
+            Thành thạo Meta Business Suite, TikTok Analytics; theo dõi và tối ưu hóa Organic Reach, Engagement Rate, phân tích dữ liệu hiệu suất bài viết và chuyển đổi đơn hàng.
           </p>
         </div>
 
@@ -2469,10 +2469,10 @@ portfolio_html = f'''<!DOCTYPE html>
           <div class="skill-pill-list">
             <span class="skill-pill">✍️ <strong>Content Strategy</strong></span>
             <span class="skill-pill">🎬 <strong>Short-form Video</strong></span>
-            <span class="skill-pill">📈 <strong>Paid-Ads Meta &amp; TikTok</strong></span>
+            <span class="skill-pill">📈 <strong>Quản Trị Fanpage &amp; Kênh</strong></span>
             <span class="skill-pill">🔍 <strong>SEO Y Dược</strong></span>
             <span class="skill-pill">🤝 <strong>B2B Healthcare Media</strong></span>
-            <span class="skill-pill">👥 <strong>KOC / Influencer Collab</strong></span>
+            <span class="skill-pill">👥 <strong>KOC / Influencer Review</strong></span>
             <span class="skill-pill">💖 <strong>Customer Experience CSAT</strong></span>
           </div>
         </div>
@@ -2650,9 +2650,9 @@ portfolio_html = f'''<!DOCTYPE html>
   // Video Modal System Data
   const videoModalData = {{
     koc: {{
-      title: "Sáng Tạo Nội Dung Đa Nền Tảng &amp; KOC Reviewer",
-      category: "Short-form Video • Beauty &amp; Skincare KOC",
-      partner: "✨ L’Oréal • Vichy • Eucerin • SVR",
+      title: "Content Creator &amp; KOC Reviewer (Creator &amp; KOC Là 1)",
+      category: "Creator &amp; KOC Là Một • Beauty &amp; Skincare Review",
+      partner: "✨ Độc Lập • L’Oréal • Vichy • Eucerin • SVR",
       badge: "✨ 15.000+ Views/tháng • 800+ Profile Visits",
       thumb: "data:image/jpeg;base64,{koc_b64}",
       fbUrl: "https://www.tiktok.com",
@@ -2664,15 +2664,15 @@ portfolio_html = f'''<!DOCTYPE html>
         {{ value: "4 Brand", label: "Hợp tác nhãn hàng", desc: "L'Oréal, Vichy, Eucerin..." }},
         {{ value: "100%", label: "Tự chủ media", desc: "Ý tưởng, quay dựng iPhone" }}
       ],
-      insight: "Người xem mỹ phẩm hiện đại rất nhạy cảm với quảng cáo; họ tìm kiếm những video chân thật, quay cận chất kem, đánh giá thẳng thắn hiệu quả và bảng thành phần lành tính.",
-      execution: "Tự chủ 100% quy trình sản xuất video trên iPhone: Lên kịch bản Hook 3 giây, quay cận cảnh kết cấu mỹ phẩm với ánh sáng tự nhiên, thu âm giọng đọc truyền cảm và dựng CapCut Pro bắt nhịp trending.",
-      impact: "Được các nhãn hàng dược mỹ phẩm uy tín gửi PR kit trải nghiệm sản phẩm, đạt mức độ tương tác cao và chuyển đổi đơn hàng vượt trội qua TikTok Shop Affiliate."
+      insight: "Creator và KOC là một thể thống nhất: Người tiêu dùng mỹ phẩm hiện nay tìm kiếm những video chân thật, quay cận chất kem, đánh giá thẳng thắn hiệu quả và bảng thành phần lành tính.",
+      execution: "Tự chủ 100% quy trình sản xuất video trên iPhone: Lên kịch bản Hook 3 giây, quay cận cảnh kết cấu mỹ phẩm với ánh sáng tự nhiên, thu âm giọng đọc truyền cảm và dựng CapCut Pro bắt nhịp trending; trực tiếp gắn link TikTok Shop Affiliate.",
+      impact: "Creator và KOC là 1: Vừa được các thương hiệu da liễu uy tín gửi PR kit tham dự sự kiện ra mắt độc quyền, vừa tạo chuyển đổi thực tế qua TikTok Shop Affiliate đạt GMV 239.9M đ với 3.3K đơn hàng."
     }},
     medtv: {{
-      title: "Kênh MEDDC — Truyền Thông Số Bệnh Viện (MEDTV)",
-      category: "Facebook Video • B2B Healthcare",
+      title: "Kênh MEDDC — Truyền Thông Số Bệnh Viện (Mới Khởi Tạo)",
+      category: "Facebook Video • B2B Healthcare (Kênh Mới Tạo Khi Vào Làm)",
       partner: "🏥 BV Nhi Đồng 1 &amp; BV 175",
-      badge: "🔥 98.4K+ Views • +880% Tương tác",
+      badge: "🏥 Kênh Mới Khởi Tạo Khi Vào Làm • 98.4K+ Views",
       thumb: "data:image/jpeg;base64,{meddc_cover_b64}",
       fbUrl: "https://www.facebook.com/share/14tuJtmuRGS/?mibextid=wwXIfr",
       proofKey: "medtv",
@@ -2683,15 +2683,15 @@ portfolio_html = f'''<!DOCTYPE html>
         {{ value: "+547%", label: "Followers mới", desc: "Trong 28 ngày" }},
         {{ value: "3+ Brand", label: "Nhãn hàng B2B", desc: "Comfort, ColosBaby..." }}
       ],
-      insight: "Thông tin y tế thường khô khan; phụ huynh và người bệnh rất cần kiến thức nhi khoa chuẩn xác, dễ hiểu từ bác sĩ đầu ngành. Nhãn hàng quốc tế cần một kênh truyền thông uy tín, có bảo chứng chuyên môn y tế để tài trợ nội dung B2B.",
-      execution: "Biên soạn kịch bản Reels ngắn 45–60 giây, tối ưu Hook 3 giây đầu giữ chân khán giả; lồng ghép tự nhiên thông điệp nhãn hàng với lời khuyên bác sĩ BV Nhi Đồng 1 &amp; BV 175; trực tiếp quản trị và tracking hiệu suất trên Meta Suite.",
-      impact: "Xây dựng định vị kênh truyền thông y tế hàng đầu; tạo dựng niềm tin bền vững giữa bệnh viện, chuyên gia y tế, nhãn hàng tài trợ và cộng đồng phụ huynh."
+      insight: "Kênh MEDDC là kênh mới được khởi tạo ngay khi vừa gia nhập công ty. Phụ huynh rất cần kiến thức nhi khoa chuẩn xác từ bác sĩ đầu ngành, mở ra cơ hội cho các nhãn hàng lớn (Comfort, ColosBaby) tài trợ truyền thông B2B.",
+      execution: "Khởi tạo kênh từ vạch xuất phát: Biên soạn kịch bản Reels ngắn 45–60 giây, tối ưu Hook 3 giây đầu giữ chân khán giả; lồng ghép tự nhiên thông điệp nhãn hàng với lời khuyên bác sĩ BV Nhi Đồng 1 &amp; BV 175; trực tiếp quản trị và tracking hiệu suất trên Meta Suite.",
+      impact: "Xây mới kênh từ số 0 đạt thành tích ấn tượng: 98.474 lượt xem, tương tác tăng vọt +880.5% và follower tăng +547% chỉ trong 28 ngày đầu tiên."
     }},
     than_tam: {{
-      title: "Thân Tâm — Chăm Sóc Sức Khỏe &amp; Người Cao Tuổi",
-      category: "Facebook Video • Y Tế Gia Đình &amp; Home Care",
-      partner: "📍 TP. Hồ Chí Minh (Dịch Vụ Điều Dưỡng)",
-      badge: "🩺 Chăm Sóc Sức Khỏe Tại Nhà",
+      title: "Kênh Thân Tâm — Chăm Sóc Sức Khỏe &amp; Người Cao Tuổi (Kênh Quản Trị Chính)",
+      category: "Facebook Video • Kênh Quản Trị Chính Của Công Ty",
+      partner: "🩺 Kênh Quản Trị Chính • TP. Hồ Chí Minh",
+      badge: "🩺 Kênh Chính Trực Tiếp Quản Trị &amp; Sản Xuất Media",
       thumb: "data:image/jpeg;base64,{workflow_b64}",
       fbUrl: "https://www.facebook.com/share/1HcnkPgAuy/?mibextid=wwXIfr",
       proofKey: "workflow",
@@ -2702,15 +2702,15 @@ portfolio_html = f'''<!DOCTYPE html>
         {{ value: "Rode Mic", label: "Thu âm chuyên dụng", desc: "Âm thanh trong trẻo" }},
         {{ value: "TP.HCM", label: "Địa bàn phục vụ", desc: "Toàn khu vực thành phố" }}
       ],
-      insight: "Dịch vụ điều dưỡng và y tế gia đình tại nhà đòi hỏi niềm tin tuyệt đối. Rào cản lớn nhất của con cái khi thuê người chăm sóc cha mẹ già là lo ngại về sự an toàn và tay nghề chuyên môn của điều dưỡng viên.",
-      execution: "Tự chủ 100% quy trình sản xuất media: Phác thảo storyboard kịch bản phân cảnh chi tiết, thiết lập mic thu âm Rode Wireless, biên tập dựng timeline CapCut Pro; sản xuất chuỗi video ngắn hướng dẫn chăm sóc y tế tại gia và giải đáp quy trình điều dưỡng chuyên sâu.",
+      insight: "Kênh Thân Tâm là kênh truyền thông chính trực tiếp phụ trách tại công ty. Dịch vụ điều dưỡng và y tế gia đình tại nhà đòi hỏi niềm tin tuyệt đối; người nhà rất cần thấy rõ quy trình an toàn trước khi gửi gắm cha mẹ già.",
+      execution: "Trực tiếp quản lý kênh chính và tự chủ 100% quy trình sản xuất media: Phác thảo storyboard kịch bản phân cảnh chi tiết, thiết lập mic thu âm Rode Wireless, biên tập timeline CapCut Pro; sản xuất chuỗi video ngắn hướng dẫn chăm sóc y tế tại gia và quy trình điều dưỡng chuyên sâu tại TP.HCM.",
       impact: "Minh bạch hóa thao tác điều dưỡng giúp xóa tan hoài nghi của thân nhân, nâng cao uy tín thương hiệu dịch vụ chăm sóc tại gia chuẩn mực và tăng trưởng tỷ lệ inbox tư vấn đặt lịch dịch vụ tại TP.HCM."
     }},
     opv: {{
-      title: "OPV Pharmaceutical — Video &amp; Quản Trị Kênh Fanpage",
-      category: "Facebook Media • Quản Trị Fanpage Dược Phẩm",
-      partner: "🌿 OPV Pharmaceutical",
-      badge: "🌿 21.6K+ Followers • Reach Page +30%",
+      title: "OPV Pharmaceutical — Quản Trị Fanpage &amp; Nội Dung Y Dược",
+      category: "Facebook Fanpage • Quản Trị Fanpage &amp; Content Y Dược",
+      partner: "🌿 Quản Trị Fanpage OPV (Không làm Brand Mkt)",
+      badge: "🌿 Reach Tự Nhiên Page +30% • Follower +8%",
       thumb: "data:image/jpeg;base64,{opv_b64}",
       fbUrl: "https://www.facebook.com/share/1CR4mtMRDN/?mibextid=wwXIfr",
       proofKey: "opv",
@@ -2721,9 +2721,9 @@ portfolio_html = f'''<!DOCTYPE html>
         {{ value: "7 – 8%", label: "Tăng trưởng Follower", desc: "Tăng từ mức 2-3%" }},
         {{ value: "100%", label: "Chăm sóc Fanpage", desc: "Nội dung &amp; Tương tác" }}
       ],
-      insight: "Fanpage Dược phẩm đòi hỏi thông tin chuẩn xác, đáng tin cậy và tuân thủ nghiêm ngặt quy định y tế; người dùng cần nội dung dễ hiểu giải đáp đúng thắc mắc sức khỏe thường gặp.",
-      execution: "Lập lịch nội dung định kỳ, trực tiếp quản trị Fanpage OPV, chăm sóc tương tác và xây dựng chuỗi bài viết/video ngắn chia sẻ kiến thức dược phẩm; theo dõi chỉ số hiệu suất trên Meta Suite để liên tục tối ưu nội dung.",
-      impact: "Duy trì lượng tiếp cận tự nhiên của Fanpage tăng trưởng 25–30%, giữ vững sự gắn kết của cộng đồng 21.6K+ followers và gia tăng mức độ nhận diện thương hiệu bền vững."
+      insight: "Trọng tâm công việc tại OPV là quản trị Fanpage và nội dung; không làm Brand Marketing ở tầng chiến lược vĩ mô và không phụ trách chiến dịch Paid-Ads. Fanpage đòi hỏi sự chăm sóc, tương tác tỉ mỉ và bài viết chuẩn SEO Y Dược.",
+      execution: "Trực tiếp quản lý và chăm sóc Fanpage OPV là chính: Phản hồi thắc mắc, tương tác với cộng đồng người theo dõi, lập kế hoạch nội dung và biên tập bài viết chuẩn SEO y tế, phối hợp cùng Designer làm hình ảnh.",
+      impact: "Tối ưu hóa tương tác và chất lượng nội dung giúp độ tiếp cận tự nhiên (Organic Reach) của Fanpage tăng trưởng 25–30%, thúc đẩy tăng trưởng người theo dõi trang ổn định ở mức 7–8%."
     }}
   }};
 
@@ -2789,33 +2789,33 @@ portfolio_html = f'''<!DOCTYPE html>
   const proofData = {{
     affiliate: {{
       src: "data:image/jpeg;base64,{affiliate_b64}",
-      title: "💰 Minh Chứng: Báo Cáo Doanh Thu TikTok Shop Affiliate",
-      caption: "Dashboard TikTok Shop Creator ghi nhận GMV đạt 239.9M VNĐ (+4,000%), 3.300+ đơn hàng xuất bán thành công, 1.3 Triệu lượt hiển thị sản phẩm và 34.7K lượt click trong chưa đầy 1 tháng."
+      title: "💰 Minh Chứng: Doanh Thu TikTok Shop Affiliate (Creator &amp; KOC là 1)",
+      caption: "Creator và KOC là 1: Dashboard TikTok Shop Creator ghi nhận GMV đạt 239.9M VNĐ (+4,000%), 3.300+ đơn hàng xuất bán thành công, 1.3 Triệu lượt hiển thị sản phẩm và 34.7K lượt click trong chưa đầy 1 tháng."
     }},
     koc: {{
       src: "data:image/jpeg;base64,{koc_b64}",
-      title: "✨ Minh Chứng: Video KOC Skincare Reviewer Đa Nền Tảng",
-      caption: "Sản phẩm video review thực tế trên iPhone kết hợp cùng các thương hiệu da liễu hàng đầu L’Oréal, Vichy và Eucerin. Đạt tỷ lệ người xem trung bình 15.000 lượt/tháng và hơn 800 lượt truy cập trang hồ sơ."
+      title: "✨ Minh Chứng: Video Content Creator &amp; KOC Reviewer (2 Trong 1)",
+      caption: "Creator &amp; KOC là một: Sản phẩm video review thực tế trên iPhone kết hợp cùng các thương hiệu da liễu hàng đầu L’Oréal, Vichy và Eucerin. Đạt tỷ lệ người xem trung bình 15.000 lượt/tháng và hơn 800 lượt truy cập trang hồ sơ."
     }},
     meddc_cover: {{
       src: "data:image/jpeg;base64,{meddc_cover_b64}",
-      title: "🏥 Cover Kênh MEDDC: Truyền Thông Giáo Dục Sức Khỏe Tại Bệnh Viện",
+      title: "🏥 Cover Kênh MEDDC: Kênh Mới Khởi Tạo Khi Vào Làm (Dự Án Bệnh Viện)",
       caption: "Hệ thống truyền thông số y tế (TV, LED, Digital Standee) kết nối thông tin y tế, nâng cao sức khỏe cộng đồng tại hệ thống bệnh viện hàng đầu (BV Nhi Đồng 1, BV 175).<div style='margin-top: 14px; display: flex; gap: 8px; flex-wrap: wrap;'><a href='https://www.facebook.com/share/14tuJtmuRGS/?mibextid=wwXIfr' target='_blank' rel='noopener noreferrer' class='btn btn-primary' style='padding: 8px 16px; font-size: 0.85rem;'>▶ Mở Xem Video Kênh MEDDC (Facebook) ↗</a><button data-key='medtv' onclick='closeLightboxDirect(); openLightbox(this.dataset.key);' class='btn btn-outline' style='padding: 8px 16px; font-size: 0.85rem;'>📈 Xem Báo Cáo Tăng Trưởng Meta</button></div>"
     }},
     medtv: {{
       src: "data:image/jpeg;base64,{medtv_b64}",
-      title: "📈 Minh Chứng: Báo Cáo Tăng Trưởng Meta Suite Kênh MEDTV",
-      caption: "Dashboard trực tiếp từ Meta Suite ghi nhận chiến dịch Reels giáo dục sức khỏe đạt 98.474 lượt xem, tương tác tăng trưởng đột biến +880.5% và follower tăng +547% trong vòng 28 ngày triển khai dự án B2B Healthcare.<div style='margin-top: 14px; display: flex; gap: 8px; flex-wrap: wrap;'><a href='https://www.facebook.com/share/14tuJtmuRGS/?mibextid=wwXIfr' target='_blank' rel='noopener noreferrer' class='btn btn-primary' style='padding: 8px 16px; font-size: 0.85rem;'>▶ Mở Xem Video Kênh MEDDC (Facebook) ↗</a><a href='https://www.facebook.com/share/1HcnkPgAuy/?mibextid=wwXIfr' target='_blank' rel='noopener noreferrer' class='btn btn-outline' style='padding: 8px 16px; font-size: 0.85rem;'>▶ Xem Kênh Thân Tâm ↗</a></div>"
+      title: "📈 Minh Chứng: Báo Cáo Tăng Trưởng Meta Kênh Mới MEDDC (98.4K Views)",
+      caption: "Kênh mới tạo khi vào làm: Dashboard trực tiếp từ Meta Suite ghi nhận chiến dịch Reels giáo dục sức khỏe đạt 98.474 lượt xem, tương tác tăng trưởng đột biến +880.5% và follower tăng +547% trong vòng 28 ngày triển khai dự án B2B Healthcare.<div style='margin-top: 14px; display: flex; gap: 8px; flex-wrap: wrap;'><a href='https://www.facebook.com/share/14tuJtmuRGS/?mibextid=wwXIfr' target='_blank' rel='noopener noreferrer' class='btn btn-primary' style='padding: 8px 16px; font-size: 0.85rem;'>▶ Mở Xem Video Kênh MEDDC (Facebook) ↗</a><a href='https://www.facebook.com/share/1HcnkPgAuy/?mibextid=wwXIfr' target='_blank' rel='noopener noreferrer' class='btn btn-outline' style='padding: 8px 16px; font-size: 0.85rem;'>▶ Xem Kênh Thân Tâm ↗</a></div>"
     }},
     workflow: {{
       src: "data:image/jpeg;base64,{workflow_b64}",
-      title: "🎬 Minh Chứng: Quy Trình Lên Kịch Bản &amp; Dựng Video Kênh Thân Tâm",
-      caption: "Hậu trường tự chủ 100% quy trình sản xuất video y tế gia đình Thân Tâm: Soạn thảo storyboard kịch bản phân cảnh chi tiết, thiết bị thu âm chuyên nghiệp Rode Wireless và timeline biên tập CapCut Pro trực quan.<div style='margin-top: 14px;'><a href='https://www.facebook.com/share/1HcnkPgAuy/?mibextid=wwXIfr' target='_blank' rel='noopener noreferrer' class='btn btn-primary' style='padding: 8px 16px; font-size: 0.85rem;'>▶ Mở Xem Kênh Thân Tâm trên Facebook ↗</a></div>"
+      title: "🎬 Minh Chứng: Quy Trình Kênh Chính Thân Tâm (Quản Trị Trực Tiếp)",
+      caption: "Kênh quản trị chính: Hậu trường tự chủ 100% quy trình sản xuất video y tế gia đình Thân Tâm: Soạn thảo storyboard kịch bản phân cảnh chi tiết, thiết bị thu âm chuyên nghiệp Rode Wireless và timeline biên tập CapCut Pro trực quan.<div style='margin-top: 14px;'><a href='https://www.facebook.com/share/1HcnkPgAuy/?mibextid=wwXIfr' target='_blank' rel='noopener noreferrer' class='btn btn-primary' style='padding: 8px 16px; font-size: 0.85rem;'>▶ Mở Xem Kênh Thân Tâm trên Facebook ↗</a></div>"
     }},
     opv: {{
       src: "data:image/jpeg;base64,{opv_b64}",
-      title: "🌿 Minh Chứng: Báo Cáo Tăng Trưởng Fanpage Dược Phẩm OPV",
-      caption: "Dashboard ghi nhận hiệu quả quản trị Fanpage Dược phẩm OPV: Lượng tiếp cận tự nhiên (Organic Reach) tăng 25–30%, tỷ lệ người theo dõi mới tăng từ 2% lên 8% sau 2 tháng tối ưu nội dung và chăm sóc kênh định kỳ.<div style='margin-top: 14px;'><a href='https://www.facebook.com/share/1CR4mtMRDN/?mibextid=wwXIfr' target='_blank' rel='noopener noreferrer' class='btn btn-primary' style='padding: 8px 16px; font-size: 0.85rem;'>▶ Mở Xem Video &amp; Kênh Fanpage OPV (Facebook) ↗</a></div>"
+      title: "🌿 Minh Chứng: Báo Cáo Quản Trị Fanpage Dược Phẩm OPV",
+      caption: "Quản trị Fanpage là chính (không làm Brand Mkt): Dashboard ghi nhận hiệu quả quản trị Fanpage Dược phẩm OPV: Lượng tiếp cận tự nhiên (Organic Reach) tăng 25–30%, tỷ lệ người theo dõi mới tăng từ 2% lên 8% sau 2 tháng tối ưu nội dung và chăm sóc kênh định kỳ.<div style='margin-top: 14px;'><a href='https://www.facebook.com/share/1CR4mtMRDN/?mibextid=wwXIfr' target='_blank' rel='noopener noreferrer' class='btn btn-primary' style='padding: 8px 16px; font-size: 0.85rem;'>▶ Mở Xem Video &amp; Kênh Fanpage OPV (Facebook) ↗</a></div>"
     }},
     dental: {{
       src: "data:image/jpeg;base64,{dental_b64}",
