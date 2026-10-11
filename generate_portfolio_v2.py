@@ -751,6 +751,13 @@ portfolio_html = f'''<!DOCTYPE html>
     color: var(--text-primary);
     margin-bottom: 6px;
   }}
+  .case-title[onclick] {{
+    cursor: pointer;
+    transition: color 0.2s ease;
+  }}
+  .case-title[onclick]:hover {{
+    color: var(--accent);
+  }}
   .case-brands {{
     font-size: 0.85rem;
     font-weight: 700;
@@ -2108,7 +2115,7 @@ portfolio_html = f'''<!DOCTYPE html>
             <span class="case-category-tag">Beauty &amp; Influencer KOC</span>
             <span class="case-timeline">09/2024 – Hiện tại</span>
           </div>
-          <h3 class="case-title">Sáng Tạo Nội Dung Đa Nền Tảng &amp; KOC Reviewer</h3>
+          <h3 class="case-title" onclick="openVideoModal('koc')" title="Bấm xem chi tiết dự án KOC">Sáng Tạo Nội Dung Đa Nền Tảng &amp; KOC Reviewer</h3>
           <div class="case-brands">✨ L’Oréal • Vichy • Eucerin • SVR</div>
           <ul class="case-bullets">
             <li>Tự chủ 100% quy trình từ ý tưởng, kịch bản, quay chụp đến dựng video ngắn review mỹ phẩm chuẩn visual cao cấp.</li>
@@ -2117,6 +2124,14 @@ portfolio_html = f'''<!DOCTYPE html>
           <div class="case-metrics-banner">
             <span class="metric-item">👀 Views trung bình: <strong class="metric-badge">15.000 / tháng (+30%)</strong></span>
             <span class="metric-item">👤 Profile Visits: <strong class="metric-badge">800 lượt (+20%)</strong></span>
+          </div>
+          <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-top: 14px;">
+            <button type="button" onclick="openVideoModal('koc')" class="btn btn-secondary" style="padding: 8px 14px; font-size: 0.82rem; cursor: pointer;">
+              <span>▶ Xem Chi Tiết Dự Án KOC</span>
+            </button>
+            <button type="button" onclick="openLightbox('koc')" class="btn btn-outline" style="padding: 8px 14px; font-size: 0.82rem; cursor: pointer;">
+              <span>🔍 Phóng To Minh Chứng</span>
+            </button>
           </div>
         </div>
       </div>
@@ -2132,7 +2147,7 @@ portfolio_html = f'''<!DOCTYPE html>
             <span class="case-category-tag">B2B Healthcare &amp; Media</span>
             <span class="case-timeline">03/2026 – 09/2026</span>
           </div>
-          <h3 class="case-title">Kênh Truyền Thông Y Tế MEDTV &amp; Giáo Dục Sức Khỏe</h3>
+          <h3 class="case-title" onclick="openVideoModal('medtv')" title="Bấm xem chi tiết video MEDDC">Kênh Truyền Thông Y Tế MEDTV &amp; Giáo Dục Sức Khỏe</h3>
           <div class="case-brands">🏥 Comfort • ColosBaby • Gaviscon x BV Nhi Đồng 1, BV 175</div>
           <ul class="case-bullets">
             <li>Quản trị 2 Fanpage MEDDC &amp; Thân Tâm, kết nối nhãn hàng quốc tế với các bệnh viện đầu ngành qua dự án B2B MEDTV.</li>
@@ -2144,12 +2159,12 @@ portfolio_html = f'''<!DOCTYPE html>
             <span class="metric-item">👥 Followers: <strong class="metric-badge">+547% trong 28 ngày</strong></span>
           </div>
           <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-top: 14px;">
-            <a href="https://www.facebook.com/share/14tuJtmuRGS/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" style="padding: 8px 14px; font-size: 0.82rem;">
-              <span>▶ Xem Video Kênh MEDDC ↗</span>
-            </a>
-            <a href="https://www.facebook.com/share/1HcnkPgAuy/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="padding: 8px 14px; font-size: 0.82rem;">
-              <span>▶ Xem Kênh Thân Tâm ↗</span>
-            </a>
+            <button type="button" onclick="openVideoModal('medtv')" class="btn btn-secondary" style="padding: 8px 14px; font-size: 0.82rem; cursor: pointer;">
+              <span>▶ Xem Chi Tiết Video Kênh MEDDC</span>
+            </button>
+            <button type="button" onclick="openVideoModal('than_tam')" class="btn btn-outline" style="padding: 8px 14px; font-size: 0.82rem; cursor: pointer;">
+              <span>▶ Xem Video Kênh Thân Tâm</span>
+            </button>
           </div>
         </div>
       </div>
@@ -2165,7 +2180,7 @@ portfolio_html = f'''<!DOCTYPE html>
             <span class="case-category-tag">Home Healthcare &amp; Video Media</span>
             <span class="case-timeline">06/2025 – Hiện tại</span>
           </div>
-          <h3 class="case-title">Kênh Thân Tâm — Chăm Sóc Sức Khỏe &amp; Người Cao Tuổi</h3>
+          <h3 class="case-title" onclick="openVideoModal('than_tam')" title="Bấm xem chi tiết video Thân Tâm">Kênh Thân Tâm — Chăm Sóc Sức Khỏe &amp; Người Cao Tuổi</h3>
           <div class="case-brands">🩺 Dịch Vụ Điều Dưỡng &amp; Y Tế Gia Đình (TP. Hồ Chí Minh)</div>
           <ul class="case-bullets">
             <li><strong>Insight:</strong> Dịch vụ điều dưỡng tại gia đòi hỏi niềm tin tuyệt đối; người nhà e ngại về sự an toàn và tay nghề chuyên môn khi gửi gắm cha mẹ.</li>
@@ -2178,11 +2193,11 @@ portfolio_html = f'''<!DOCTYPE html>
             <span class="metric-item">📍 Địa bàn: <strong class="metric-badge">TP. Hồ Chí Minh</strong></span>
           </div>
           <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-top: 14px;">
-            <a href="https://www.facebook.com/share/1HcnkPgAuy/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" style="padding: 8px 14px; font-size: 0.82rem;">
-              <span>▶ Xem Kênh Thân Tâm ↗</span>
-            </a>
-            <button onclick="openLightbox('workflow')" class="btn btn-outline" style="padding: 8px 14px; font-size: 0.82rem;">
-              <span>🔍 Xem Minh Chứng Quy Trình</span>
+            <button type="button" onclick="openVideoModal('than_tam')" class="btn btn-secondary" style="padding: 8px 14px; font-size: 0.82rem; cursor: pointer;">
+              <span>▶ Xem Chi Tiết Video Thân Tâm</span>
+            </button>
+            <button type="button" onclick="openLightbox('workflow')" class="btn btn-outline" style="padding: 8px 14px; font-size: 0.82rem; cursor: pointer;">
+              <span>🎬 Xem Minh Chứng Quy Trình</span>
             </button>
           </div>
         </div>
@@ -2199,7 +2214,7 @@ portfolio_html = f'''<!DOCTYPE html>
             <span class="case-category-tag">Pharma Marketing &amp; Paid Ads</span>
             <span class="case-timeline">12/2024 – 02/2026</span>
           </div>
-          <h3 class="case-title">Chiến Dịch Content Chuẩn SEO &amp; Paid-Ads Đa Kênh</h3>
+          <h3 class="case-title" onclick="openVideoModal('opv')" title="Bấm xem chi tiết video &amp; ads OPV">Chiến Dịch Content Chuẩn SEO &amp; Paid-Ads Đa Kênh</h3>
           <div class="case-brands">💊 Công ty Cổ phần Dược phẩm OPV</div>
           <ul class="case-bullets">
             <li>Lập kế hoạch &amp; viết bài chuẩn SEO Y Dược trên Website, Facebook, TikTok gia tăng thứ hạng tìm kiếm tự nhiên.</li>
@@ -2210,11 +2225,11 @@ portfolio_html = f'''<!DOCTYPE html>
             <span class="metric-item">📊 Tăng trưởng người theo dõi: <strong class="metric-badge">Từ 2-3% lên 7-8%</strong></span>
           </div>
           <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-top: 14px;">
-            <a href="https://www.facebook.com/share/1CR4mtMRDN/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" style="padding: 8px 14px; font-size: 0.82rem;">
-              <span>▶ Xem Video &amp; Kênh OPV Pharmaceutical ↗</span>
-            </a>
-            <button onclick="openLightbox('opv')" class="btn btn-outline" style="padding: 8px 14px; font-size: 0.82rem;">
-              <span>🔍 Phóng To Dashboard</span>
+            <button type="button" onclick="openVideoModal('opv')" class="btn btn-secondary" style="padding: 8px 14px; font-size: 0.82rem; cursor: pointer;">
+              <span>▶ Xem Chi Tiết Video &amp; Ads OPV</span>
+            </button>
+            <button type="button" onclick="openLightbox('opv')" class="btn btn-outline" style="padding: 8px 14px; font-size: 0.82rem; cursor: pointer;">
+              <span>📈 Phóng To Dashboard Paid-Ads</span>
             </button>
           </div>
         </div>
@@ -2231,7 +2246,7 @@ portfolio_html = f'''<!DOCTYPE html>
             <span class="case-category-tag">Customer Experience &amp; Care</span>
             <span class="case-timeline">06/2024 – 12/2024</span>
           </div>
-          <h3 class="case-title">Tối Ưu Trải Nghiệm &amp; Quản Trị Thông Tin Dịch Vụ</h3>
+          <h3 class="case-title" onclick="openLightbox('dental')" title="Bấm xem báo cáo CSAT Nha Khoa Kim">Tối Ưu Trải Nghiệm &amp; Quản Trị Thông Tin Dịch Vụ</h3>
           <div class="case-brands">🦷 Hệ thống Nha Khoa Kim</div>
           <ul class="case-bullets">
             <li>Tư vấn chu đáo quy trình và liệu trình nha khoa chuyên sâu, quản lý tệp thông tin và điều phối đón tiếp cùng bác sĩ.</li>
@@ -2240,6 +2255,11 @@ portfolio_html = f'''<!DOCTYPE html>
           <div class="case-metrics-banner">
             <span class="metric-item">⭐ Tiếp đón &amp; Chăm sóc: <strong class="metric-badge">10 – 15 khách/ngày</strong></span>
             <span class="metric-item">🎯 KPI chất lượng dịch vụ: <strong class="metric-badge">90 – 110%</strong></span>
+          </div>
+          <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-top: 14px;">
+            <button type="button" onclick="openLightbox('dental')" class="btn btn-secondary" style="padding: 8px 14px; font-size: 0.82rem; cursor: pointer;">
+              <span>⭐ Xem Báo Cáo Trải Nghiệm CSAT 4.9/5</span>
+            </button>
           </div>
         </div>
       </div>
@@ -2563,6 +2583,25 @@ portfolio_html = f'''<!DOCTYPE html>
 <script>
   // Video Modal System Data
   const videoModalData = {{
+    koc: {{
+      title: "Sáng Tạo Nội Dung Đa Nền Tảng &amp; KOC Reviewer",
+      category: "Short-form Video • Beauty &amp; Skincare KOC",
+      partner: "✨ L’Oréal • Vichy • Eucerin • SVR",
+      badge: "✨ 15.000+ Views/tháng • 800+ Profile Visits",
+      thumb: "data:image/jpeg;base64,{koc_b64}",
+      fbUrl: "https://www.tiktok.com",
+      proofKey: "koc",
+      proofBtnText: "🔍 Phóng To Minh Chứng KOC &amp; Đơn Hàng",
+      metrics: [
+        {{ value: "15.000+", label: "Views trung bình/tháng", desc: "Tăng trưởng +30%" }},
+        {{ value: "800+", label: "Profile Visits", desc: "Tăng trưởng +20%" }},
+        {{ value: "4 Brand", label: "Hợp tác nhãn hàng", desc: "L'Oréal, Vichy, Eucerin..." }},
+        {{ value: "100%", label: "Tự chủ media", desc: "Ý tưởng, quay dựng iPhone" }}
+      ],
+      insight: "Người xem mỹ phẩm hiện đại rất nhạy cảm với quảng cáo; họ tìm kiếm những video chân thật, quay cận chất kem, đánh giá thẳng thắn hiệu quả và bảng thành phần lành tính.",
+      execution: "Tự chủ 100% quy trình sản xuất video trên iPhone: Lên kịch bản Hook 3 giây, quay cận cảnh kết cấu mỹ phẩm với ánh sáng tự nhiên, thu âm giọng đọc truyền cảm và dựng CapCut Pro bắt nhịp trending.",
+      impact: "Được các nhãn hàng dược mỹ phẩm uy tín gửi PR kit trải nghiệm sản phẩm, đạt mức độ tương tác cao và chuyển đổi đơn hàng vượt trội qua TikTok Shop Affiliate."
+    }},
     medtv: {{
       title: "Kênh MEDDC — Truyền Thông Số Bệnh Viện (MEDTV)",
       category: "Facebook Video • B2B Healthcare",
@@ -2571,6 +2610,7 @@ portfolio_html = f'''<!DOCTYPE html>
       thumb: "data:image/jpeg;base64,{meddc_cover_b64}",
       fbUrl: "https://www.facebook.com/share/14tuJtmuRGS/?mibextid=wwXIfr",
       proofKey: "medtv",
+      proofBtnText: "📈 Xem Báo Cáo Tăng Trưởng Meta",
       metrics: [
         {{ value: "98.474", label: "Lượt xem video", desc: "Reels giáo dục y tế" }},
         {{ value: "+880.5%", label: "Tăng tương tác", desc: "Bình luận &amp; Chia sẻ" }},
@@ -2589,6 +2629,7 @@ portfolio_html = f'''<!DOCTYPE html>
       thumb: "data:image/jpeg;base64,{workflow_b64}",
       fbUrl: "https://www.facebook.com/share/1HcnkPgAuy/?mibextid=wwXIfr",
       proofKey: "workflow",
+      proofBtnText: "🎬 Xem Minh Chứng Quy Trình",
       metrics: [
         {{ value: "100%", label: "Tự chủ quy trình", desc: "Sản xuất Media" }},
         {{ value: "Storyboard", label: "Kịch bản phân cảnh", desc: "Chuẩn chỉ từng shot" }},
@@ -2607,6 +2648,7 @@ portfolio_html = f'''<!DOCTYPE html>
       thumb: "data:image/jpeg;base64,{opv_b64}",
       fbUrl: "https://www.facebook.com/share/1CR4mtMRDN/?mibextid=wwXIfr",
       proofKey: "opv",
+      proofBtnText: "📈 Phóng To Dashboard Paid-Ads",
       metrics: [
         {{ value: "21.6K+", label: "Tổng Followers", desc: "Cộng đồng theo dõi" }},
         {{ value: "+25 – 30%", label: "Tiếp cận tự nhiên", desc: "Organic Reach" }},
@@ -2630,11 +2672,22 @@ portfolio_html = f'''<!DOCTYPE html>
     document.getElementById('vmPlayBtn').href = data.fbUrl;
     document.getElementById('vmFbBannerLink').href = data.fbUrl;
     document.getElementById('vmFooterFbBtn').href = data.fbUrl;
+
+    const isVideo = (key !== 'koc');
+    document.getElementById('vmPlayBtn').style.display = isVideo ? 'flex' : 'none';
+    document.getElementById('vmFbBannerLink').style.display = isVideo ? 'inline-flex' : 'none';
+    document.getElementById('vmFooterFbBtn').style.display = isVideo ? 'inline-flex' : 'none';
+
     document.getElementById('vmInsight').innerHTML = data.insight;
     document.getElementById('vmExecution').innerHTML = data.execution;
     document.getElementById('vmImpact').innerHTML = data.impact;
 
     const proofBtn = document.getElementById('vmProofBtn');
+    if (data.proofBtnText) {{
+      proofBtn.innerHTML = `<span>${{data.proofBtnText}}</span>`;
+    }} else {{
+      proofBtn.innerHTML = `<span>🔍 Phóng To Báo Cáo</span>`;
+    }}
     proofBtn.onclick = function() {{
       closeVideoModalDirect();
       openLightbox(data.proofKey);
