@@ -802,15 +802,3 @@ with open(output_pdf, 'rb') as f:
     pdf_bytes = f.read()
 pages = len(re.findall(rb'/Type\s*/Page\b', pdf_bytes))
 print(f"Verified PDF page count: {pages} pages")
-
-# Screenshot
-subprocess.run([
-    chrome_path,
-    "--headless=new",
-    "--disable-gpu",
-    f"--screenshot={output_preview}",
-    "--window-size=1200,2400",
-    f"file://{output_html}"
-], check=True)
-
-print(f"Exported preview screenshot to {output_preview}")

@@ -631,6 +631,36 @@ portfolio_html = f'''<!DOCTYPE html>
     margin-bottom: 18px;
     flex: 1;
   }}
+  .video-analysis-box {{
+    background: var(--bg-card-sub);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    padding: 12px 14px;
+    margin-bottom: 16px;
+    font-size: 0.82rem;
+    line-height: 1.5;
+  }}
+  .analysis-item {{
+    margin-bottom: 6px;
+    display: flex;
+    align-items: flex-start;
+    gap: 6px;
+    color: var(--text-secondary);
+  }}
+  .analysis-item:last-child {{
+    margin-bottom: 0;
+  }}
+  .analysis-label {{
+    font-weight: 700;
+    color: var(--accent-text);
+    white-space: nowrap;
+    font-size: 0.8rem;
+  }}
+  .btn-group-card {{
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+  }}
 
   /* CASE STUDIES GRID */
   .case-grid {{
@@ -1784,11 +1814,28 @@ portfolio_html = f'''<!DOCTYPE html>
             <p class="video-card-desc">
               Dự án kết nối nhãn hàng quốc tế (Comfort, ColosBaby, Gaviscon...) với các bệnh viện đầu ngành qua chuỗi Reels giáo dục sức khỏe và phóng sự y tế tiếp cận 98.4K+ lượt xem.
             </p>
+            <div class="video-analysis-box">
+              <div class="analysis-item">
+                <span class="analysis-label">🎯 Insight &amp; Bối cảnh:</span>
+                <span>Thông tin y khoa vốn khô cứng; phụ huynh cần kiến thức nhi khoa gần gũi, chính xác từ bác sĩ đầu ngành. Nhãn hàng cần bảo chứng chuyên môn y tế.</span>
+              </div>
+              <div class="analysis-item">
+                <span class="analysis-label">🎬 Thực thi chuyên môn:</span>
+                <span>Biên soạn kịch bản Reels ngắn 45–60s, tối ưu hook 3s đầu, lồng ghép tự nhiên thông điệp nhãn hàng với lời khuyên bác sĩ; quản trị 2 Fanpage MEDDC &amp; Thân Tâm.</span>
+              </div>
+              <div class="analysis-item">
+                <span class="analysis-label">📈 Kết quả định lượng:</span>
+                <span>98.474 lượt xem video • Tương tác tăng vọt +880.5% • Tăng +547% follower trong 28 ngày triển khai.</span>
+              </div>
+            </div>
           </div>
-          <div>
-            <a href="https://www.facebook.com/share/14tuJtmuRGS/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="width: 100%; padding: 11px; font-size: 0.88rem;">
-              <span>▶ Xem Video Kênh MEDDC trên Facebook ↗</span>
+          <div class="btn-group-card">
+            <a href="https://www.facebook.com/share/14tuJtmuRGS/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="flex: 1; padding: 10px; font-size: 0.85rem; text-align: center;">
+              <span>▶ Xem Video Facebook ↗</span>
             </a>
+            <button onclick="openLightbox('medtv')" class="btn btn-outline" style="padding: 10px 14px; font-size: 0.85rem;">
+              <span>🔍 Phóng To Báo Cáo</span>
+            </button>
           </div>
         </div>
       </div>
@@ -1813,11 +1860,28 @@ portfolio_html = f'''<!DOCTYPE html>
             <p class="video-card-desc">
               Chuỗi nội dung video ngắn hướng dẫn chăm sóc y tế tại gia, giải đáp quy trình điều dưỡng chuyên sâu, tạo dựng niềm tin và sự gắn kết bền vững với khách hàng.
             </p>
+            <div class="video-analysis-box">
+              <div class="analysis-item">
+                <span class="analysis-label">🎯 Insight &amp; Bối cảnh:</span>
+                <span>Dịch vụ điều dưỡng tại gia đòi hỏi niềm tin tuyệt đối; người nhà e ngại về tay nghề và sự an toàn khi gửi gắm chăm sóc cha mẹ già.</span>
+              </div>
+              <div class="analysis-item">
+                <span class="analysis-label">🎬 Thực thi chuyên môn:</span>
+                <span>Tự chủ 100% quy trình sản xuất media: Phác thảo storyboard kịch bản phân cảnh, thiết bị thu âm Rode chuyên dụng, biên tập dựng timeline CapCut Pro trực quan.</span>
+              </div>
+              <div class="analysis-item">
+                <span class="analysis-label">🩺 Tác động chuyển đổi:</span>
+                <span>Minh bạch hóa thao tác điều dưỡng giúp xóa tan hoài nghi, nâng cao uy tín thương hiệu và tăng trưởng tỷ lệ inbox tư vấn dịch vụ tại TP.HCM.</span>
+              </div>
+            </div>
           </div>
-          <div>
-            <a href="https://www.facebook.com/share/1HcnkPgAuy/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="width: 100%; padding: 11px; font-size: 0.88rem;">
-              <span>▶ Xem Video Kênh Thân Tâm trên Facebook ↗</span>
+          <div class="btn-group-card">
+            <a href="https://www.facebook.com/share/1HcnkPgAuy/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="flex: 1; padding: 10px; font-size: 0.85rem; text-align: center;">
+              <span>▶ Xem Kênh Thân Tâm ↗</span>
             </a>
+            <button onclick="openLightbox('workflow')" class="btn btn-outline" style="padding: 10px 14px; font-size: 0.85rem;">
+              <span>🔍 Xem Quy Trình Media</span>
+            </button>
           </div>
         </div>
       </div>
@@ -1842,11 +1906,28 @@ portfolio_html = f'''<!DOCTYPE html>
             <p class="video-card-desc">
               Sản xuất video sản phẩm và nội dung bài viết chuẩn SEO Y Dược, kết hợp vận hành quảng cáo Paid-Ads đa kênh, thúc đẩy nhận diện dòng sản phẩm mới tăng trưởng 25–30%.
             </p>
+            <div class="video-analysis-box">
+              <div class="analysis-item">
+                <span class="analysis-label">🎯 Insight &amp; Bối cảnh:</span>
+                <span>Ngành Dược chịu kiểm duyệt chính sách quảng cáo rất gắt gao; giải pháp bền vững là Content-led kết hợp Paid-Ads tối ưu chuyển đổi.</span>
+              </div>
+              <div class="analysis-item">
+                <span class="analysis-label">🎬 Thực thi chuyên môn:</span>
+                <span>Viết chuỗi bài chuẩn SEO Y Dược giải quyết nỗi đau người bệnh; setup và A/B testing chiến dịch Facebook &amp; TikTok Ads đa kênh, tối ưu ngân sách chi tiêu.</span>
+              </div>
+              <div class="analysis-item">
+                <span class="analysis-label">🚀 Kết quả định lượng:</span>
+                <span>Cán mốc 21.6K+ Followers • Tiếp cận tự nhiên tăng 25–30% • Tốc độ tăng trưởng follower mới vọt từ 2-3% lên 7-8%.</span>
+              </div>
+            </div>
           </div>
-          <div>
-            <a href="https://www.facebook.com/share/1CR4mtMRDN/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="width: 100%; padding: 11px; font-size: 0.88rem;">
-              <span>▶ Xem Video Kênh OPV trên Facebook ↗</span>
+          <div class="btn-group-card">
+            <a href="https://www.facebook.com/share/1CR4mtMRDN/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="flex: 1; padding: 10px; font-size: 0.85rem; text-align: center;">
+              <span>▶ Xem Video OPV ↗</span>
             </a>
+            <button onclick="openLightbox('opv')" class="btn btn-outline" style="padding: 10px 14px; font-size: 0.85rem;">
+              <span>🔍 Phóng To Dashboard</span>
+            </button>
           </div>
         </div>
       </div>
@@ -1922,7 +2003,41 @@ portfolio_html = f'''<!DOCTYPE html>
         </div>
       </div>
 
-      <!-- PROJECT 3 -->
+      <!-- PROJECT 3: THÂN TÂM HOME HEALTHCARE -->
+      <div class="case-card">
+        <div class="case-media-header" onclick="openLightbox('workflow')">
+          <img class="case-media-img" src="data:image/jpeg;base64,{workflow_b64}" alt="Case study Kênh Thân Tâm Y Tế Gia Đình">
+          <div class="case-media-overlay">🔍 Bấm xem ảnh minh chứng</div>
+        </div>
+        <div class="case-body">
+          <div class="case-meta-row">
+            <span class="case-category-tag">Home Healthcare &amp; Video Media</span>
+            <span class="case-timeline">06/2025 – Hiện tại</span>
+          </div>
+          <h3 class="case-title">Kênh Thân Tâm — Chăm Sóc Sức Khỏe &amp; Người Cao Tuổi</h3>
+          <div class="case-brands">🩺 Dịch Vụ Điều Dưỡng &amp; Y Tế Gia Đình (TP. Hồ Chí Minh)</div>
+          <ul class="case-bullets">
+            <li><strong>Insight:</strong> Dịch vụ điều dưỡng tại gia đòi hỏi niềm tin tuyệt đối; người nhà e ngại về sự an toàn và tay nghề chuyên môn khi gửi gắm cha mẹ.</li>
+            <li><strong>Thực thi:</strong> Tự chủ 100% quy trình sản xuất media: Lên kịch bản storyboard, thu âm mic Rode, dựng CapCut Pro tái hiện quy trình chăm sóc tại gia.</li>
+            <li><strong>Tác động:</strong> Minh bạch hóa thao tác y tế giúp xóa bỏ rào cản tâm lý, định vị uy tín thương hiệu và tăng trưởng tỷ lệ inbox tư vấn đặt lịch dịch vụ.</li>
+          </ul>
+          <div class="case-metrics-banner">
+            <span class="metric-item">🩺 Định vị: <strong class="metric-badge">Chăm Sóc Y Tế Tại Gia</strong></span>
+            <span class="metric-item">🎬 Quy trình: <strong class="metric-badge">Tự chủ 100% Media</strong></span>
+            <span class="metric-item">📍 Địa bàn: <strong class="metric-badge">TP. Hồ Chí Minh</strong></span>
+          </div>
+          <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-top: 14px;">
+            <a href="https://www.facebook.com/share/1HcnkPgAuy/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" style="padding: 8px 14px; font-size: 0.82rem;">
+              <span>▶ Xem Kênh Thân Tâm ↗</span>
+            </a>
+            <button onclick="openLightbox('workflow')" class="btn btn-outline" style="padding: 8px 14px; font-size: 0.82rem;">
+              <span>🔍 Xem Minh Chứng Quy Trình</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- PROJECT 4: OPV PHARMACEUTICAL -->
       <div class="case-card">
         <div class="case-media-header" onclick="openLightbox('opv')">
           <img class="case-media-img" src="data:image/jpeg;base64,{opv_b64}" alt="Case study Dược phẩm OPV">
@@ -1947,11 +2062,14 @@ portfolio_html = f'''<!DOCTYPE html>
             <a href="https://www.facebook.com/share/1CR4mtMRDN/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" style="padding: 8px 14px; font-size: 0.82rem;">
               <span>▶ Xem Video &amp; Kênh OPV Pharmaceutical ↗</span>
             </a>
+            <button onclick="openLightbox('opv')" class="btn btn-outline" style="padding: 8px 14px; font-size: 0.82rem;">
+              <span>🔍 Phóng To Dashboard</span>
+            </button>
           </div>
         </div>
       </div>
 
-      <!-- PROJECT 4 -->
+      <!-- PROJECT 5: NHA KHOA KIM -->
       <div class="case-card">
         <div class="case-media-header" onclick="openLightbox('dental')">
           <img class="case-media-img" src="data:image/jpeg;base64,{dental_b64}" alt="Case study Nha Khoa Kim">
@@ -2246,8 +2364,8 @@ portfolio_html = f'''<!DOCTYPE html>
     }},
     workflow: {{
       src: "data:image/jpeg;base64,{workflow_b64}",
-      title: "🎬 Minh Chứng: Quy Trình Lên Kịch Bản &amp; Dựng Video CapCut Pro",
-      caption: "Ảnh chụp hậu trường quy trình sản xuất video ngắn: Soạn thảo storyboard kịch bản phân cảnh chi tiết, thiết bị thu âm chuyên nghiệp Rode và timeline biên tập dựng phim hiệu ứng trên máy tính bảng."
+      title: "🎬 Minh Chứng: Quy Trình Lên Kịch Bản &amp; Dựng Video Kênh Thân Tâm",
+      caption: "Hậu trường tự chủ 100% quy trình sản xuất video y tế gia đình Thân Tâm: Soạn thảo storyboard kịch bản phân cảnh chi tiết, thiết bị thu âm chuyên nghiệp Rode Wireless và timeline biên tập CapCut Pro trực quan.<div style='margin-top: 14px;'><a href='https://www.facebook.com/share/1HcnkPgAuy/?mibextid=wwXIfr' target='_blank' rel='noopener noreferrer' class='btn btn-primary' style='padding: 8px 16px; font-size: 0.85rem;'>▶ Mở Xem Kênh Thân Tâm trên Facebook ↗</a></div>"
     }},
     opv: {{
       src: "data:image/jpeg;base64,{opv_b64}",
@@ -2347,21 +2465,4 @@ with open(html_path, 'w', encoding='utf-8') as f:
 
 root_html = '/Users/Admin/Documents/HRM/index.html'
 shutil.copyfile(html_path, root_html)
-
-# Copy HTML to Desktop
-shutil.copyfile(html_path, desktop_html)
-print(f"Generated {html_path}, {root_html} and copied to {desktop_html}")
-
-chrome_path = "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
-
-# Take high-res preview screenshot
-subprocess.run([
-    chrome_path,
-    "--headless=new",
-    "--disable-gpu",
-    f"--screenshot={desktop_preview}",
-    "--window-size=1280,3600",
-    f"file://{html_path}"
-], check=True)
-
-print(f"Exported preview screenshot to {desktop_preview}")
+print(f"Generated {html_path} and {root_html}")
