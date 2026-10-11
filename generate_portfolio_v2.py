@@ -2681,7 +2681,7 @@ portfolio_html = f'''<!DOCTYPE html>
     meddc_cover: {{
       src: "data:image/jpeg;base64,{meddc_cover_b64}",
       title: "🏥 Cover Kênh MEDDC: Truyền Thông Giáo Dục Sức Khỏe Tại Bệnh Viện",
-      caption: "Hệ thống truyền thông số y tế (TV, LED, Digital Standee) kết nối thông tin y tế, nâng cao sức khỏe cộng đồng tại hệ thống bệnh viện hàng đầu (BV Nhi Đồng 1, BV 175).<div style='margin-top: 14px; display: flex; gap: 8px; flex-wrap: wrap;'><a href='https://www.facebook.com/share/14tuJtmuRGS/?mibextid=wwXIfr' target='_blank' rel='noopener noreferrer' class='btn btn-primary' style='padding: 8px 16px; font-size: 0.85rem;'>▶ Mở Xem Video Kênh MEDDC (Facebook) ↗</a><button onclick='closeLightboxDirect(); openLightbox(\"medtv\");' class='btn btn-outline' style='padding: 8px 16px; font-size: 0.85rem;'>📈 Xem Báo Cáo Tăng Trưởng Meta</button></div>"
+      caption: "Hệ thống truyền thông số y tế (TV, LED, Digital Standee) kết nối thông tin y tế, nâng cao sức khỏe cộng đồng tại hệ thống bệnh viện hàng đầu (BV Nhi Đồng 1, BV 175).<div style='margin-top: 14px; display: flex; gap: 8px; flex-wrap: wrap;'><a href='https://www.facebook.com/share/14tuJtmuRGS/?mibextid=wwXIfr' target='_blank' rel='noopener noreferrer' class='btn btn-primary' style='padding: 8px 16px; font-size: 0.85rem;'>▶ Mở Xem Video Kênh MEDDC (Facebook) ↗</a><button data-key='medtv' onclick='closeLightboxDirect(); openLightbox(this.dataset.key);' class='btn btn-outline' style='padding: 8px 16px; font-size: 0.85rem;'>📈 Xem Báo Cáo Tăng Trưởng Meta</button></div>"
     }},
     medtv: {{
       src: "data:image/jpeg;base64,{medtv_b64}",
