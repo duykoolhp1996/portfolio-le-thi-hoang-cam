@@ -1123,206 +1123,6 @@ portfolio_html = f'''<!DOCTYPE html>
     background: rgba(0,0,0,0.9);
   }}
 
-  /* VIDEO SYSTEM MODAL */
-  .video-modal {{
-    position: fixed;
-    inset: 0;
-    background: rgba(18, 24, 21, 0.88);
-    backdrop-filter: blur(12px);
-    z-index: 2100;
-    display: none;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-  }}
-  .video-modal.active {{
-    display: flex;
-  }}
-  .video-modal-dialog {{
-    max-width: 780px;
-    width: 100%;
-    max-height: 92vh;
-    background: #fff;
-    border-radius: var(--radius-md);
-    overflow: hidden;
-    box-shadow: 0 25px 65px rgba(0,0,0,0.5);
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    animation: modalScale 0.28s cubic-bezier(0.16, 1, 0.3, 1);
-  }}
-  .video-modal-close {{
-    position: absolute;
-    top: 14px;
-    right: 14px;
-    width: 38px;
-    height: 38px;
-    border-radius: 50%;
-    background: rgba(0,0,0,0.6);
-    color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    font-size: 1.4rem;
-    border: none;
-    transition: background 0.2s;
-    z-index: 20;
-  }}
-  .video-modal-close:hover {{
-    background: rgba(0,0,0,0.9);
-  }}
-  .video-modal-header {{
-    padding: 22px 24px 14px 24px;
-    border-bottom: 1px solid var(--border-color);
-    background: #fff;
-  }}
-  .video-modal-tags {{
-    display: flex;
-    gap: 8px;
-    align-items: center;
-    margin-bottom: 8px;
-    flex-wrap: wrap;
-  }}
-  .video-modal-title {{
-    font-size: 1.25rem;
-    font-weight: 800;
-    color: var(--text-primary);
-    line-height: 1.35;
-    margin: 0;
-  }}
-  .video-modal-body {{
-    padding: 20px 24px;
-    overflow-y: auto;
-    flex: 1;
-  }}
-  .video-preview-banner {{
-    position: relative;
-    width: 100%;
-    height: 280px;
-    border-radius: var(--radius-sm);
-    overflow: hidden;
-    background: #0d120f;
-    margin-bottom: 20px;
-  }}
-  .video-preview-img {{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.4s ease;
-  }}
-  .video-preview-banner:hover .video-preview-img {{
-    transform: scale(1.04);
-  }}
-  .video-preview-overlay {{
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.25) 50%, rgba(0,0,0,0.4) 100%);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 16px;
-  }}
-  .video-preview-play-btn {{
-    align-self: center;
-    margin-top: auto;
-    margin-bottom: auto;
-    width: 64px;
-    height: 64px;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.95);
-    color: var(--accent-dark);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.6rem;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.4);
-    text-decoration: none;
-    transition: all 0.25s ease;
-  }}
-  .video-preview-play-btn:hover {{
-    transform: scale(1.15);
-    background: var(--accent);
-    color: #fff;
-  }}
-  .video-preview-cta-wrap {{
-    text-align: center;
-  }}
-  .video-preview-fb-btn {{
-    box-shadow: 0 4px 14px rgba(0,0,0,0.4);
-    font-weight: 700;
-  }}
-  .vm-metrics-grid {{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 12px;
-    margin-bottom: 22px;
-  }}
-  .vm-metric-card {{
-    background: var(--bg-card-sub);
-    border: 1px solid var(--border-color);
-    border-radius: var(--radius-sm);
-    padding: 12px 14px;
-    text-align: center;
-  }}
-  .vm-metric-value {{
-    font-size: 1.2rem;
-    font-weight: 800;
-    color: var(--accent-dark);
-    font-family: 'Space Grotesk', sans-serif;
-    margin-bottom: 2px;
-  }}
-  .vm-metric-label {{
-    font-size: 0.74rem;
-    font-weight: 700;
-    color: var(--text-primary);
-    text-transform: uppercase;
-    letter-spacing: 0.3px;
-    margin-bottom: 2px;
-  }}
-  .vm-metric-desc {{
-    font-size: 0.72rem;
-    color: var(--text-muted);
-  }}
-  .vm-analysis-section {{
-    background: #faf9f6;
-    border: 1px solid var(--border-color);
-    border-radius: var(--radius-sm);
-    padding: 18px 20px;
-  }}
-  .vm-section-heading {{
-    font-size: 0.92rem;
-    font-weight: 800;
-    color: var(--accent-text);
-    margin-top: 14px;
-    margin-bottom: 6px;
-    text-transform: uppercase;
-    letter-spacing: 0.4px;
-  }}
-  .vm-section-heading:first-child {{
-    margin-top: 0;
-  }}
-  .vm-text {{
-    font-size: 0.88rem;
-    color: var(--text-secondary);
-    line-height: 1.6;
-    margin: 0;
-  }}
-  .video-modal-footer {{
-    padding: 16px 24px;
-    background: #fff;
-    border-top: 1px solid var(--border-color);
-    display: flex;
-    justify-content: flex-end;
-  }}
-  @media (max-width: 640px) {{
-    .vm-metrics-grid {{
-      grid-template-columns: repeat(2, 1fr);
-    }}
-    .video-preview-banner {{
-      height: 200px;
-    }}
-  }}
 
   /* MOBILE TOGGLE & DRAWER */
   .nav-actions {{
@@ -1998,14 +1798,14 @@ portfolio_html = f'''<!DOCTYPE html>
     <div class="video-grid">
       <!-- VIDEO 1: MEDDC TRUYỀN THÔNG SỐ BỆNH VIỆN -->
       <div class="video-card">
-        <div onclick="openVideoModal('medtv')" class="video-thumb" style="cursor: pointer;" title="Bấm mở popup chi tiết video &amp; hệ thống">
+        <a href="https://www.facebook.com/share/14tuJtmuRGS/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" class="video-thumb" title="Xem video thực tế trên Facebook">
           <img src="data:image/jpeg;base64,{meddc_cover_b64}" alt="Kênh MEDDC Truyền thông số Bệnh viện" class="video-thumb-img">
           <div class="video-play-overlay">
             <span class="video-badge-views">🔥 98.4K+ Views • +880% Tương tác</span>
             <div class="video-play-btn">▶</div>
-            <div style="font-size: 0.76rem; color: #fff; text-align: center; text-shadow: 0 1px 4px rgba(0,0,0,0.8);">Bấm mở popup xem video &amp; hệ thống ↗</div>
+            <div style="font-size: 0.76rem; color: #fff; text-align: center; text-shadow: 0 1px 4px rgba(0,0,0,0.8);">Mở xem video trên Facebook ↗</div>
           </div>
-        </div>
+        </a>
         <div class="video-card-body">
           <div>
             <div class="video-meta-top">
@@ -2032,29 +1832,26 @@ portfolio_html = f'''<!DOCTYPE html>
             </div>
           </div>
           <div class="btn-group-card">
-            <button onclick="openVideoModal('medtv')" class="btn btn-primary" style="flex: 1; padding: 10px; font-size: 0.85rem; text-align: center;">
-              <span>▶ Xem Video &amp; Báo Cáo ↗</span>
-            </button>
-            <button onclick="openLightbox('medtv')" class="btn btn-outline" style="padding: 10px 12px; font-size: 0.82rem;" title="Phóng to ảnh báo cáo Meta">
-              <span>🔍 Báo Cáo</span>
-            </button>
-            <a href="https://www.facebook.com/share/14tuJtmuRGS/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="padding: 10px 12px; font-size: 0.82rem;" title="Mở trực tiếp trên Facebook">
-              <span>FB ↗</span>
+            <a href="https://www.facebook.com/share/14tuJtmuRGS/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="flex: 1; padding: 10px; font-size: 0.85rem; text-align: center;">
+              <span>▶ Xem Video Facebook ↗</span>
             </a>
+            <button onclick="openLightbox('medtv')" class="btn btn-outline" style="padding: 10px 14px; font-size: 0.85rem;" title="Xem báo cáo số liệu Meta Suite">
+              <span>📈 Báo Cáo</span>
+            </button>
           </div>
         </div>
       </div>
 
       <!-- VIDEO 2: THÂN TÂM HOME HEALTHCARE -->
       <div class="video-card">
-        <div onclick="openVideoModal('than_tam')" class="video-thumb" style="cursor: pointer;" title="Bấm mở popup chi tiết video &amp; hệ thống">
+        <a href="https://www.facebook.com/share/1HcnkPgAuy/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" class="video-thumb" title="Xem video thực tế trên Facebook">
           <img src="data:image/jpeg;base64,{workflow_b64}" alt="Kênh Thân Tâm Chăm sóc sức khỏe tại nhà" class="video-thumb-img">
           <div class="video-play-overlay">
             <span class="video-badge-views">🩺 Chăm Sóc Sức Khỏe Tại Nhà</span>
             <div class="video-play-btn">▶</div>
-            <div style="font-size: 0.76rem; color: #fff; text-align: center; text-shadow: 0 1px 4px rgba(0,0,0,0.8);">Bấm mở popup xem video &amp; hệ thống ↗</div>
+            <div style="font-size: 0.76rem; color: #fff; text-align: center; text-shadow: 0 1px 4px rgba(0,0,0,0.8);">Mở xem video trên Facebook ↗</div>
           </div>
-        </div>
+        </a>
         <div class="video-card-body">
           <div>
             <div class="video-meta-top">
@@ -2081,29 +1878,26 @@ portfolio_html = f'''<!DOCTYPE html>
             </div>
           </div>
           <div class="btn-group-card">
-            <button onclick="openVideoModal('than_tam')" class="btn btn-primary" style="flex: 1; padding: 10px; font-size: 0.85rem; text-align: center;">
-              <span>▶ Xem Video &amp; Báo Cáo ↗</span>
-            </button>
-            <button onclick="openLightbox('workflow')" class="btn btn-outline" style="padding: 10px 12px; font-size: 0.82rem;" title="Xem hậu trường quy trình media">
+            <a href="https://www.facebook.com/share/1HcnkPgAuy/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="flex: 1; padding: 10px; font-size: 0.85rem; text-align: center;">
+              <span>▶ Xem Video Facebook ↗</span>
+            </a>
+            <button onclick="openLightbox('workflow')" class="btn btn-outline" style="padding: 10px 14px; font-size: 0.85rem;" title="Xem hậu trường quy trình media">
               <span>🔍 Quy Trình</span>
             </button>
-            <a href="https://www.facebook.com/share/1HcnkPgAuy/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="padding: 10px 12px; font-size: 0.82rem;" title="Mở trực tiếp trên Facebook">
-              <span>FB ↗</span>
-            </a>
           </div>
         </div>
       </div>
 
       <!-- VIDEO 3: OPV PHARMACEUTICAL -->
       <div class="video-card">
-        <div onclick="openVideoModal('opv')" class="video-thumb" style="cursor: pointer;" title="Bấm mở popup chi tiết video &amp; hệ thống">
+        <a href="https://www.facebook.com/share/1CR4mtMRDN/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" class="video-thumb" title="Xem video thực tế trên Facebook">
           <img src="data:image/jpeg;base64,{opv_b64}" alt="Kênh Dược phẩm OPV Pharmaceutical" class="video-thumb-img">
           <div class="video-play-overlay">
             <span class="video-badge-views">💊 21.6K+ Followers • Reach +30%</span>
             <div class="video-play-btn">▶</div>
-            <div style="font-size: 0.76rem; color: #fff; text-align: center; text-shadow: 0 1px 4px rgba(0,0,0,0.8);">Bấm mở popup xem video &amp; hệ thống ↗</div>
+            <div style="font-size: 0.76rem; color: #fff; text-align: center; text-shadow: 0 1px 4px rgba(0,0,0,0.8);">Mở xem video trên Facebook ↗</div>
           </div>
-        </div>
+        </a>
         <div class="video-card-body">
           <div>
             <div class="video-meta-top">
@@ -2130,15 +1924,12 @@ portfolio_html = f'''<!DOCTYPE html>
             </div>
           </div>
           <div class="btn-group-card">
-            <button onclick="openVideoModal('opv')" class="btn btn-primary" style="flex: 1; padding: 10px; font-size: 0.85rem; text-align: center;">
-              <span>▶ Xem Video &amp; Báo Cáo ↗</span>
-            </button>
-            <button onclick="openLightbox('opv')" class="btn btn-outline" style="padding: 10px 12px; font-size: 0.82rem;" title="Phóng to dashboard Paid Ads">
+            <a href="https://www.facebook.com/share/1CR4mtMRDN/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="flex: 1; padding: 10px; font-size: 0.85rem; text-align: center;">
+              <span>▶ Xem Video Facebook ↗</span>
+            </a>
+            <button onclick="openLightbox('opv')" class="btn btn-outline" style="padding: 10px 14px; font-size: 0.85rem;" title="Xem dashboard chiến dịch Paid Ads">
               <span>🔍 Dashboard</span>
             </button>
-            <a href="https://www.facebook.com/share/1CR4mtMRDN/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="padding: 10px 12px; font-size: 0.82rem;" title="Mở trực tiếp trên Facebook">
-              <span>FB ↗</span>
-            </a>
           </div>
         </div>
       </div>
@@ -2541,70 +2332,6 @@ portfolio_html = f'''<!DOCTYPE html>
   </div>
 </footer>
 
-<!-- VIDEO DETAIL MODAL (POPUP HỆ THỐNG) -->
-<div id="videoModal" class="video-modal" onclick="closeVideoModal(event)">
-  <div class="video-modal-dialog" onclick="event.stopPropagation()">
-    <button class="video-modal-close" onclick="closeVideoModalDirect()">&times;</button>
-    
-    <!-- MODAL HEADER -->
-    <div class="video-modal-header">
-      <div class="video-modal-tags">
-        <span id="vmCategory" class="video-source-pill"></span>
-        <span id="vmPartner" class="video-hospital-tag"></span>
-      </div>
-      <h3 id="vmTitle" class="video-modal-title"></h3>
-    </div>
-
-    <!-- MODAL BODY -->
-    <div class="video-modal-body">
-      <!-- VIDEO PREVIEW BANNER -->
-      <div class="video-preview-banner">
-        <img id="vmThumb" src="" alt="Video Preview" class="video-preview-img">
-        <div class="video-preview-overlay">
-          <span id="vmBadge" class="video-badge-views"></span>
-          <a id="vmPlayBtn" href="#" target="_blank" rel="noopener noreferrer" class="video-preview-play-btn" title="Phát Video trên Facebook">
-            ▶
-          </a>
-          <div class="video-preview-cta-wrap">
-            <a id="vmFbBannerLink" href="#" target="_blank" rel="noopener noreferrer" class="btn btn-primary video-preview-fb-btn">
-              <span>▶ Bấm Mở Xem Video Trực Tiếp Trên Facebook ↗</span>
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <!-- METRICS GRID -->
-      <div class="vm-metrics-grid" id="vmMetricsGrid"></div>
-
-      <!-- STRATEGIC ANALYSIS DETAILS -->
-      <div class="vm-analysis-section">
-        <h4 class="vm-section-heading">🎯 Bối Cảnh &amp; Insight Chiến Dịch</h4>
-        <p id="vmInsight" class="vm-text"></p>
-
-        <h4 class="vm-section-heading" style="margin-top: 14px;">🎬 Quy Trình Sản Xuất &amp; Thực Thi Media</h4>
-        <p id="vmExecution" class="vm-text"></p>
-
-        <h4 class="vm-section-heading" style="margin-top: 14px;">📈 Tác Động Định Lượng &amp; Giá Trị Chuyển Đổi</h4>
-        <p id="vmImpact" class="vm-text"></p>
-      </div>
-    </div>
-
-    <!-- MODAL FOOTER -->
-    <div class="video-modal-footer">
-      <div style="display: flex; gap: 10px; width: 100%; flex-wrap: wrap;">
-        <a id="vmFooterFbBtn" href="#" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="flex: 2; min-width: 200px; padding: 12px; font-size: 0.92rem; text-align: center;">
-          <span>▶ Mở Xem Video Trên Facebook ↗</span>
-        </a>
-        <button id="vmProofBtn" onclick="" class="btn btn-outline" style="flex: 1; min-width: 160px; padding: 12px; font-size: 0.92rem;">
-          <span>🔍 Phóng To Báo Cáo</span>
-        </button>
-        <button onclick="closeVideoModalDirect()" class="btn btn-secondary" style="padding: 12px 20px; font-size: 0.92rem;">
-          <span>Đóng</span>
-        </button>
-      </div>
-    </div>
-  </div>
-</div>
 
 <!-- LIGHTBOX MODAL -->
 <div id="lightboxModal" class="lightbox-modal" onclick="closeLightbox(event)">
@@ -2621,110 +2348,6 @@ portfolio_html = f'''<!DOCTYPE html>
 </div>
 
 <script>
-  // Video Modal System Data
-  const videoModalData = {{
-    medtv: {{
-      title: "Kênh MEDDC — Truyền Thông Số Bệnh Viện (MEDTV)",
-      category: "Facebook Video • B2B Healthcare",
-      partner: "🏥 BV Nhi Đồng 1 &amp; BV 175",
-      badge: "🔥 98.4K+ Views • +880% Tương tác",
-      thumb: "data:image/jpeg;base64,{meddc_cover_b64}",
-      fbUrl: "https://www.facebook.com/share/14tuJtmuRGS/?mibextid=wwXIfr",
-      proofKey: "medtv",
-      metrics: [
-        {{ value: "98.474", label: "Lượt xem video", desc: "Reels giáo dục y tế" }},
-        {{ value: "+880.5%", label: "Tăng tương tác", desc: "Bình luận &amp; Chia sẻ" }},
-        {{ value: "+547%", label: "Followers mới", desc: "Trong 28 ngày" }},
-        {{ value: "3+ Brand", label: "Nhãn hàng B2B", desc: "Comfort, ColosBaby..." }}
-      ],
-      insight: "Thông tin y tế thường khô khan; phụ huynh và người bệnh rất cần kiến thức nhi khoa chuẩn xác, dễ hiểu từ bác sĩ đầu ngành. Nhãn hàng quốc tế cần một kênh truyền thông uy tín, có bảo chứng chuyên môn y tế để tài trợ nội dung B2B.",
-      execution: "Biên soạn kịch bản Reels ngắn 45–60 giây, tối ưu Hook 3 giây đầu giữ chân khán giả; lồng ghép tự nhiên thông điệp nhãn hàng với lời khuyên bác sĩ BV Nhi Đồng 1 &amp; BV 175; trực tiếp quản trị và tracking hiệu suất trên Meta Suite.",
-      impact: "Xây dựng định vị kênh truyền thông y tế hàng đầu; tạo dựng niềm tin bền vững giữa bệnh viện, chuyên gia y tế, nhãn hàng tài trợ và cộng đồng phụ huynh."
-    }},
-    than_tam: {{
-      title: "Thân Tâm — Chăm Sóc Sức Khỏe &amp; Người Cao Tuổi",
-      category: "Facebook Video • Y Tế Gia Đình &amp; Home Care",
-      partner: "📍 TP. Hồ Chí Minh (Dịch Vụ Điều Dưỡng)",
-      badge: "🩺 Chăm Sóc Sức Khỏe Tại Nhà",
-      thumb: "data:image/jpeg;base64,{workflow_b64}",
-      fbUrl: "https://www.facebook.com/share/1HcnkPgAuy/?mibextid=wwXIfr",
-      proofKey: "workflow",
-      metrics: [
-        {{ value: "100%", label: "Tự chủ quy trình", desc: "Sản xuất Media" }},
-        {{ value: "Storyboard", label: "Kịch bản phân cảnh", desc: "Chuẩn chỉ từng shot" }},
-        {{ value: "Rode Mic", label: "Thu âm chuyên dụng", desc: "Âm thanh trong trẻo" }},
-        {{ value: "TP.HCM", label: "Địa bàn phục vụ", desc: "Toàn khu vực thành phố" }}
-      ],
-      insight: "Dịch vụ điều dưỡng và y tế gia đình tại nhà đòi hỏi niềm tin tuyệt đối. Rào cản lớn nhất của con cái khi thuê người chăm sóc cha mẹ già là lo ngại về sự an toàn và tay nghề chuyên môn của điều dưỡng viên.",
-      execution: "Tự chủ 100% quy trình sản xuất media: Phác thảo storyboard kịch bản phân cảnh chi tiết, thiết lập mic thu âm Rode Wireless, biên tập dựng timeline CapCut Pro; sản xuất chuỗi video ngắn hướng dẫn chăm sóc y tế tại gia và giải đáp quy trình điều dưỡng chuyên sâu.",
-      impact: "Minh bạch hóa thao tác điều dưỡng giúp xóa tan hoài nghi của thân nhân, nâng cao uy tín thương hiệu dịch vụ chăm sóc tại gia chuẩn mực và tăng trưởng tỷ lệ inbox tư vấn đặt lịch dịch vụ tại TP.HCM."
-    }},
-    opv: {{
-      title: "OPV Pharmaceutical — Video &amp; Truyền Thông Thương Hiệu",
-      category: "Facebook Media • Dược Phẩm &amp; Paid Ads",
-      partner: "🌿 OPV Pharmaceutical",
-      badge: "💊 21.6K+ Followers • Reach +30%",
-      thumb: "data:image/jpeg;base64,{opv_b64}",
-      fbUrl: "https://www.facebook.com/share/1CR4mtMRDN/?mibextid=wwXIfr",
-      proofKey: "opv",
-      metrics: [
-        {{ value: "21.6K+", label: "Tổng Followers", desc: "Cộng đồng theo dõi" }},
-        {{ value: "+25 – 30%", label: "Tiếp cận tự nhiên", desc: "Organic Reach" }},
-        {{ value: "7 – 8%", label: "Tăng trưởng Follower", desc: "Tăng từ mức 2-3%" }},
-        {{ value: "Đa Kênh", label: "Phủ sóng Paid Ads", desc: "Website, FB, TikTok" }}
-      ],
-      insight: "Ngành Dược phẩm chịu kiểm duyệt chính sách quảng cáo rất gắt gao; giải pháp bền vững là mô hình Content-led kết hợp Paid-Ads tối ưu chuyển đổi và gia tăng thứ hạng tìm kiếm tự nhiên.",
-      execution: "Sản xuất video sản phẩm và chuỗi bài viết chuẩn SEO Y Dược giải quyết nỗi đau người bệnh; cài đặt, theo dõi và A/B testing chiến dịch Paid-Ads đa kênh (Facebook Ads, TikTok Ads), tối ưu ngân sách chi tiêu và phân bổ tệp đối tượng chuẩn xác.",
-      impact: "Thúc đẩy nhận diện dòng sản phẩm mới tăng trưởng vượt bậc 25–30%, gia tăng lượng tìm kiếm tự nhiên và chuyển đổi khách hàng tiềm năng bền vững."
-    }}
-  }};
-
-  function openVideoModal(key) {{
-    const data = videoModalData[key];
-    if (!data) return;
-    document.getElementById('vmTitle').innerHTML = data.title;
-    document.getElementById('vmCategory').innerHTML = data.category;
-    document.getElementById('vmPartner').innerHTML = data.partner;
-    document.getElementById('vmBadge').innerHTML = data.badge;
-    document.getElementById('vmThumb').src = data.thumb;
-    document.getElementById('vmPlayBtn').href = data.fbUrl;
-    document.getElementById('vmFbBannerLink').href = data.fbUrl;
-    document.getElementById('vmFooterFbBtn').href = data.fbUrl;
-    document.getElementById('vmInsight').innerHTML = data.insight;
-    document.getElementById('vmExecution').innerHTML = data.execution;
-    document.getElementById('vmImpact').innerHTML = data.impact;
-
-    const proofBtn = document.getElementById('vmProofBtn');
-    proofBtn.onclick = function() {{
-      closeVideoModalDirect();
-      openLightbox(data.proofKey);
-    }};
-
-    // Metrics grid
-    const mg = document.getElementById('vmMetricsGrid');
-    mg.innerHTML = data.metrics.map(m => `
-      <div class="vm-metric-card">
-        <div class="vm-metric-value">${{m.value}}</div>
-        <div class="vm-metric-label">${{m.label}}</div>
-        <div class="vm-metric-desc">${{m.desc}}</div>
-      </div>
-    `).join('');
-
-    document.getElementById('videoModal').classList.add('active');
-    document.body.style.overflow = 'hidden';
-  }}
-
-  function closeVideoModal(e) {{
-    if (e.target.id === 'videoModal') {{
-      closeVideoModalDirect();
-    }}
-  }}
-
-  function closeVideoModalDirect() {{
-    const vm = document.getElementById('videoModal');
-    if (vm) vm.classList.remove('active');
-    document.body.style.overflow = 'auto';
-  }}
 
   // Proof Data for Lightbox
   const proofData = {{
@@ -2794,7 +2417,6 @@ portfolio_html = f'''<!DOCTYPE html>
   document.addEventListener('keydown', function(e) {{
     if (e.key === 'Escape') {{
       closeLightboxDirect();
-      closeVideoModalDirect();
     }}
   }});
 
