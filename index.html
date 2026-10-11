@@ -929,6 +929,152 @@
     color: var(--text-secondary);
     line-height: 1.5;
   }
+  .job-brand-tag {
+    background: #ffffff;
+    border: 1px solid #d9d3c7;
+    padding: 1.5px 8px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 800;
+    color: var(--accent-text);
+  }
+  .timeline-bullets {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+    margin: 8px 0;
+  }
+  .timeline-bullets li {
+    position: relative;
+    padding-left: 16px;
+  }
+  .timeline-bullets li::before {
+    content: "•";
+    position: absolute;
+    left: 2px;
+    top: 0;
+    color: var(--accent);
+    font-weight: 900;
+    font-size: 0.95rem;
+  }
+  .timeline-bullets strong {
+    color: var(--text-primary);
+    font-weight: 700;
+  }
+  .timeline-achievement-box {
+    background: #ffffff;
+    border-radius: 0 8px 8px 0;
+    padding: 10px 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-top: 10px;
+    border: 1px solid var(--border-color);
+    border-left: 3.5px solid var(--accent);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+  }
+  .timeline-achievement-title {
+    font-size: 0.78rem;
+    font-weight: 900;
+    color: var(--accent-text);
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .timeline-achievement-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    font-size: 0.82rem;
+    color: var(--text-primary);
+    line-height: 1.45;
+  }
+  .timeline-achievement-list li {
+    position: relative;
+    padding-left: 16px;
+  }
+  .timeline-achievement-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+    font-weight: 900;
+  }
+  .badge-metric {
+    display: inline-block;
+    background: #E8EFE9;
+    color: #264A31;
+    font-weight: 800;
+    padding: 1px 6px;
+    border-radius: 4px;
+    border: 0.5px solid #CCDDCF;
+  }
+  .about-card-banner {
+    background: var(--bg-card);
+    border: 1.5px solid var(--accent-border);
+    border-radius: var(--radius-md);
+    padding: 18px 22px;
+    margin-bottom: 28px;
+    position: relative;
+    box-shadow: var(--shadow-sm);
+  }
+  .about-card-title {
+    font-size: 0.92rem;
+    font-weight: 800;
+    color: var(--accent-text);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .about-card-desc {
+    font-size: 0.92rem;
+    line-height: 1.65;
+    color: var(--text-secondary);
+  }
+  .about-card-desc strong {
+    color: var(--text-primary);
+  }
+  .cv-modal-box {
+    background: var(--bg-card);
+    border-radius: var(--radius-lg);
+    max-width: 980px;
+    width: 95%;
+    max-height: 94vh;
+    overflow: hidden;
+    position: relative;
+    box-shadow: var(--shadow-lg);
+    display: flex;
+    flex-direction: column;
+    animation: modalScaleUp 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .cv-modal-iframe-wrap {
+    padding: 16px;
+    background: #cbd5e1;
+    height: 75vh;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  .cv-modal-iframe {
+    width: 100%;
+    height: 100%;
+    min-height: 600px;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    background: #fff;
+  }
 
   /* NĂNG LỰC TRONG CỘT NĂNG LỰC */
   .competency-item {
@@ -1761,6 +1907,9 @@
       <li><a href="#contact" class="nav-link">Liên hệ</a></li>
     </ul>
     <div class="nav-actions">
+      <button type="button" onclick="openCvModal()" class="btn btn-outline nav-cv-btn" style="border-color: var(--accent); color: var(--accent-dark); font-weight: 700; background: #fff; cursor: pointer;">
+        <span>👁️ Xem CV A4</span>
+      </button>
       <a href="CV_Le_Thi_Hoang_Cam_A4_2Trang.pdf" target="_blank" class="btn btn-primary nav-cv-btn">
         <span>📄 Tải CV PDF</span>
       </a>
@@ -1791,10 +1940,13 @@
       <li><a href="#evidence" onclick="closeMobileMenu()" class="mobile-nav-link">🔍 Minh chứng thực tế <span class="nav-badge-pill">7 Proofs</span></a></li>
       <li><a href="#videos" onclick="closeMobileMenu()" class="mobile-nav-link">🎬 Video đã làm <span class="nav-badge-pill" style="background:#e0f2fe; color:#0369a1;">3 Kênh</span></a></li>
       <li><a href="#projects" onclick="closeMobileMenu()" class="mobile-nav-link">💼 Dự án &amp; Case Studies</a></li>
-      <li><a href="#skills" onclick="closeMobileMenu()" class="mobile-nav-link">⚡ Kỹ năng (Kinh nghiệm &amp; Năng lực)</a></li>
+      <li><a href="#skills" onclick="closeMobileMenu()" class="mobile-nav-link">⚡ Hồ sơ CV chuẩn 100%</a></li>
       <li><a href="#contact" onclick="closeMobileMenu()" class="mobile-nav-link">📞 Liên hệ ứng tuyển</a></li>
     </ul>
     <div class="mobile-drawer-footer">
+      <button type="button" onclick="closeMobileMenu(); openCvModal();" class="btn btn-outline" style="width: 100%; justify-content: center; font-size: 0.9rem; padding: 12px; margin-bottom: 10px; border-color: var(--accent); color: var(--accent-dark); font-weight: 700;">
+        <span>👁️ Xem Trực Tiếp CV A4 (Bản Gốc)</span>
+      </button>
       <a href="CV_Le_Thi_Hoang_Cam_A4_2Trang.pdf" target="_blank" class="btn btn-primary" style="width: 100%; justify-content: center; font-size: 0.9rem; padding: 12px;">
         <span>📄 Tải CV Đầy Đủ (Có Ảnh &amp; SĐT)</span>
       </a>
@@ -1820,14 +1972,14 @@
         Hơn <strong>3 năm kinh nghiệm thực chiến</strong> tự chủ quy trình sản xuất Content &amp; Short-form Video (Reels, TikTok), quản trị tương tác Fanpage và truyền thông Y Tế &amp; Làm Đẹp. Mọi kết quả đều được kiểm chứng bằng số liệu và sản phẩm truyền thông thực tế.
       </p>
       <div class="hero-cta-group">
-        <a href="#evidence" class="btn btn-primary" style="padding: 12px 24px; font-size: 0.95rem;">
+        <button type="button" onclick="openCvModal()" class="btn btn-primary" style="padding: 12px 22px; font-size: 0.95rem; cursor: pointer;">
+          <span>👁️ Xem CV A4 Trực Tiếp</span>
+        </button>
+        <a href="#evidence" class="btn btn-secondary" style="padding: 12px 20px; font-size: 0.95rem;">
           <span>🔍 Xem Minh Chứng</span>
         </a>
-        <a href="#videos" class="btn btn-secondary" style="padding: 12px 22px; font-size: 0.95rem;">
-          <span>🎬 Xem Video Đã Làm</span>
-        </a>
-        <a href="#projects" class="btn btn-outline" style="padding: 12px 20px;">
-          <span>Dự án Case Studies</span>
+        <a href="#skills" class="btn btn-outline" style="padding: 12px 18px;">
+          <span>Hồ Sơ CV Chuẩn 100%</span>
         </a>
         <a href="tel:0363123121" class="btn btn-outline" style="padding: 12px 18px;">
           <span>📞 0363 123 121</span>
@@ -2295,30 +2447,43 @@
   </div>
 </section>
 
-<!-- SKILLS SYSTEM: KINH NGHIỆM & NĂNG LỰC THỰC CHIẾN -->
+<!-- SKILLS SYSTEM: KINH NGHIỆM & NĂNG LỰC THỰC CHIẾN (CHUẨN 100% CV) -->
 <section id="skills" class="section section-alt">
   <div class="container">
     <div class="section-header">
-      <span class="section-tag">Hồ Sơ Chuyên Môn</span>
-      <h2 class="section-title">Kỹ Năng: Kinh Nghiệm &amp; Năng Lực</h2>
-      <p class="section-subtitle">Kỹ năng vững vàng được minh chứng qua Hành trình Kinh nghiệm thực tế kết hợp Hệ thống Năng lực chuyên môn toàn diện.</p>
+      <span class="section-tag" style="background: var(--accent-soft); color: var(--accent-text); border-color: var(--accent-border);">Đồng Bộ 100% Hồ Sơ CV</span>
+      <h2 class="section-title">Kỹ Năng: Kinh Nghiệm &amp; Năng Lực Chuẩn CV</h2>
+      <p class="section-subtitle">Toàn bộ 4 chặng kinh nghiệm thực tế, số liệu chứng minh, học vấn cử nhân và chứng chỉ chuyên môn được chuẩn hóa khớp 100% với bản CV chính thức của Lê Thị Hoàng Cẩm.</p>
+    </div>
+
+    <!-- MỤC TIÊU NGHỀ NGHIỆP & ĐỊNH VỊ BẢN THÂN (100% KHỚP CV) -->
+    <div class="about-card-banner">
+      <div class="about-card-title">
+        <div style="display: flex; align-items: center; gap: 8px;">
+          <span>🎯 Mục Tiêu Nghề Nghiệp &amp; Định Vị Bản Thân</span>
+        </div>
+        <span class="lime-pill" style="font-size: 0.75rem; background: var(--accent-soft); color: var(--accent-text); padding: 3px 10px; border-radius: 9999px; border: 1px solid var(--accent-border);">Trích nguyên văn từ CV A4</span>
+      </div>
+      <p class="about-card-desc">
+        Chuyên viên <strong>Marketing Executive</strong> với hơn <strong>3 năm kinh nghiệm</strong> thực chiến, sở hữu năng lực toàn diện về <strong>Content Marketing</strong> và <strong>Digital Marketing</strong> đa nền tảng (Facebook, TikTok, Reels, Threads, Website). Thế mạnh nổi trội trong mảng <strong>Healthcare Marketing (Y tế &amp; Dược phẩm)</strong> và <strong>Beauty/FMCG</strong>, có kinh nghiệm triển khai dự án B2B kết nối nhãn hàng lớn với bệnh viện. Thành thạo quy trình từ nghiên cứu insight, sáng tạo nội dung, chạy chiến dịch quảng cáo đa kênh đến phân tích hiệu suất và tối ưu tỷ lệ chuyển đổi.
+      </p>
     </div>
 
     <!-- BỐ CỤC CHIA LÀM: KINH NGHIỆM VÀ NĂNG LỰC -->
     <div class="skills-dual-grid">
 
-      <!-- CỘT 1: KINH NGHIỆM THỰC CHIẾN -->
+      <!-- CỘT 1: KINH NGHIỆM THỰC CHIẾN (100% KHỚP CV) -->
       <div class="skills-dual-col">
         <div class="skills-dual-col-header">
           <div class="skills-dual-icon">💼</div>
           <div>
-            <div class="skills-dual-badge">Hành Trình Thực Tế</div>
+            <div class="skills-dual-badge">Hành Trình Thực Tế (4 Chặng)</div>
             <h3 class="skills-dual-title">Kinh Nghiệm Làm Việc</h3>
           </div>
         </div>
 
         <div class="dual-timeline-wrap">
-          <!-- EXP 1 -->
+          <!-- JOB 1 -->
           <div class="dual-timeline-item">
             <div class="dual-timeline-dot"></div>
             <div class="dual-timeline-card">
@@ -2326,44 +2491,83 @@
                 <span class="dual-timeline-role">Content Creator &amp; KOC Reviewer</span>
                 <span class="dual-timeline-date">09/2024 – HIỆN TẠI</span>
               </div>
-              <div class="dual-timeline-company">Độc Lập • Hợp tác: L’Oréal • Vichy • Eucerin • SVR</div>
-              <p class="dual-timeline-desc">
-                Creator &amp; KOC là một: Tự chủ kịch bản, quay dựng video ngắn review mỹ phẩm trên iPhone; hợp tác nhận PR kit cùng các nhãn hàng da liễu; duy trì 15.000+ views/tháng và vận hành Affiliate TikTok Shop đạt GMV 239M đ.
-              </p>
+              <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 6px; margin-bottom: 6px;">
+                <div class="dual-timeline-company" style="margin-bottom: 0;">Sáng tạo nội dung &amp; Đánh giá trải nghiệm mỹ phẩm</div>
+                <span class="job-brand-tag">L’Oréal • Vichy • Eucerin • SVR</span>
+              </div>
+              <ul class="timeline-bullets">
+                <li><strong>Creator &amp; KOC là một:</strong> Tự chủ 100% quy trình từ lên ý tưởng, viết kịch bản, quay dựng video ngắn review mỹ phẩm trên iPhone (TikTok, Reels, Threads); hợp tác nhận PR kit từ nhãn hàng uy tín.</li>
+                <li>Vận hành affiliate TikTok Shop đa kênh, quản trị tiến độ và bắt trúng xu hướng thịnh hành giới trẻ, đạt GMV 239M đ.</li>
+              </ul>
+              <div class="timeline-achievement-box">
+                <div class="timeline-achievement-title">
+                  <span>🏆 Kết quả &amp; Thành tựu nổi bật:</span>
+                </div>
+                <ul class="timeline-achievement-list">
+                  <li>Được các thương hiệu mỹ phẩm hàng đầu (<strong>L’Oréal, Vichy, Eucerin, SVR,...</strong>) gửi lời mời tham dự sự kiện ra mắt độc quyền và sản xuất video review tại sự kiện.</li>
+                  <li>Kênh cá nhân đạt trung bình <span class="badge-metric">15.000 lượt hiển thị/tháng (+30%)</span> và <span class="badge-metric">800 lượt truy cập profile (+20%)</span>.</li>
+                </ul>
+              </div>
             </div>
           </div>
 
-          <!-- EXP 2 -->
+          <!-- JOB 2 -->
           <div class="dual-timeline-item">
             <div class="dual-timeline-dot"></div>
             <div class="dual-timeline-card">
               <div class="dual-timeline-top">
-                <span class="dual-timeline-role">Chuyên viên Content &amp; Quản Trị Kênh</span>
+                <span class="dual-timeline-role">Chuyên viên Content &amp; Quản trị Kênh</span>
                 <span class="dual-timeline-date">03/2026 – 09/2026</span>
               </div>
-              <div class="dual-timeline-company">Công ty TNHH Đào tạo &amp; Chăm sóc Sức khỏe Thân Tâm</div>
-              <p class="dual-timeline-desc">
-                Trực tiếp quản lý và tự chủ 100% media cho kênh chính Thân Tâm (Y tế tại nhà); đồng thời tham gia khởi tạo và phát triển kênh mới MEDDC (dự án truyền thông số kết nối BV Nhi Đồng 1, BV 175); đạt 98.4K lượt xem và tương tác tăng +880.5%.
-              </p>
+              <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 6px; margin-bottom: 6px;">
+                <div class="dual-timeline-company" style="margin-bottom: 0;">Công ty TNHH Đào tạo &amp; Chăm sóc Sức khỏe Thân Tâm</div>
+                <span class="job-brand-tag" style="background: #e0f2fe; color: #0369a1; border-color: #bae6fd;">Kênh Thân Tâm (Chính) &amp; MEDDC</span>
+              </div>
+              <ul class="timeline-bullets">
+                <li><strong>Kênh chính Thân Tâm (Quản trị trực tiếp):</strong> Tự chủ 100% quy trình media (storyboard, thu âm mic Rode, dựng CapCut Pro) chuyên đề chăm sóc người cao tuổi và y tế gia đình tại TP.HCM.</li>
+                <li><strong>Kênh mới MEDDC (Khởi tạo khi vào làm):</strong> Tham gia xây dựng từ đầu chuỗi Reels/TikTok truyền thông số y tế (MEDTV), kết nối nhãn hàng lớn (Comfort, ColosBaby, Gaviscon...) với bệnh viện đầu ngành (BV Nhi Đồng 1, BV 175).</li>
+              </ul>
+              <div class="timeline-achievement-box">
+                <div class="timeline-achievement-title">
+                  <span>🏆 Kết quả &amp; Thành tựu nổi bật:</span>
+                </div>
+                <ul class="timeline-achievement-list">
+                  <li>Đạt <span class="badge-metric">98.474 lượt xem</span> và <span class="badge-metric">37.417 người tiếp cận</span> chỉ trong 28 ngày qua chiến lược Reels đánh trúng insight.</li>
+                  <li>Tăng trưởng <span class="badge-metric">+880,5% tương tác</span> và tăng <span class="badge-metric">+547% người theo dõi (+110 organic followers)</span> trong 28 ngày.</li>
+                </ul>
+              </div>
             </div>
           </div>
 
-          <!-- EXP 3 -->
+          <!-- JOB 3 -->
           <div class="dual-timeline-item">
             <div class="dual-timeline-dot"></div>
             <div class="dual-timeline-card">
               <div class="dual-timeline-top">
-                <span class="dual-timeline-role">Chuyên viên Content &amp; Quản Trị Fanpage</span>
+                <span class="dual-timeline-role">Chuyên viên Content &amp; Quản trị Fanpage</span>
                 <span class="dual-timeline-date">12/2024 – 02/2026</span>
               </div>
-              <div class="dual-timeline-company">Công ty Cổ phần Dược phẩm OPV</div>
-              <p class="dual-timeline-desc">
-                Lập kế hoạch nội dung chuẩn SEO y dược, trực tiếp quản lý và chăm sóc Fanpage OPV; tối ưu tương tác cộng đồng giúp độ tiếp cận tự nhiên (Reach) của trang tăng 25–30%. (Không phụ trách Brand Mkt).
-              </p>
+              <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 6px; margin-bottom: 6px;">
+                <div class="dual-timeline-company" style="margin-bottom: 0;">Công ty Cổ phần Dược phẩm OPV</div>
+                <span class="job-brand-tag">Pharma Content &amp; Fanpage</span>
+              </div>
+              <ul class="timeline-bullets">
+                <li>Lập kế hoạch &amp; sản xuất nội dung bài viết chuẩn SEO Y Dược; phối hợp cùng Designer sản xuất tư liệu hình ảnh và hỗ trợ tối ưu giao diện website.</li>
+                <li><strong>Quản trị Fanpage là chính:</strong> Trực tiếp chăm sóc, kiểm duyệt và phản hồi tương tác cộng đồng trên Fanpage OPV (không phụ trách Brand Mkt); theo dõi báo cáo tăng trưởng tiếp cận tự nhiên của trang định kỳ.</li>
+              </ul>
+              <div class="timeline-achievement-box">
+                <div class="timeline-achievement-title">
+                  <span>🏆 Kết quả &amp; Thành tựu nổi bật:</span>
+                </div>
+                <ul class="timeline-achievement-list">
+                  <li>Tăng <span class="badge-metric">25 – 30% tiếp cận &amp; tương tác tự nhiên</span> sau 2 tháng triển khai kế hoạch nội dung mới.</li>
+                  <li>Thúc đẩy tỷ lệ tăng trưởng người theo dõi fanpage từ <strong>2-3% lên 7-8%</strong> ổn định.</li>
+                </ul>
+              </div>
             </div>
           </div>
 
-          <!-- EXP 4 -->
+          <!-- JOB 4 -->
           <div class="dual-timeline-item">
             <div class="dual-timeline-dot"></div>
             <div class="dual-timeline-card">
@@ -2371,87 +2575,102 @@
                 <span class="dual-timeline-role">Chuyên viên Chăm sóc &amp; Trải nghiệm Khách hàng</span>
                 <span class="dual-timeline-date">06/2024 – 12/2024</span>
               </div>
-              <div class="dual-timeline-company">Hệ thống Nha Khoa Kim</div>
-              <p class="dual-timeline-desc">
-                Tư vấn liệu trình chuyên sâu, điều phối đón tiếp 10–15 khách/ngày cùng bác sĩ, duy trì 90–110% KPI chất lượng dịch vụ và CSAT 4.9/5 sao.
-              </p>
+              <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 6px; margin-bottom: 6px;">
+                <div class="dual-timeline-company" style="margin-bottom: 0;">Hệ thống Nha Khoa Kim</div>
+                <span class="job-brand-tag">Dịch vụ Khách hàng</span>
+              </div>
+              <ul class="timeline-bullets">
+                <li>Hướng dẫn, giải đáp quy trình điều trị y tế chuyên sâu; quản lý thông tin khách hàng và phối hợp với bác sĩ tối ưu quy trình đón tiếp giúp giảm thiểu thời gian chờ khám của khách hàng.</li>
+              </ul>
+              <div class="timeline-achievement-box">
+                <div class="timeline-achievement-title">
+                  <span>🏆 Kết quả &amp; Thành tựu nổi bật:</span>
+                </div>
+                <ul class="timeline-achievement-list">
+                  <li>Tiếp đón và hỗ trợ chu đáo <span class="badge-metric">10 – 15 khách/ngày</span>, xuất sắc đạt <span class="badge-metric">90 – 110% KPI</span> chất lượng dịch vụ được giao.</li>
+                  <li>Duy trì tỷ lệ khách hàng cũ quay lại tái khám và tỷ lệ khách hài lòng dịch vụ ở mức cao.</li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- CỘT 2: NĂNG LỰC CỐT LÕI & CÔNG CỤ -->
+      <!-- CỘT 2: HỌC VẤN, CHỨNG CHỈ, KỸ NĂNG & CÔNG CỤ (100% KHỚP CV) -->
       <div class="skills-dual-col">
         <div class="skills-dual-col-header">
           <div class="skills-dual-icon">⭐</div>
           <div>
-            <div class="skills-dual-badge">Thế Mạnh &amp; Kỹ Thuật</div>
-            <h3 class="skills-dual-title">Năng Lực &amp; Bộ Kỹ Năng</h3>
+            <div class="skills-dual-badge">Học Vấn &amp; Năng Lực (Khớp 100% CV)</div>
+            <h3 class="skills-dual-title">Bằng Cấp, Kỹ Năng &amp; Công Cụ</h3>
           </div>
         </div>
 
-        <!-- 5 THẾ MẠNH CỐT LÕI -->
+        <!-- HỌC VẤN & BẰNG CẤP -->
         <div class="competency-item">
           <div class="competency-item-top">
-            <span class="competency-item-icon">💡</span>
-            <h4 class="competency-item-title">Chiến Lược Content Dựa Trên Dữ Liệu &amp; Insight</h4>
+            <span class="competency-item-icon">🎓</span>
+            <div style="flex: 1;">
+              <div style="display: flex; justify-content: space-between; align-items: center;">
+                <h4 class="competency-item-title">Đại học Sài Gòn</h4>
+                <span class="dual-timeline-date">2019 – 2023</span>
+              </div>
+              <div style="font-size: 0.84rem; font-weight: 700; color: var(--accent-dark); margin-top: 2px;">Cử nhân Thông Tin – Thư Viện</div>
+            </div>
           </div>
-          <p class="competency-item-desc">
-            Cử nhân ĐH Sài Gòn với tư duy cấu trúc thông tin khoa học, phân tích sâu hành vi độc giả để sáng tạo nội dung có tính chuyển đổi cao.
+          <p class="competency-item-desc" style="margin-top: 6px;">
+            Thế mạnh: Khai thác, cấu trúc dữ liệu &amp; quản trị thông tin chuẩn xác. Vận dụng tư duy logic và khoa học thông tin vào tối ưu hóa nội dung truyền thông.
           </p>
         </div>
 
+        <!-- CHỨNG CHỈ CHUYÊN MÔN -->
         <div class="competency-item">
           <div class="competency-item-top">
-            <span class="competency-item-icon">🏥</span>
-            <h4 class="competency-item-title">Am Hiểu Y Dược &amp; Dược Mỹ Phẩm (Healthcare &amp; FMCG)</h4>
+            <span class="competency-item-icon">📜</span>
+            <h4 class="competency-item-title">Chứng Chỉ Chuyên Môn</h4>
           </div>
-          <p class="competency-item-desc">
-            Nắm vững quy chuẩn truyền thông y tế, thấu hiểu tâm lý phụ huynh, bệnh nhân và kết nối thông điệp tài trợ nhãn hàng B2B.
-          </p>
+          <div style="display: flex; flex-direction: column; gap: 8px; margin-top: 8px;">
+            <div style="background: #fff; padding: 10px 12px; border-radius: 8px; border: 1px solid var(--border-color);">
+              <div style="display: flex; justify-content: space-between; align-items: center;">
+                <strong style="font-size: 0.86rem; color: var(--text-primary);">TOEIC Speaking &amp; Writing</strong>
+                <span class="dual-timeline-date" style="font-size: 0.7rem;">06/2024</span>
+              </div>
+              <p style="font-size: 0.8rem; color: var(--text-secondary); margin: 2px 0 0 0;">Kỹ năng giao tiếp và biên soạn thông điệp quảng cáo chuyên nghiệp.</p>
+            </div>
+            <div style="background: #fff; padding: 10px 12px; border-radius: 8px; border: 1px solid var(--border-color);">
+              <div style="display: flex; justify-content: space-between; align-items: center;">
+                <strong style="font-size: 0.86rem; color: var(--text-primary);">Tin Học Văn Phòng MOS (Microsoft Office)</strong>
+                <span class="dual-timeline-date" style="font-size: 0.7rem;">06/2023</span>
+              </div>
+              <p style="font-size: 0.8rem; color: var(--text-secondary); margin: 2px 0 0 0;">Thành thạo Excel báo cáo dữ liệu, Word kịch bản &amp; PowerPoint.</p>
+            </div>
+          </div>
         </div>
 
+        <!-- KỸ NĂNG BỔ TRỢ (SOFT SKILLS) -->
         <div class="competency-item">
           <div class="competency-item-top">
-            <span class="competency-item-icon">🎬</span>
-            <h4 class="competency-item-title">Tự Chủ Sản Xuất Short-form Video Độc Lập</h4>
+            <span class="competency-item-icon">🌟</span>
+            <h4 class="competency-item-title">Kỹ Năng Bổ Trợ (Soft Skills)</h4>
           </div>
-          <p class="competency-item-desc">
-            Trọn gói từ ý tưởng Hook 3 giây, storyboard, quay trên iPhone, mic thu âm Rode đến dựng hậu kỳ CapCut Pro.
-          </p>
+          <ul class="timeline-bullets" style="margin-top: 6px;">
+            <li><strong>Bắt trend nhạy bén:</strong> Nắm bắt nhanh thuật toán TikTok/Reels &amp; xu hướng thị hiếu giới trẻ.</li>
+            <li><strong>Thấu hiểu khách hàng:</strong> Khéo léo, am hiểu sâu tâm lý và hành vi người tiêu dùng đa độ tuổi.</li>
+            <li><strong>Cam kết tiến độ:</strong> Trách nhiệm cao, kỷ luật deadline và phối hợp nhịp nhàng đa phòng ban.</li>
+          </ul>
         </div>
 
-        <div class="competency-item">
-          <div class="competency-item-top">
-            <span class="competency-item-icon">📊</span>
-            <h4 class="competency-item-title">Quản Trị Kênh &amp; Đo Lường Tăng Trưởng (Social Media Growth)</h4>
-          </div>
-          <p class="competency-item-desc">
-            Thành thạo Meta Business Suite, TikTok Analytics; theo dõi và tối ưu hóa Organic Reach, Engagement Rate, phân tích dữ liệu hiệu suất bài viết và chuyển đổi đơn hàng.
-          </p>
-        </div>
-
-        <div class="competency-item">
-          <div class="competency-item-top">
-            <span class="competency-item-icon">🤝</span>
-            <h4 class="competency-item-title">Quản Trị Trải Nghiệm Khách Hàng Đa Điểm Chạm</h4>
-          </div>
-          <p class="competency-item-desc">
-            Kinh nghiệm CSKH Nha Khoa Kim giúp đặt sự ân cần và thấu hiểu khách hàng làm trọng tâm cho mọi chiến dịch truyền thông.
-          </p>
-        </div>
-
-        <!-- MARKETING SKILLS PILLS -->
+        <!-- KỸ NĂNG CHUYÊN MÔN -->
         <div class="dual-skill-box">
-          <h4 class="dual-skill-box-title">🎯 Kỹ Năng Marketing Chuyên Môn</h4>
+          <h4 class="dual-skill-box-title">🎯 Kỹ Năng Chuyên Môn (Theo CV)</h4>
           <div class="skill-pill-list">
-            <span class="skill-pill">✍️ <strong>Content Strategy</strong></span>
             <span class="skill-pill">🎬 <strong>Short-form Video</strong></span>
+            <span class="skill-pill">✍️ <strong>Content &amp; Copywriting</strong></span>
             <span class="skill-pill">📈 <strong>Quản Trị Fanpage &amp; Kênh</strong></span>
-            <span class="skill-pill">🔍 <strong>SEO Y Dược</strong></span>
-            <span class="skill-pill">🤝 <strong>B2B Healthcare Media</strong></span>
-            <span class="skill-pill">👥 <strong>KOC / Influencer Review</strong></span>
-            <span class="skill-pill">💖 <strong>Customer Experience CSAT</strong></span>
+            <span class="skill-pill">🔍 <strong>Nội Dung Chuẩn SEO</strong></span>
+            <span class="skill-pill">🏥 <strong>B2B Healthcare Media</strong></span>
+            <span class="skill-pill">👥 <strong>KOC Reviewer Độc Lập</strong></span>
+            <span class="skill-pill">💖 <strong>Trải Nghiệm Khách Hàng CSAT</strong></span>
           </div>
         </div>
 
@@ -2461,11 +2680,24 @@
           <div class="skill-pill-list">
             <span class="skill-pill">✨ <strong>CapCut Pro</strong></span>
             <span class="skill-pill">🎨 <strong>Canva Pro</strong></span>
-            <span class="skill-pill">🤖 <strong>Gemini &amp; ChatGPT</strong></span>
+            <span class="skill-pill">🤖 <strong>GenAI (Gemini, ChatGPT)</strong></span>
             <span class="skill-pill">📊 <strong>Meta Business Suite</strong></span>
             <span class="skill-pill">📱 <strong>TikTok Creator Hub</strong></span>
-            <span class="skill-pill">🖌️ <strong>Photoshop &amp; Premiere</strong></span>
             <span class="skill-pill">📑 <strong>Google Docs &amp; Sheets</strong></span>
+          </div>
+        </div>
+
+        <!-- NÚT XEM CV TRỰC TIẾP -->
+        <div style="margin-top: 20px; padding: 14px; background: #fff; border-radius: 12px; border: 1.5px dashed var(--accent); text-align: center;">
+          <div style="font-weight: 800; font-size: 0.92rem; color: var(--accent-dark); margin-bottom: 6px;">📄 Xem Bản In Gốc A4 Chuẩn 2 Trang</div>
+          <p style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 10px;">Xem trực tiếp bản PDF chính thức với bố cục thiết kế in ấn tiêu chuẩn.</p>
+          <div style="display: flex; gap: 8px; justify-content: center; flex-wrap: wrap;">
+            <button type="button" onclick="openCvModal()" class="btn btn-primary" style="padding: 8px 16px; font-size: 0.84rem;">
+              <span>👁️ Xem CV A4 Trực Tiếp</span>
+            </button>
+            <a href="CV_Le_Thi_Hoang_Cam_A4_2Trang.pdf" target="_blank" class="btn btn-outline" style="padding: 8px 14px; font-size: 0.84rem;">
+              <span>📥 Tải PDF Về Máy</span>
+            </a>
           </div>
         </div>
 
@@ -2620,6 +2852,38 @@
     <div class="lightbox-info">
       <div id="lightboxTitle" class="lightbox-title"></div>
       <div id="lightboxCaption" class="lightbox-caption"></div>
+    </div>
+  </div>
+</div>
+
+<!-- CV DIRECT VIEWER MODAL (100% BẢN GỐC CV LÊ THỊ HOÀNG CẨM) -->
+<div id="cvModal" class="video-modal" onclick="closeCvModal(event)">
+  <div class="cv-modal-box" onclick="event.stopPropagation()">
+    <div class="video-modal-header" style="background: var(--bg-main); padding: 16px 20px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border-color);">
+      <div>
+        <span class="video-hospital-tag" style="background: var(--accent-soft); color: var(--accent-text);">📄 Bản In Chuẩn A4 2 Trang</span>
+        <h3 style="font-size: 1.15rem; font-weight: 800; color: var(--text-primary); margin-top: 4px;">CV Lê Thị Hoàng Cẩm — Marketing Executive (Bản Gốc 100%)</h3>
+      </div>
+      <button type="button" class="video-modal-close" onclick="closeCvModalDirect()" style="position: static; font-size: 1.6rem; background: none; border: none; cursor: pointer; color: var(--text-muted);">&times;</button>
+    </div>
+    <div class="cv-modal-iframe-wrap">
+      <iframe src="CV_Le_Thi_Hoang_Cam_A4_2Trang.html" class="cv-modal-iframe" title="CV Lê Thị Hoàng Cẩm A4"></iframe>
+    </div>
+    <div class="video-modal-footer" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; padding: 14px 20px; border-top: 1px solid var(--border-color); background: var(--bg-main);">
+      <div style="font-size: 0.85rem; color: var(--text-muted);">
+        ✨ Bản in hai trang chuẩn quốc tế của ứng viên Lê Thị Hoàng Cẩm.
+      </div>
+      <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+        <a href="CV_Le_Thi_Hoang_Cam_A4_2Trang.pdf" target="_blank" class="btn btn-primary" style="padding: 8px 16px; font-size: 0.85rem;">
+          <span>📄 Tải PDF Bản Đầy Đủ</span>
+        </a>
+        <a href="CV_Le_Thi_Hoang_Cam_AnDanh.pdf" target="_blank" class="btn btn-secondary" style="padding: 8px 16px; font-size: 0.85rem;">
+          <span>🔒 Tải Bản Ẩn Danh</span>
+        </a>
+        <button type="button" onclick="closeCvModalDirect()" class="btn btn-outline" style="padding: 8px 14px; font-size: 0.85rem; cursor: pointer;">
+          <span>Đóng</span>
+        </button>
+      </div>
     </div>
   </div>
 </div>
@@ -2828,10 +3092,29 @@
     document.body.style.overflow = 'auto';
   }
 
+  function openCvModal() {
+    const cm = document.getElementById('cvModal');
+    if (cm) cm.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeCvModal(event) {
+    if (event.target.id === 'cvModal') {
+      closeCvModalDirect();
+    }
+  }
+
+  function closeCvModalDirect() {
+    const cm = document.getElementById('cvModal');
+    if (cm) cm.classList.remove('active');
+    document.body.style.overflow = 'auto';
+  }
+
   document.addEventListener('keydown', function(e) {
     if (e.key === 'Escape') {
       closeLightboxDirect();
       closeVideoModalDirect();
+      closeCvModalDirect();
     }
   });
 

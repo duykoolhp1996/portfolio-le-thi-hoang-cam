@@ -779,7 +779,9 @@ print(f"Exported PDF to {output_pdf}")
 shutil.copyfile(output_pdf, output_desktop_pdf)
 portfolio_pdf = '/Users/Admin/Documents/HRM/portfolio/CV_Le_Thi_Hoang_Cam_A4_2Trang.pdf'
 shutil.copyfile(output_pdf, portfolio_pdf)
-print(f"Copied PDF to {output_desktop_pdf} and {portfolio_pdf}")
+portfolio_html = '/Users/Admin/Documents/HRM/portfolio/CV_Le_Thi_Hoang_Cam_A4_2Trang.html'
+shutil.copyfile(output_html, portfolio_html)
+print(f"Copied PDF and HTML to portfolio/")
 
 # Check page count
 with open(output_pdf, 'rb') as f:
