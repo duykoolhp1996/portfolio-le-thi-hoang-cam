@@ -1985,20 +1985,20 @@ portfolio_html = f'''<!DOCTYPE html>
         </div>
       </div>
 
-      <!-- PROOF 4: OPV PHARMA ADS DASHBOARD -->
+      <!-- PROOF 4: OPV PHARMA FANPAGE MANAGEMENT -->
       <div class="evidence-card" data-evidence="data" onclick="openLightbox('opv')">
         <div class="evidence-thumb-wrap">
-          <span class="evidence-pill-tag">Dashboard Paid Ads &amp; SEO</span>
-          <img class="evidence-img" src="data:image/jpeg;base64,{opv_b64}" alt="Báo cáo hiệu quả Ads Dược phẩm OPV">
+          <span class="evidence-pill-tag">Quản Trị Fanpage &amp; Content</span>
+          <img class="evidence-img" src="data:image/jpeg;base64,{opv_b64}" alt="Báo cáo hiệu quả Fanpage Dược phẩm OPV">
           <div class="evidence-zoom-overlay">🔍 Bấm xem ảnh phóng to</div>
         </div>
         <div class="evidence-content">
           <div>
-            <h3 class="evidence-title">Chiến Dịch Content SEO &amp; Paid-Ads Dược Phẩm</h3>
-            <p class="evidence-caption">Vận hành quảng cáo Facebook &amp; TikTok Ads cho Dược phẩm OPV kết hợp tối ưu SEO web, thúc đẩy reach tự nhiên tăng 25–30%.</p>
+            <h3 class="evidence-title">Quản Trị Fanpage &amp; Nội Dung Dược Phẩm OPV</h3>
+            <p class="evidence-caption">Lập kế hoạch nội dung chuẩn Y Dược, trực tiếp quản lý và chăm sóc Fanpage OPV, thúc đẩy lượng tiếp cận tự nhiên của trang tăng 25–30%.</p>
           </div>
           <div>
-            <span class="evidence-stat-badge">🚀 Reach tự nhiên +30% • Follower +8%</span>
+            <span class="evidence-stat-badge">🌿 Reach tự nhiên Page +30% • Follower +8%</span>
           </div>
         </div>
       </div>
@@ -2116,7 +2116,7 @@ portfolio_html = f'''<!DOCTYPE html>
         <div onclick="openVideoModal('opv')" class="video-thumb" style="cursor: pointer;" title="Bấm mở popup chi tiết video &amp; hệ thống">
           <img src="data:image/jpeg;base64,{opv_b64}" alt="Kênh Dược phẩm OPV Pharmaceutical" class="video-thumb-img">
           <div class="video-play-overlay">
-            <span class="video-badge-views">💊 21.6K+ Followers • Reach +30%</span>
+            <span class="video-badge-views">🌿 21.6K+ Followers • Reach Page +30%</span>
             <div class="video-play-btn">▶</div>
             <div style="font-size: 0.76rem; color: #fff; text-align: center; text-shadow: 0 1px 4px rgba(0,0,0,0.8);">Bấm mở xem chi tiết &amp; video ↗</div>
           </div>
@@ -2124,17 +2124,17 @@ portfolio_html = f'''<!DOCTYPE html>
         <div class="video-card-body">
           <div>
             <div class="video-meta-top">
-              <span class="video-source-pill">Facebook Media • Dược Phẩm</span>
+              <span class="video-source-pill">Facebook Media • Quản Trị Fanpage</span>
               <span class="video-hospital-tag">🌿 OPV Pharmaceutical</span>
             </div>
-            <h3 onclick="openVideoModal('opv')" class="video-card-title" style="cursor: pointer;" title="Bấm mở popup chi tiết video &amp; hệ thống">OPV Pharmaceutical — Video &amp; Truyền Thông Thương Hiệu</h3>
+            <h3 onclick="openVideoModal('opv')" class="video-card-title" style="cursor: pointer;" title="Bấm mở popup chi tiết video &amp; hệ thống">OPV Pharmaceutical — Video &amp; Quản Trị Kênh Fanpage</h3>
             <p class="video-card-desc">
-              Sản xuất video sản phẩm và nội dung bài viết chuẩn SEO Y Dược, kết hợp vận hành quảng cáo Paid-Ads đa kênh, thúc đẩy nhận diện dòng sản phẩm mới tăng trưởng 25–30%.
+              Quản trị Fanpage OPV, biên tập nội dung bài viết và video ngắn chuẩn SEO y dược, chăm sóc tương tác cộng đồng và duy trì lượng tiếp cận tự nhiên ổn định cho trang.
             </p>
           </div>
           <div>
             <button type="button" onclick="openVideoModal('opv')" class="btn btn-primary" style="width: 100%; justify-content: center; padding: 12px 16px; font-size: 0.88rem; font-weight: 700; border-radius: 9999px; cursor: pointer;">
-              <span>▶ Xem Video Kênh OPV trên Facebook ↗</span>
+              <span>▶ Xem Chi Tiết Kênh Fanpage OPV ↗</span>
             </button>
           </div>
         </div>
@@ -2261,25 +2261,25 @@ portfolio_html = f'''<!DOCTYPE html>
         </div>
         <div class="case-body">
           <div class="case-meta-row">
-            <span class="case-category-tag">Pharma Marketing &amp; Paid Ads</span>
+            <span class="case-category-tag">Pharma Marketing &amp; Fanpage Management</span>
             <span class="case-timeline">12/2024 – 02/2026</span>
           </div>
-          <h3 class="case-title" onclick="openVideoModal('opv')" title="Bấm xem chi tiết video &amp; ads OPV">Chiến Dịch Content Chuẩn SEO &amp; Paid-Ads Đa Kênh</h3>
+          <h3 class="case-title" onclick="openVideoModal('opv')" title="Bấm xem chi tiết dự án OPV">Quản Trị Fanpage &amp; Kế Hoạch Content Dược Phẩm</h3>
           <div class="case-brands">💊 Công ty Cổ phần Dược phẩm OPV</div>
           <ul class="case-bullets">
-            <li>Lập kế hoạch &amp; viết bài chuẩn SEO Y Dược trên Website, Facebook, TikTok gia tăng thứ hạng tìm kiếm tự nhiên.</li>
-            <li>Cài đặt, theo dõi và tối ưu chiến dịch Paid-Ads (Facebook Ads, TikTok Ads) giúp tăng nhận diện dòng sản phẩm mới.</li>
+            <li>Lập kế hoạch nội dung định kỳ và biên soạn bài viết, kịch bản video chuẩn SEO Y Dược theo đúng quy định truyền thông Dược phẩm.</li>
+            <li>Trực tiếp quản lý và chăm sóc Fanpage OPV, tương tác cộng đồng người theo dõi, phối hợp cùng Designer sản xuất tư liệu và theo dõi báo cáo trang.</li>
           </ul>
           <div class="case-metrics-banner">
             <span class="metric-item">🚀 Tiếp cận tự nhiên: <strong class="metric-badge">+25 – 30%</strong></span>
-            <span class="metric-item">📊 Tăng trưởng người theo dõi: <strong class="metric-badge">Từ 2-3% lên 7-8%</strong></span>
+            <span class="metric-item">👥 Tăng trưởng người theo dõi: <strong class="metric-badge">Từ 2-3% lên 7-8%</strong></span>
           </div>
           <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-top: 14px;">
             <button type="button" onclick="openVideoModal('opv')" class="btn btn-secondary" style="padding: 8px 14px; font-size: 0.82rem; cursor: pointer;">
-              <span>▶ Xem Chi Tiết Video &amp; Ads OPV</span>
+              <span>▶ Xem Chi Tiết Kênh Fanpage OPV</span>
             </button>
             <button type="button" onclick="openLightbox('opv')" class="btn btn-outline" style="padding: 8px 14px; font-size: 0.82rem; cursor: pointer;">
-              <span>📈 Phóng To Dashboard Paid-Ads</span>
+              <span>📈 Phóng To Báo Cáo Page</span>
             </button>
           </div>
         </div>
@@ -2376,12 +2376,12 @@ portfolio_html = f'''<!DOCTYPE html>
             <div class="dual-timeline-dot"></div>
             <div class="dual-timeline-card">
               <div class="dual-timeline-top">
-                <span class="dual-timeline-role">Chuyên viên Content &amp; Digital Marketing</span>
+                <span class="dual-timeline-role">Chuyên viên Content &amp; Quản Trị Fanpage</span>
                 <span class="dual-timeline-date">12/2024 – 02/2026</span>
               </div>
               <div class="dual-timeline-company">Công ty Cổ phần Dược phẩm OPV</div>
               <p class="dual-timeline-desc">
-                Sản xuất nội dung chuẩn SEO Y Dược và điều phối chiến dịch quảng cáo Paid-Ads (Facebook Ads, TikTok Ads) giúp độ tiếp cận tự nhiên tăng 25–30%.
+                Lập kế hoạch nội dung chuẩn SEO y dược, trực tiếp quản lý và chăm sóc Fanpage OPV; tối ưu tương tác cộng đồng giúp độ tiếp cận tự nhiên (Reach) của trang tăng 25–30%.
               </p>
             </div>
           </div>
@@ -2708,23 +2708,23 @@ portfolio_html = f'''<!DOCTYPE html>
       impact: "Minh bạch hóa thao tác điều dưỡng giúp xóa tan hoài nghi của thân nhân, nâng cao uy tín thương hiệu dịch vụ chăm sóc tại gia chuẩn mực và tăng trưởng tỷ lệ inbox tư vấn đặt lịch dịch vụ tại TP.HCM."
     }},
     opv: {{
-      title: "OPV Pharmaceutical — Video &amp; Truyền Thông Thương Hiệu",
-      category: "Facebook Media • Dược Phẩm &amp; Paid Ads",
+      title: "OPV Pharmaceutical — Video &amp; Quản Trị Kênh Fanpage",
+      category: "Facebook Media • Quản Trị Fanpage Dược Phẩm",
       partner: "🌿 OPV Pharmaceutical",
-      badge: "💊 21.6K+ Followers • Reach +30%",
+      badge: "🌿 21.6K+ Followers • Reach Page +30%",
       thumb: "data:image/jpeg;base64,{opv_b64}",
       fbUrl: "https://www.facebook.com/share/1CR4mtMRDN/?mibextid=wwXIfr",
       proofKey: "opv",
-      proofBtnText: "📈 Phóng To Dashboard Paid-Ads",
+      proofBtnText: "📈 Phóng To Báo Cáo Tăng Trưởng Page",
       metrics: [
-        {{ value: "21.6K+", label: "Tổng Followers", desc: "Cộng đồng theo dõi" }},
-        {{ value: "+25 – 30%", label: "Tiếp cận tự nhiên", desc: "Organic Reach" }},
+        {{ value: "21.6K+", label: "Cộng đồng Fanpage", desc: "Người theo dõi trang" }},
+        {{ value: "+25 – 30%", label: "Tiếp cận tự nhiên", desc: "Organic Reach trang" }},
         {{ value: "7 – 8%", label: "Tăng trưởng Follower", desc: "Tăng từ mức 2-3%" }},
-        {{ value: "Đa Kênh", label: "Phủ sóng Paid Ads", desc: "Website, FB, TikTok" }}
+        {{ value: "100%", label: "Chăm sóc Fanpage", desc: "Nội dung &amp; Tương tác" }}
       ],
-      insight: "Ngành Dược phẩm chịu kiểm duyệt chính sách quảng cáo rất gắt gao; giải pháp bền vững là mô hình Content-led kết hợp Paid-Ads tối ưu chuyển đổi và gia tăng thứ hạng tìm kiếm tự nhiên.",
-      execution: "Sản xuất video sản phẩm và chuỗi bài viết chuẩn SEO Y Dược giải quyết nỗi đau người bệnh; cài đặt, theo dõi và A/B testing chiến dịch Paid-Ads đa kênh (Facebook Ads, TikTok Ads), tối ưu ngân sách chi tiêu và phân bổ tệp đối tượng chuẩn xác.",
-      impact: "Thúc đẩy nhận diện dòng sản phẩm mới tăng trưởng vượt bậc 25–30%, gia tăng lượng tìm kiếm tự nhiên và chuyển đổi khách hàng tiềm năng bền vững."
+      insight: "Fanpage Dược phẩm đòi hỏi thông tin chuẩn xác, đáng tin cậy và tuân thủ nghiêm ngặt quy định y tế; người dùng cần nội dung dễ hiểu giải đáp đúng thắc mắc sức khỏe thường gặp.",
+      execution: "Lập lịch nội dung định kỳ, trực tiếp quản trị Fanpage OPV, chăm sóc tương tác và xây dựng chuỗi bài viết/video ngắn chia sẻ kiến thức dược phẩm; theo dõi chỉ số hiệu suất trên Meta Suite để liên tục tối ưu nội dung.",
+      impact: "Duy trì lượng tiếp cận tự nhiên của Fanpage tăng trưởng 25–30%, giữ vững sự gắn kết của cộng đồng 21.6K+ followers và gia tăng mức độ nhận diện thương hiệu bền vững."
     }}
   }};
 
@@ -2815,8 +2815,8 @@ portfolio_html = f'''<!DOCTYPE html>
     }},
     opv: {{
       src: "data:image/jpeg;base64,{opv_b64}",
-      title: "🚀 Minh Chứng: Dashboard Paid Ads &amp; Tăng Trưởng SEO Dược Phẩm OPV",
-      caption: "Báo cáo chiến dịch Paid Advertising đa kênh (Facebook, TikTok Ads) và biểu đồ lượng tìm kiếm tự nhiên (Organic Reach) tăng 25–30%, tỷ lệ người theo dõi mới tăng từ 2% lên 8% sau 2 tháng tối ưu.<div style='margin-top: 14px;'><a href='https://www.facebook.com/share/1CR4mtMRDN/?mibextid=wwXIfr' target='_blank' rel='noopener noreferrer' class='btn btn-primary' style='padding: 8px 16px; font-size: 0.85rem;'>▶ Mở Xem Video &amp; Kênh OPV (Facebook) ↗</a></div>"
+      title: "🌿 Minh Chứng: Báo Cáo Tăng Trưởng Fanpage Dược Phẩm OPV",
+      caption: "Dashboard ghi nhận hiệu quả quản trị Fanpage Dược phẩm OPV: Lượng tiếp cận tự nhiên (Organic Reach) tăng 25–30%, tỷ lệ người theo dõi mới tăng từ 2% lên 8% sau 2 tháng tối ưu nội dung và chăm sóc kênh định kỳ.<div style='margin-top: 14px;'><a href='https://www.facebook.com/share/1CR4mtMRDN/?mibextid=wwXIfr' target='_blank' rel='noopener noreferrer' class='btn btn-primary' style='padding: 8px 16px; font-size: 0.85rem;'>▶ Mở Xem Video &amp; Kênh Fanpage OPV (Facebook) ↗</a></div>"
     }},
     dental: {{
       src: "data:image/jpeg;base64,{dental_b64}",
