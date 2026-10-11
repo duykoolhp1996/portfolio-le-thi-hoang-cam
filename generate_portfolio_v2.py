@@ -817,69 +817,186 @@ portfolio_html = f'''<!DOCTYPE html>
     font-weight: 800;
   }}
 
-  /* ABOUT BENTO SECTION */
-  .about-grid {{
+  /* SKILLS DUAL SYSTEM: KINH NGHIỆM & NĂNG LỰC */
+  .skills-dual-grid {{
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+    grid-template-columns: 1.05fr 0.95fr;
+    gap: 32px;
+    align-items: start;
   }}
-  .bento-card {{
-    background: var(--bg-card);
+  @media (max-width: 992px) {{
+    .skills-dual-grid {{
+      grid-template-columns: 1fr;
+      gap: 28px;
+    }}
+  }}
+  .skills-dual-col {{
+    background: #fff;
     border: 1px solid var(--border-color);
-    border-radius: var(--radius-md);
-    padding: 24px;
+    border-radius: var(--radius-lg);
+    padding: 32px 28px;
     box-shadow: var(--shadow-sm);
-    transition: all 0.25s ease;
   }}
-  .bento-card:hover {{
-    transform: translateY(-3px);
-    border-color: var(--accent-border);
+  .skills-dual-col-header {{
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 24px;
+    padding-bottom: 18px;
+    border-bottom: 2px solid var(--accent-soft);
   }}
-  .bento-card-span2 {{
-    grid-column: span 2;
-  }}
-  .bento-icon {{
-    width: 42px;
-    height: 42px;
+  .skills-dual-icon {{
+    width: 48px;
+    height: 48px;
     border-radius: var(--radius-sm);
     background: var(--accent-soft);
     color: var(--accent);
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.25rem;
-    margin-bottom: 14px;
+    font-size: 1.4rem;
+    flex-shrink: 0;
   }}
-  .bento-title {{
-    font-size: 1.15rem;
+  .skills-dual-badge {{
+    display: inline-block;
+    font-size: 0.74rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--accent-dark);
+    margin-bottom: 2px;
+  }}
+  .skills-dual-title {{
+    font-size: 1.35rem;
     font-weight: 800;
     color: var(--text-primary);
-    margin-bottom: 6px;
-  }}
-  .bento-desc {{
-    font-size: 0.9rem;
-    color: var(--text-secondary);
-    line-height: 1.55;
   }}
 
-  /* SKILLS & ECOSYSTEM */
-  .skills-grid {{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 24px;
+  /* TIMELINE TRONG CỘT KINH NGHIỆM */
+  .dual-timeline-wrap {{
+    position: relative;
+    padding-left: 28px;
   }}
-  .skill-box {{
-    background: var(--bg-card);
+  .dual-timeline-wrap::before {{
+    content: '';
+    position: absolute;
+    top: 10px;
+    bottom: 10px;
+    left: 8px;
+    width: 2px;
+    background: var(--accent-border);
+  }}
+  .dual-timeline-item {{
+    position: relative;
+    margin-bottom: 20px;
+  }}
+  .dual-timeline-item:last-child {{
+    margin-bottom: 0;
+  }}
+  .dual-timeline-dot {{
+    position: absolute;
+    left: -28px;
+    top: 8px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #fff;
+    border: 3.5px solid var(--accent);
+    box-shadow: 0 0 0 2px rgba(91, 130, 102, 0.18);
+  }}
+  .dual-timeline-card {{
+    background: var(--bg-card-sub);
     border: 1px solid var(--border-color);
     border-radius: var(--radius-md);
-    padding: 28px;
+    padding: 16px 18px;
+    transition: all 0.2s ease;
+  }}
+  .dual-timeline-card:hover {{
+    border-color: var(--accent-border);
+    background: #fff;
     box-shadow: var(--shadow-sm);
   }}
-  .skill-box-title {{
-    font-size: 1.2rem;
+  .dual-timeline-top {{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 8px;
+    margin-bottom: 4px;
+    flex-wrap: wrap;
+  }}
+  .dual-timeline-role {{
+    font-size: 1rem;
     font-weight: 800;
     color: var(--text-primary);
-    margin-bottom: 16px;
+    line-height: 1.35;
+  }}
+  .dual-timeline-date {{
+    font-size: 0.74rem;
+    font-weight: 700;
+    color: var(--accent);
+    background: var(--accent-soft);
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-family: 'Space Grotesk', sans-serif;
+    white-space: nowrap;
+  }}
+  .dual-timeline-company {{
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: var(--accent-dark);
+    margin-bottom: 6px;
+  }}
+  .dual-timeline-desc {{
+    font-size: 0.86rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+  }}
+
+  /* NĂNG LỰC TRONG CỘT NĂNG LỰC */
+  .competency-item {{
+    background: var(--bg-card-sub);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 14px 16px;
+    margin-bottom: 12px;
+    transition: all 0.2s ease;
+  }}
+  .competency-item:hover {{
+    border-color: var(--accent-border);
+    background: #fff;
+    box-shadow: var(--shadow-sm);
+  }}
+  .competency-item-top {{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 6px;
+  }}
+  .competency-item-icon {{
+    font-size: 1.15rem;
+  }}
+  .competency-item-title {{
+    font-size: 0.96rem;
+    font-weight: 800;
+    color: var(--text-primary);
+  }}
+  .competency-item-desc {{
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    line-height: 1.48;
+  }}
+
+  /* SKILL PILLS BOXES */
+  .dual-skill-box {{
+    margin-top: 18px;
+    padding-top: 16px;
+    border-top: 1px dashed var(--border-color);
+  }}
+  .dual-skill-box-title {{
+    font-size: 0.95rem;
+    font-weight: 800;
+    color: var(--text-primary);
+    margin-bottom: 12px;
     display: flex;
     align-items: center;
     gap: 8px;
@@ -892,9 +1009,9 @@ portfolio_html = f'''<!DOCTYPE html>
   .skill-pill {{
     background: var(--bg-card-sub);
     border: 1px solid var(--border-color);
-    padding: 7px 14px;
+    padding: 6px 12px;
     border-radius: var(--radius-full);
-    font-size: 0.85rem;
+    font-size: 0.82rem;
     font-weight: 600;
     color: var(--text-primary);
     display: flex;
@@ -909,71 +1026,6 @@ portfolio_html = f'''<!DOCTYPE html>
   }}
   .skill-pill strong {{
     color: var(--accent-dark);
-  }}
-
-  /* TIMELINE */
-  .timeline-wrap {{
-    position: relative;
-    max-width: 860px;
-    margin: 0 auto;
-  }}
-  .timeline-wrap::before {{
-    content: '';
-    position: absolute;
-    top: 10px;
-    bottom: 10px;
-    left: 20px;
-    width: 2px;
-    background: var(--accent-border);
-  }}
-  .timeline-item {{
-    position: relative;
-    padding-left: 56px;
-    margin-bottom: 24px;
-  }}
-  .timeline-dot {{
-    position: absolute;
-    left: 12px;
-    top: 16px;
-    width: 18px;
-    height: 18px;
-    border-radius: 50%;
-    background: #fff;
-    border: 4px solid var(--accent);
-    box-shadow: 0 0 0 3px rgba(91, 130, 102, 0.15);
-  }}
-  .timeline-card {{
-    background: var(--bg-card);
-    border: 1px solid var(--border-color);
-    border-radius: var(--radius-md);
-    padding: 18px 22px;
-    box-shadow: var(--shadow-sm);
-  }}
-  .timeline-header {{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 4px;
-  }}
-  .timeline-role {{
-    font-size: 1.05rem;
-    font-weight: 800;
-    color: var(--text-primary);
-  }}
-  .timeline-date {{
-    font-size: 0.78rem;
-    font-weight: 700;
-    color: var(--accent);
-    background: var(--accent-soft);
-    padding: 2px 8px;
-    border-radius: 4px;
-    font-family: 'Space Grotesk', sans-serif;
-  }}
-  .timeline-company {{
-    font-size: 0.85rem;
-    color: var(--text-secondary);
-    font-weight: 600;
-    margin-bottom: 6px;
   }}
 
   /* CONTACT CARD */
@@ -1727,8 +1779,7 @@ portfolio_html = f'''<!DOCTYPE html>
       <li><a href="#evidence" class="nav-link">Minh chứng thực tế <span class="nav-badge-pill">7 Proofs</span></a></li>
       <li><a href="#videos" class="nav-link">🎬 Video đã làm <span class="nav-badge-pill" style="background:#e0f2fe; color:#0369a1;">3 Kênh</span></a></li>
       <li><a href="#projects" class="nav-link">Dự án &amp; Case Studies</a></li>
-      <li><a href="#about" class="nav-link">Năng lực cốt lõi</a></li>
-      <li><a href="#skills" class="nav-link">Công cụ &amp; AI</a></li>
+      <li><a href="#skills" class="nav-link">Kỹ năng (Kinh nghiệm &amp; Năng lực)</a></li>
       <li><a href="#contact" class="nav-link">Liên hệ</a></li>
     </ul>
     <div class="nav-actions">
@@ -1762,8 +1813,7 @@ portfolio_html = f'''<!DOCTYPE html>
       <li><a href="#evidence" onclick="closeMobileMenu()" class="mobile-nav-link">🔍 Minh chứng thực tế <span class="nav-badge-pill">7 Proofs</span></a></li>
       <li><a href="#videos" onclick="closeMobileMenu()" class="mobile-nav-link">🎬 Video đã làm <span class="nav-badge-pill" style="background:#e0f2fe; color:#0369a1;">3 Kênh</span></a></li>
       <li><a href="#projects" onclick="closeMobileMenu()" class="mobile-nav-link">💼 Dự án &amp; Case Studies</a></li>
-      <li><a href="#about" onclick="closeMobileMenu()" class="mobile-nav-link">⭐ Năng lực cốt lõi</a></li>
-      <li><a href="#skills" onclick="closeMobileMenu()" class="mobile-nav-link">🛠 Công cụ &amp; AI</a></li>
+      <li><a href="#skills" onclick="closeMobileMenu()" class="mobile-nav-link">⚡ Kỹ năng (Kinh nghiệm &amp; Năng lực)</a></li>
       <li><a href="#contact" onclick="closeMobileMenu()" class="mobile-nav-link">📞 Liên hệ ứng tuyển</a></li>
     </ul>
     <div class="mobile-drawer-footer">
@@ -2268,165 +2318,182 @@ portfolio_html = f'''<!DOCTYPE html>
   </div>
 </section>
 
-<!-- ABOUT / CORE COMPETENCIES -->
-<section id="about" class="section section-alt">
+<!-- SKILLS SYSTEM: KINH NGHIỆM & NĂNG LỰC THỰC CHIẾN -->
+<section id="skills" class="section section-alt">
   <div class="container">
     <div class="section-header">
-      <span class="section-tag">Thế Mạnh</span>
-      <h2 class="section-title">Năng Lực Cốt Lõi</h2>
-      <p class="section-subtitle">Tư duy hệ thống từ chuyên ngành thông tin kết hợp khả năng sáng tạo đa phương tiện.</p>
+      <span class="section-tag">Hồ Sơ Chuyên Môn</span>
+      <h2 class="section-title">Kỹ Năng: Kinh Nghiệm &amp; Năng Lực</h2>
+      <p class="section-subtitle">Kỹ năng vững vàng được minh chứng qua Hành trình Kinh nghiệm thực tế kết hợp Hệ thống Năng lực chuyên môn toàn diện.</p>
     </div>
 
-    <div class="about-grid">
-      <div class="bento-card bento-card-span2">
-        <div class="bento-icon">💡</div>
-        <h3 class="bento-title">Chiến Lược Content Dựa Trên Dữ Liệu &amp; Insight</h3>
-        <p class="bento-desc">
-          Tốt nghiệp chuyên ngành <strong>Thông Tin – Thư Viện (ĐH Sài Gòn)</strong>, mình có kỹ năng cấu trúc thông tin khoa học và phân tích sâu hành vi người dùng, biến insight thành nội dung có tính lan tỏa và thúc đẩy chuyển đổi tự nhiên.
-        </p>
-      </div>
+    <!-- BỐ CỤC CHIA LÀM: KINH NGHIỆM VÀ NĂNG LỰC -->
+    <div class="skills-dual-grid">
 
-      <div class="bento-card">
-        <div class="bento-icon">🏥</div>
-        <h3 class="bento-title">Thế Mạnh Y Tế &amp; Dược Mỹ Phẩm</h3>
-        <p class="bento-desc">
-          Nắm vững quy chuẩn truyền thông Healthcare &amp; FMCG, am hiểu cách tiếp cận từ phụ huynh, bệnh nhân đến đối tác B2B.
-        </p>
-      </div>
-
-      <div class="bento-card">
-        <div class="bento-icon">🎬</div>
-        <h3 class="bento-title">Sản Xuất Short-form Video Độc Lập</h3>
-        <p class="bento-desc">
-          Tự đảm nhiệm kịch bản phân cảnh, ghi hình và hậu kỳ CapCut Pro, tạo nhịp điệu cuốn hút giữ chân người xem.
-        </p>
-      </div>
-
-      <div class="bento-card">
-        <div class="bento-icon">📊</div>
-        <h3 class="bento-title">Vận Hành &amp; Đo Lường Paid-Ads</h3>
-        <p class="bento-desc">
-          Thành thạo tối ưu Facebook Ads, TikTok Ads, theo dõi CPC, CPM, CTR và phân tích dữ liệu để điều chỉnh chiến dịch tức thì.
-        </p>
-      </div>
-
-      <div class="bento-card">
-        <div class="bento-icon">🤝</div>
-        <h3 class="bento-title">Trải Nghiệm Khách Hàng Đa Điểm Chạm</h3>
-        <p class="bento-desc">
-          Kinh nghiệm từ Nha Khoa Kim giúp mình luôn đặt sự thấu hiểu tâm lý khách hàng làm trọng tâm cho mọi thông điệp truyền thông.
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- SKILLS & TOOLS ECOSYSTEM -->
-<section id="skills" class="section">
-  <div class="container">
-    <div class="section-header">
-      <span class="section-tag">Bộ Công Cụ</span>
-      <h2 class="section-title">Kỹ Năng &amp; Công Nghệ Thực Chiến</h2>
-      <p class="section-subtitle">Ứng dụng AI và các phần mềm hiện đại nhằm tối đa hóa tốc độ sáng tạo và chất lượng đầu ra.</p>
-    </div>
-
-    <div class="skills-grid">
-      <!-- SKILLS -->
-      <div class="skill-box">
-        <h3 class="skill-box-title">🎯 Kỹ Năng Marketing Chuyên Môn</h3>
-        <div class="skill-pill-list">
-          <span class="skill-pill">✍️ <strong>Content Strategy</strong> (Xây dựng chiến lược)</span>
-          <span class="skill-pill">🎬 <strong>Short-form Video</strong> (Reels, TikTok, Shorts)</span>
-          <span class="skill-pill">📈 <strong>Paid-Ads</strong> (Meta Ads, TikTok Ads)</span>
-          <span class="skill-pill">🔍 <strong>SEO Y Dược</strong> (Onpage, Keyword Research)</span>
-          <span class="skill-pill">🤝 <strong>B2B Healthcare Media</strong> (Kết nối viện - nhãn)</span>
-          <span class="skill-pill">👥 <strong>KOC / Influencer Collab</strong> (L'Oréal, Vichy, SVR)</span>
-          <span class="skill-pill">💖 <strong>Customer Care</strong> (Trải nghiệm khách hàng)</span>
-        </div>
-      </div>
-
-      <!-- TOOLS & AI -->
-      <div class="skill-box">
-        <h3 class="skill-box-title">💻 Hệ Sinh Thái Công Cụ &amp; GenAI</h3>
-        <div class="skill-pill-list">
-          <span class="skill-pill">✨ <strong>CapCut Pro</strong> (Dựng video ngắn tốc độ)</span>
-          <span class="skill-pill">🎨 <strong>Canva Pro</strong> (Visual post, infographic)</span>
-          <span class="skill-pill">🤖 <strong>Gemini &amp; ChatGPT</strong> (Brainstorm, kịch bản)</span>
-          <span class="skill-pill">📊 <strong>Meta Business Suite</strong> (Báo cáo, đo lường)</span>
-          <span class="skill-pill">📱 <strong>TikTok Creator Hub</strong> (Bắt trend, tối ưu)</span>
-          <span class="skill-pill">🖌️ <strong>Photoshop &amp; Premiere</strong> (Cắt ghép, tinh chỉnh)</span>
-          <span class="skill-pill">📑 <strong>Google Docs &amp; Sheets</strong> (Kế hoạch nội dung)</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- TIMELINE -->
-<section class="section section-alt">
-  <div class="container">
-    <div class="section-header">
-      <span class="section-tag">Hành Trình</span>
-      <h2 class="section-title">Kinh Nghiệm Làm Việc</h2>
-      <p class="section-subtitle">4 cột mốc khẳng định sự phát triển và tính kỷ luật trong công việc.</p>
-    </div>
-
-    <div class="timeline-wrap">
-      <div class="timeline-item">
-        <div class="timeline-dot"></div>
-        <div class="timeline-card">
-          <div class="timeline-header">
-            <span class="timeline-role">Freelance Marketing Executive &amp; Content Creator</span>
-            <span class="timeline-date">09/2024 – HIỆN TẠI</span>
+      <!-- CỘT 1: KINH NGHIỆM THỰC CHIẾN -->
+      <div class="skills-dual-col">
+        <div class="skills-dual-col-header">
+          <div class="skills-dual-icon">💼</div>
+          <div>
+            <div class="skills-dual-badge">Hành Trình Thực Tế</div>
+            <h3 class="skills-dual-title">Kinh Nghiệm Làm Việc</h3>
           </div>
-          <div class="timeline-company">Hợp tác nhãn hàng: L’Oréal • Vichy • Eucerin • SVR</div>
-          <p style="font-size: 0.88rem; color: var(--text-secondary);">
-            Tự chủ kịch bản, quay dựng video ngắn đa nền tảng, duy trì đều đặn 15.000+ views/tháng và 800 lượt truy cập trang.
+        </div>
+
+        <div class="dual-timeline-wrap">
+          <!-- EXP 1 -->
+          <div class="dual-timeline-item">
+            <div class="dual-timeline-dot"></div>
+            <div class="dual-timeline-card">
+              <div class="dual-timeline-top">
+                <span class="dual-timeline-role">Freelance Marketing Executive &amp; KOC Creator</span>
+                <span class="dual-timeline-date">09/2024 – HIỆN TẠI</span>
+              </div>
+              <div class="dual-timeline-company">Hợp tác: L’Oréal • Vichy • Eucerin • SVR</div>
+              <p class="dual-timeline-desc">
+                Tự chủ kịch bản, quay dựng video ngắn review mỹ phẩm trên iPhone; duy trì đều đặn 15.000+ views/tháng và 800 lượt truy cập trang hồ sơ; vận hành affiliate đạt GMV 239M đ.
+              </p>
+            </div>
+          </div>
+
+          <!-- EXP 2 -->
+          <div class="dual-timeline-item">
+            <div class="dual-timeline-dot"></div>
+            <div class="dual-timeline-card">
+              <div class="dual-timeline-top">
+                <span class="dual-timeline-role">Chuyên viên Digital Marketing</span>
+                <span class="dual-timeline-date">03/2026 – 09/2026</span>
+              </div>
+              <div class="dual-timeline-company">Công ty TNHH Đào tạo &amp; Chăm sóc Sức khỏe Thân Tâm</div>
+              <p class="dual-timeline-desc">
+                Quản trị 2 fanpage MEDDC &amp; Thân Tâm, điều phối chiến dịch B2B kênh MEDTV đạt 98.474 views, tương tác tăng trưởng +880.5% và follower tăng +547%.
+              </p>
+            </div>
+          </div>
+
+          <!-- EXP 3 -->
+          <div class="dual-timeline-item">
+            <div class="dual-timeline-dot"></div>
+            <div class="dual-timeline-card">
+              <div class="dual-timeline-top">
+                <span class="dual-timeline-role">Chuyên viên Content &amp; Digital Marketing</span>
+                <span class="dual-timeline-date">12/2024 – 02/2026</span>
+              </div>
+              <div class="dual-timeline-company">Công ty Cổ phần Dược phẩm OPV</div>
+              <p class="dual-timeline-desc">
+                Sản xuất nội dung chuẩn SEO Y Dược và điều phối chiến dịch quảng cáo Paid-Ads (Facebook Ads, TikTok Ads) giúp độ tiếp cận tự nhiên tăng 25–30%.
+              </p>
+            </div>
+          </div>
+
+          <!-- EXP 4 -->
+          <div class="dual-timeline-item">
+            <div class="dual-timeline-dot"></div>
+            <div class="dual-timeline-card">
+              <div class="dual-timeline-top">
+                <span class="dual-timeline-role">Chuyên viên Chăm sóc &amp; Trải nghiệm Khách hàng</span>
+                <span class="dual-timeline-date">06/2024 – 12/2024</span>
+              </div>
+              <div class="dual-timeline-company">Hệ thống Nha Khoa Kim</div>
+              <p class="dual-timeline-desc">
+                Tư vấn liệu trình chuyên sâu, điều phối đón tiếp 10–15 khách/ngày cùng bác sĩ, duy trì 90–110% KPI chất lượng dịch vụ và CSAT 4.9/5 sao.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CỘT 2: NĂNG LỰC CỐT LÕI & CÔNG CỤ -->
+      <div class="skills-dual-col">
+        <div class="skills-dual-col-header">
+          <div class="skills-dual-icon">⭐</div>
+          <div>
+            <div class="skills-dual-badge">Thế Mạnh &amp; Kỹ Thuật</div>
+            <h3 class="skills-dual-title">Năng Lực &amp; Bộ Kỹ Năng</h3>
+          </div>
+        </div>
+
+        <!-- 5 THẾ MẠNH CỐT LÕI -->
+        <div class="competency-item">
+          <div class="competency-item-top">
+            <span class="competency-item-icon">💡</span>
+            <h4 class="competency-item-title">Chiến Lược Content Dựa Trên Dữ Liệu &amp; Insight</h4>
+          </div>
+          <p class="competency-item-desc">
+            Cử nhân ĐH Sài Gòn với tư duy cấu trúc thông tin khoa học, phân tích sâu hành vi độc giả để sáng tạo nội dung có tính chuyển đổi cao.
           </p>
         </div>
-      </div>
 
-      <div class="timeline-item">
-        <div class="timeline-dot"></div>
-        <div class="timeline-card">
-          <div class="timeline-header">
-            <span class="timeline-role">Chuyên viên Digital Marketing</span>
-            <span class="timeline-date">03/2026 – 09/2026</span>
+        <div class="competency-item">
+          <div class="competency-item-top">
+            <span class="competency-item-icon">🏥</span>
+            <h4 class="competency-item-title">Am Hiểu Y Dược &amp; Dược Mỹ Phẩm (Healthcare &amp; FMCG)</h4>
           </div>
-          <div class="timeline-company">Công ty TNHH Đào tạo &amp; Chăm sóc Sức khỏe Thân Tâm</div>
-          <p style="font-size: 0.88rem; color: var(--text-secondary);">
-            Quản trị fanpage MEDDC &amp; Thân Tâm, kết nối chiến dịch B2B kênh MEDTV đạt 98.474 views và tăng trưởng +880.5% tương tác.
+          <p class="competency-item-desc">
+            Nắm vững quy chuẩn truyền thông y tế, thấu hiểu tâm lý phụ huynh, bệnh nhân và kết nối thông điệp tài trợ nhãn hàng B2B.
           </p>
         </div>
-      </div>
 
-      <div class="timeline-item">
-        <div class="timeline-dot"></div>
-        <div class="timeline-card">
-          <div class="timeline-header">
-            <span class="timeline-role">Chuyên viên Content &amp; Digital Marketing</span>
-            <span class="timeline-date">12/2024 – 02/2026</span>
+        <div class="competency-item">
+          <div class="competency-item-top">
+            <span class="competency-item-icon">🎬</span>
+            <h4 class="competency-item-title">Tự Chủ Sản Xuất Short-form Video Độc Lập</h4>
           </div>
-          <div class="timeline-company">Công ty Cổ phần Dược phẩm OPV</div>
-          <p style="font-size: 0.88rem; color: var(--text-secondary);">
-            Sản xuất nội dung chuẩn SEO Y Dược và điều phối chiến dịch quảng cáo Paid-Ads giúp độ tiếp cận tự nhiên tăng 25–30%.
+          <p class="competency-item-desc">
+            Trọn gói từ ý tưởng Hook 3 giây, storyboard, quay trên iPhone, mic thu âm Rode đến dựng hậu kỳ CapCut Pro.
           </p>
         </div>
-      </div>
 
-      <div class="timeline-item">
-        <div class="timeline-dot"></div>
-        <div class="timeline-card">
-          <div class="timeline-header">
-            <span class="timeline-role">Chuyên viên Chăm sóc &amp; Trải nghiệm Khách hàng</span>
-            <span class="timeline-date">06/2024 – 12/2024</span>
+        <div class="competency-item">
+          <div class="competency-item-top">
+            <span class="competency-item-icon">📊</span>
+            <h4 class="competency-item-title">Vận Hành &amp; Đo Lường Paid-Ads Đa Kênh</h4>
           </div>
-          <div class="timeline-company">Hệ thống Nha Khoa Kim</div>
-          <p style="font-size: 0.88rem; color: var(--text-secondary);">
-            Tư vấn quy trình dịch vụ nha khoa, điều phối lịch hẹn bác sĩ chuyên môn và duy trì 90–110% KPI chất lượng dịch vụ.
+          <p class="competency-item-desc">
+            Thành thạo Meta Ads, TikTok Ads, Meta Suite; đọc hiểu dữ liệu CPC, CPM, CTR và A/B testing tối ưu chi phí.
           </p>
         </div>
+
+        <div class="competency-item">
+          <div class="competency-item-top">
+            <span class="competency-item-icon">🤝</span>
+            <h4 class="competency-item-title">Quản Trị Trải Nghiệm Khách Hàng Đa Điểm Chạm</h4>
+          </div>
+          <p class="competency-item-desc">
+            Kinh nghiệm CSKH Nha Khoa Kim giúp đặt sự ân cần và thấu hiểu khách hàng làm trọng tâm cho mọi chiến dịch truyền thông.
+          </p>
+        </div>
+
+        <!-- MARKETING SKILLS PILLS -->
+        <div class="dual-skill-box">
+          <h4 class="dual-skill-box-title">🎯 Kỹ Năng Marketing Chuyên Môn</h4>
+          <div class="skill-pill-list">
+            <span class="skill-pill">✍️ <strong>Content Strategy</strong></span>
+            <span class="skill-pill">🎬 <strong>Short-form Video</strong></span>
+            <span class="skill-pill">📈 <strong>Paid-Ads Meta &amp; TikTok</strong></span>
+            <span class="skill-pill">🔍 <strong>SEO Y Dược</strong></span>
+            <span class="skill-pill">🤝 <strong>B2B Healthcare Media</strong></span>
+            <span class="skill-pill">👥 <strong>KOC / Influencer Collab</strong></span>
+            <span class="skill-pill">💖 <strong>Customer Experience CSAT</strong></span>
+          </div>
+        </div>
+
+        <!-- TOOLS & AI PILLS -->
+        <div class="dual-skill-box" style="margin-top: 14px; padding-top: 14px;">
+          <h4 class="dual-skill-box-title">💻 Hệ Sinh Thái Công Cụ &amp; GenAI</h4>
+          <div class="skill-pill-list">
+            <span class="skill-pill">✨ <strong>CapCut Pro</strong></span>
+            <span class="skill-pill">🎨 <strong>Canva Pro</strong></span>
+            <span class="skill-pill">🤖 <strong>Gemini &amp; ChatGPT</strong></span>
+            <span class="skill-pill">📊 <strong>Meta Business Suite</strong></span>
+            <span class="skill-pill">📱 <strong>TikTok Creator Hub</strong></span>
+            <span class="skill-pill">🖌️ <strong>Photoshop &amp; Premiere</strong></span>
+            <span class="skill-pill">📑 <strong>Google Docs &amp; Sheets</strong></span>
+          </div>
+        </div>
+
       </div>
+
     </div>
   </div>
 </section>
