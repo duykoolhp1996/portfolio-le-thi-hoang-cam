@@ -27,7 +27,7 @@ portfolio_html = f'''<!DOCTYPE html>
 <title>Lê Thị Hoàng Cẩm — Marketing Executive Portfolio & Minh Chứng</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 <style>
   :root {{
     --bg-main: #FAF8F5;
@@ -63,11 +63,13 @@ portfolio_html = f'''<!DOCTYPE html>
   }}
 
   body {{
-    font-family: 'Outfit', sans-serif;
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
     background-color: var(--bg-main);
     color: var(--text-primary);
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
     overflow-x: hidden;
   }}
 
@@ -1542,7 +1544,7 @@ portfolio_html = f'''<!DOCTYPE html>
     <div>
       <div class="hero-badge">
         <span class="hero-badge-dot"></span>
-        MARKETING EXECUTIVE • CONTENT &amp; DIGITAL MARKETING
+        MARKETING EXECUTIVE
       </div>
       <h1 class="hero-title">
         Sáng tạo nội dung chạm <span class="highlight">insight</span>, dữ liệu chứng minh <span class="highlight">hiệu quả</span>.

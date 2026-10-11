@@ -15,7 +15,7 @@ html_content = f'''<!DOCTYPE html>
 <title>CV Lê Thị Hoàng Cẩm — Marketing Executive</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
 <style>
   :root {{
     --bg-page: #FAF8F5;
@@ -41,10 +41,12 @@ html_content = f'''<!DOCTYPE html>
     padding: 0;
   }}
   body {{
-    font-family: 'Outfit', sans-serif;
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
     background-color: #cbd5e1;
     color: var(--text-black);
     -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
   }}
@@ -135,8 +137,7 @@ html_content = f'''<!DOCTYPE html>
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 7.5pt;
-    font-weight: 900;
+    flex-shrink: 0;
   }}
   .hero-heading {{
     font-size: 25pt;
@@ -477,8 +478,10 @@ html_content = f'''<!DOCTYPE html>
 
     <div class="hero-info">
       <div class="role-badge">
-        <div class="role-icon-circle">›</div>
-        MARKETING EXECUTIVE • CONTENT &amp; DIGITAL MARKETING
+        <div class="role-icon-circle">
+          <svg width="8" height="8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" style="display: block;"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </div>
+        MARKETING EXECUTIVE
       </div>
       <div class="hero-heading">Lê Thị Hoàng Cẩm</div>
       <div class="contact-bar">
@@ -772,9 +775,11 @@ subprocess.run([
 
 print(f"Exported PDF to {output_pdf}")
 
-# Copy to Desktop
+# Copy to Desktop and portfolio
 shutil.copyfile(output_pdf, output_desktop_pdf)
-print(f"Copied PDF to {output_desktop_pdf}")
+portfolio_pdf = '/Users/Admin/Documents/HRM/portfolio/CV_Le_Thi_Hoang_Cam_A4_2Trang.pdf'
+shutil.copyfile(output_pdf, portfolio_pdf)
+print(f"Copied PDF to {output_desktop_pdf} and {portfolio_pdf}")
 
 # Check page count
 with open(output_pdf, 'rb') as f:
