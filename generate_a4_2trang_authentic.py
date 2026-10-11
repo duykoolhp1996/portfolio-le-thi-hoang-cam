@@ -516,17 +516,17 @@ html_content = f'''<!DOCTYPE html>
   <div class="job-card">
     <div class="job-head">
       <div>
-        <span class="job-company-name">Freelance Marketing Executive &amp; Content Creator</span>
+        <span class="job-company-name">Content Creator &amp; KOC Reviewer</span>
       </div>
       <span class="lime-pill">09/2024 – HIỆN TẠI</span>
     </div>
     <div class="job-role-line">
-      <span>Chiến dịch Content &amp; Digital Marketing Đa kênh • KOC</span>
+      <span>Sáng tạo nội dung &amp; Đánh giá trải nghiệm mỹ phẩm</span>
       <span class="job-brand-tag">L’Oréal • Vichy • Eucerin • SVR</span>
     </div>
     <ul class="job-bullets">
-      <li>Lên ý tưởng, viết kịch bản chi tiết, tự chủ quay chụp và dựng video/ảnh ngắn chất lượng cao trên đa nền tảng (Facebook, TikTok, Threads, Instagram), luôn đảm bảo đúng deadline và tiến độ.</li>
-      <li>Hợp tác sản xuất video trải nghiệm/cảm nhận sản phẩm theo brief từ các nhãn hàng, nắm bắt nhanh xu hướng thịnh hành của giới trẻ để tối ưu hóa tương tác tự nhiên.</li>
+      <li><strong>Creator &amp; KOC là một:</strong> Tự chủ 100% quy trình từ lên ý tưởng, viết kịch bản, quay dựng video ngắn review mỹ phẩm trên iPhone (TikTok, Reels, Threads); hợp tác nhận PR kit từ nhãn hàng uy tín.</li>
+      <li>Vận hành affiliate TikTok Shop đa kênh, quản trị tiến độ và bắt trúng xu hướng thịnh hành giới trẻ, đạt GMV 239M đ.</li>
     </ul>
     <div class="achievement-box">
       <div class="achievement-title">
@@ -548,12 +548,12 @@ html_content = f'''<!DOCTYPE html>
       <span class="lime-pill">03/2026 – 09/2026</span>
     </div>
     <div class="job-role-line">
-      <span>Chuyên viên Digital Marketing</span>
-      <span class="job-brand-tag">Healthcare &amp; Media • Kênh MEDTV</span>
+      <span>Chuyên viên Content &amp; Quản trị Kênh</span>
+      <span class="job-brand-tag">Kênh Chính Thân Tâm &amp; Kênh Mới MEDDC</span>
     </div>
     <ul class="job-bullets">
-      <li>Lên ý tưởng, viết kịch bản, quay dựng chuỗi Reels/TikTok giáo dục sức khỏe và xây dựng thương hiệu; trực tiếp quản trị 2 Fanpage trọng điểm: <strong>MEDDC</strong> và <strong>Thân Tâm - CSKH Tại Nhà</strong>.</li>
-      <li>Triển khai dự án <strong>B2B Healthcare Marketing</strong> kết nối nhãn hàng lớn (<strong>Comfort, ColosBaby, Gaviscon...</strong>) với các bệnh viện đầu ngành (BV Nhi Đồng 1, BV Thủ Đức, BV 175) qua kênh <strong>MEDTV</strong>.</li>
+      <li><strong>Kênh chính Thân Tâm (Quản trị trực tiếp):</strong> Tự chủ 100% quy trình media (storyboard, thu âm mic Rode, dựng CapCut Pro) chuyên đề chăm sóc người cao tuổi và y tế gia đình tại TP.HCM.</li>
+      <li><strong>Kênh mới MEDDC (Khởi tạo khi vào làm):</strong> Tham gia xây dựng từ đầu chuỗi Reels/TikTok truyền thông số y tế (MEDTV), kết nối nhãn hàng lớn (Comfort, ColosBaby, Gaviscon...) với bệnh viện đầu ngành (BV Nhi Đồng 1, BV 175).</li>
     </ul>
     <div class="achievement-box">
       <div class="achievement-title">
@@ -588,11 +588,11 @@ html_content = f'''<!DOCTYPE html>
     </div>
     <div class="job-role-line">
       <span>Chuyên viên Content &amp; Quản trị Fanpage</span>
-      <span class="job-brand-tag">Pharmaceutical Brand</span>
+      <span class="job-brand-tag">Pharma Content &amp; Fanpage</span>
     </div>
     <ul class="job-bullets">
-      <li>Lập kế hoạch &amp; sản xuất content đa kênh (Facebook, TikTok, Web), biên soạn bài viết chuẩn SEO Y Dược; phối hợp cùng Designer và IT sản xuất tư liệu và tối ưu giao diện website.</li>
-      <li>Trực tiếp quản trị và chăm sóc Fanpage OPV, tương tác cộng đồng người theo dõi và theo dõi báo cáo tăng trưởng tiếp cận tự nhiên của trang định kỳ.</li>
+      <li>Lập kế hoạch &amp; sản xuất nội dung bài viết chuẩn SEO Y Dược; phối hợp cùng Designer sản xuất tư liệu hình ảnh và hỗ trợ tối ưu giao diện website.</li>
+      <li><strong>Quản trị Fanpage là chính:</strong> Trực tiếp chăm sóc, kiểm duyệt và phản hồi tương tác cộng đồng trên Fanpage OPV (không phụ trách Brand Mkt); theo dõi báo cáo tăng trưởng tiếp cận tự nhiên của trang định kỳ.</li>
     </ul>
     <div class="achievement-box">
       <div class="achievement-title">

@@ -2053,41 +2053,12 @@ portfolio_html = f'''<!DOCTYPE html>
     </div>
 
     <div class="video-grid">
-      <!-- VIDEO 1: MEDDC TRUYỀN THÔNG SỐ BỆNH VIỆN -->
-      <div class="video-card">
-        <div onclick="openVideoModal('medtv')" class="video-thumb" style="cursor: pointer;" title="Bấm mở popup chi tiết video &amp; hệ thống">
-          <img src="data:image/jpeg;base64,{meddc_cover_b64}" alt="Kênh MEDDC Truyền thông số Bệnh viện" class="video-thumb-img">
-          <div class="video-play-overlay">
-            <span class="video-badge-views">🔥 98.4K+ Views • +880% Tương tác</span>
-            <div class="video-play-btn">▶</div>
-            <div style="font-size: 0.76rem; color: #fff; text-align: center; text-shadow: 0 1px 4px rgba(0,0,0,0.8);">Bấm mở xem chi tiết &amp; video ↗</div>
-          </div>
-        </div>
-        <div class="video-card-body">
-          <div>
-            <div class="video-meta-top">
-              <span class="video-source-pill">Facebook Video • B2B Healthcare</span>
-              <span class="video-hospital-tag">🏥 BV Nhi Đồng 1 &amp; BV 175</span>
-            </div>
-            <h3 onclick="openVideoModal('medtv')" class="video-card-title" style="cursor: pointer;" title="Bấm mở popup chi tiết video &amp; hệ thống">Kênh MEDDC — Truyền Thông Số Bệnh Viện (MEDTV)</h3>
-            <p class="video-card-desc">
-              Dự án kết nối nhãn hàng quốc tế (Comfort, ColosBaby, Gaviscon...) với các bệnh viện đầu ngành qua chuỗi Reels giáo dục sức khỏe và phóng sự y tế tiếp cận 98.4K+ lượt xem.
-            </p>
-          </div>
-          <div>
-            <button type="button" onclick="openVideoModal('medtv')" class="btn btn-primary" style="width: 100%; justify-content: center; padding: 12px 16px; font-size: 0.88rem; font-weight: 700; border-radius: 9999px; cursor: pointer;">
-              <span>▶ Xem Video Kênh MEDDC trên Facebook ↗</span>
-            </button>
-          </div>
-        </div>
-      </div>
-
-      <!-- VIDEO 2: THÂN TÂM HOME HEALTHCARE -->
+      <!-- VIDEO 1: THÂN TÂM HOME HEALTHCARE (KÊNH QUẢN TRỊ CHÍNH) -->
       <div class="video-card">
         <div onclick="openVideoModal('than_tam')" class="video-thumb" style="cursor: pointer;" title="Bấm mở popup chi tiết video &amp; hệ thống">
           <img src="data:image/jpeg;base64,{workflow_b64}" alt="Kênh Thân Tâm Chăm sóc sức khỏe tại nhà" class="video-thumb-img">
           <div class="video-play-overlay">
-            <span class="video-badge-views">🩺 Chăm Sóc Sức Khỏe Tại Nhà</span>
+            <span class="video-badge-views">🩺 Kênh Quản Trị Chính • Y Tế Tại Nhà</span>
             <div class="video-play-btn">▶</div>
             <div style="font-size: 0.76rem; color: #fff; text-align: center; text-shadow: 0 1px 4px rgba(0,0,0,0.8);">Bấm mở xem chi tiết &amp; video ↗</div>
           </div>
@@ -2095,17 +2066,46 @@ portfolio_html = f'''<!DOCTYPE html>
         <div class="video-card-body">
           <div>
             <div class="video-meta-top">
-              <span class="video-source-pill">Facebook Video • Y Tế Gia Đình</span>
+              <span class="video-source-pill" style="background:#e0f2fe; color:#0369a1;">Facebook Video • Kênh Quản Trị Chính</span>
               <span class="video-hospital-tag">📍 TP. Hồ Chí Minh</span>
             </div>
             <h3 onclick="openVideoModal('than_tam')" class="video-card-title" style="cursor: pointer;" title="Bấm mở popup chi tiết video &amp; hệ thống">Thân Tâm — Chăm Sóc Sức Khỏe &amp; Người Cao Tuổi</h3>
             <p class="video-card-desc">
-              Chuỗi nội dung video ngắn hướng dẫn chăm sóc y tế tại gia, giải đáp quy trình điều dưỡng chuyên sâu, tạo dựng niềm tin và sự gắn kết bền vững với khách hàng.
+              Kênh truyền thông y tế gia đình trực tiếp quản lý và tự chủ 100% quy trình sản xuất media: Lên kịch bản storyboard, thu âm mic Rode, dựng CapCut Pro hướng dẫn điều dưỡng chuyên sâu tại nhà.
             </p>
           </div>
           <div>
             <button type="button" onclick="openVideoModal('than_tam')" class="btn btn-primary" style="width: 100%; justify-content: center; padding: 12px 16px; font-size: 0.88rem; font-weight: 700; border-radius: 9999px; cursor: pointer;">
               <span>▶ Xem Video Kênh Thân Tâm trên Facebook ↗</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- VIDEO 2: MEDDC TRUYỀN THÔNG SỐ BỆNH VIỆN (KÊNH MỚI KHỞI TẠO) -->
+      <div class="video-card">
+        <div onclick="openVideoModal('medtv')" class="video-thumb" style="cursor: pointer;" title="Bấm mở popup chi tiết video &amp; hệ thống">
+          <img src="data:image/jpeg;base64,{meddc_cover_b64}" alt="Kênh MEDDC Truyền thông số Bệnh viện" class="video-thumb-img">
+          <div class="video-play-overlay">
+            <span class="video-badge-views">🏥 Kênh Mới Khởi Tạo • 98.4K+ Views</span>
+            <div class="video-play-btn">▶</div>
+            <div style="font-size: 0.76rem; color: #fff; text-align: center; text-shadow: 0 1px 4px rgba(0,0,0,0.8);">Bấm mở xem chi tiết &amp; video ↗</div>
+          </div>
+        </div>
+        <div class="video-card-body">
+          <div>
+            <div class="video-meta-top">
+              <span class="video-source-pill">Facebook Video • Dự Án Mới Khởi Tạo</span>
+              <span class="video-hospital-tag">🏥 BV Nhi Đồng 1 &amp; BV 175</span>
+            </div>
+            <h3 onclick="openVideoModal('medtv')" class="video-card-title" style="cursor: pointer;" title="Bấm mở popup chi tiết video &amp; hệ thống">Kênh MEDDC — Truyền Thông Số Bệnh Viện (Mới Khởi Tạo)</h3>
+            <p class="video-card-desc">
+              Kênh mới được thành lập khi tham gia dự án, kết nối các nhãn hàng quốc tế (Comfort, ColosBaby, Gaviscon...) với bệnh viện đầu ngành qua chuỗi Reels giáo dục sức khỏe đạt 98.4K+ views.
+            </p>
+          </div>
+          <div>
+            <button type="button" onclick="openVideoModal('medtv')" class="btn btn-primary" style="width: 100%; justify-content: center; padding: 12px 16px; font-size: 0.88rem; font-weight: 700; border-radius: 9999px; cursor: pointer;">
+              <span>▶ Xem Video Kênh MEDDC trên Facebook ↗</span>
             </button>
           </div>
         </div>
@@ -2186,7 +2186,40 @@ portfolio_html = f'''<!DOCTYPE html>
         </div>
       </div>
 
-      <!-- PROJECT 2 -->
+      <!-- PROJECT 2: THÂN TÂM HOME HEALTHCARE (KÊNH QUẢN TRỊ CHÍNH) -->
+      <div class="case-card">
+        <div class="case-media-header" onclick="openLightbox('workflow')">
+          <img class="case-media-img" src="data:image/jpeg;base64,{workflow_b64}" alt="Case study Kênh Thân Tâm Y Tế Gia Đình">
+          <div class="case-media-overlay">🔍 Bấm xem ảnh minh chứng</div>
+        </div>
+        <div class="case-body">
+          <div class="case-meta-row">
+            <span class="case-category-tag" style="background:#e0f2fe; color:#0369a1;">Home Healthcare • Kênh Quản Trị Chính</span>
+            <span class="case-timeline">06/2025 – Hiện tại</span>
+          </div>
+          <h3 class="case-title" onclick="openVideoModal('than_tam')" title="Bấm xem chi tiết video Thân Tâm">Kênh Thân Tâm — Chăm Sóc Sức Khỏe &amp; Người Cao Tuổi</h3>
+          <div class="case-brands">🩺 Dịch Vụ Điều Dưỡng &amp; Y Tế Gia Đình (TP. Hồ Chí Minh)</div>
+          <ul class="case-bullets">
+            <li><strong>Kênh quản trị chính:</strong> Trực tiếp vận hành kênh và tự chủ 100% quy trình sản xuất media: Lên kịch bản storyboard, thu âm mic Rode, dựng CapCut Pro tái hiện quy trình chăm sóc y tế tại gia.</li>
+            <li><strong>Tác động:</strong> Minh bạch hóa thao tác điều dưỡng giúp xóa bỏ rào cản tâm lý của thân nhân, nâng cao uy tín thương hiệu dịch vụ chăm sóc tại gia và tăng trưởng tỷ lệ inbox tư vấn đặt lịch.</li>
+          </ul>
+          <div class="case-metrics-banner">
+            <span class="metric-item">🩺 Kênh: <strong class="metric-badge">Quản Trị Chính</strong></span>
+            <span class="metric-item">🎬 Quy trình: <strong class="metric-badge">Tự chủ 100% Media</strong></span>
+            <span class="metric-item">📍 Địa bàn: <strong class="metric-badge">TP. Hồ Chí Minh</strong></span>
+          </div>
+          <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-top: 14px;">
+            <button type="button" onclick="openVideoModal('than_tam')" class="btn btn-secondary" style="padding: 8px 14px; font-size: 0.82rem; cursor: pointer;">
+              <span>▶ Xem Chi Tiết Video Thân Tâm</span>
+            </button>
+            <button type="button" onclick="openLightbox('workflow')" class="btn btn-outline" style="padding: 8px 14px; font-size: 0.82rem; cursor: pointer;">
+              <span>🎬 Xem Minh Chứng Quy Trình</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- PROJECT 3: MEDDC TRUYỀN THÔNG SỐ BỆNH VIỆN (KÊNH MỚI KHỞI TẠO) -->
       <div class="case-card">
         <div class="case-media-header" onclick="openLightbox('meddc_cover')">
           <img class="case-media-img" src="data:image/jpeg;base64,{meddc_cover_b64}" alt="Cover Kênh MEDDC Giáo Dục Sức Khỏe">
@@ -2194,14 +2227,14 @@ portfolio_html = f'''<!DOCTYPE html>
         </div>
         <div class="case-body">
           <div class="case-meta-row">
-            <span class="case-category-tag">B2B Healthcare &amp; Media</span>
+            <span class="case-category-tag">B2B Healthcare • Kênh Mới Khởi Tạo</span>
             <span class="case-timeline">03/2026 – 09/2026</span>
           </div>
-          <h3 class="case-title" onclick="openVideoModal('medtv')" title="Bấm xem chi tiết video MEDDC">Kênh Truyền Thông Y Tế MEDTV &amp; Giáo Dục Sức Khỏe</h3>
+          <h3 class="case-title" onclick="openVideoModal('medtv')" title="Bấm xem chi tiết video MEDDC">Kênh MEDDC — Truyền Thông Số Bệnh Viện (Mới Khởi Tạo)</h3>
           <div class="case-brands">🏥 Comfort • ColosBaby • Gaviscon x BV Nhi Đồng 1, BV 175</div>
           <ul class="case-bullets">
-            <li>Quản trị 2 Fanpage MEDDC &amp; Thân Tâm, kết nối nhãn hàng quốc tế với các bệnh viện đầu ngành qua dự án B2B MEDTV.</li>
-            <li>Xây dựng chuỗi Reels giáo dục sức khỏe đạt tốc độ viral tự nhiên cao, đánh trúng tâm lý phụ huynh và bệnh nhân.</li>
+            <li><strong>Dự án mới:</strong> Kênh mới thành lập khi tham gia dự án, kết nối nhãn hàng quốc tế với các bệnh viện đầu ngành qua chuỗi Reels giáo dục sức khỏe.</li>
+            <li><strong>Thực thi &amp; Kết quả:</strong> Xây dựng chuỗi Reels giáo dục sức khỏe đạt tốc độ viral tự nhiên cao, tiếp cận 98.4K+ lượt xem và tương tác tăng trưởng +880.5%.</li>
           </ul>
           <div class="case-metrics-banner">
             <span class="metric-item">🔥 Video Views: <strong class="metric-badge">98.474 lượt</strong></span>
@@ -2212,42 +2245,8 @@ portfolio_html = f'''<!DOCTYPE html>
             <button type="button" onclick="openVideoModal('medtv')" class="btn btn-secondary" style="padding: 8px 14px; font-size: 0.82rem; cursor: pointer;">
               <span>▶ Xem Chi Tiết Video Kênh MEDDC</span>
             </button>
-            <button type="button" onclick="openVideoModal('than_tam')" class="btn btn-outline" style="padding: 8px 14px; font-size: 0.82rem; cursor: pointer;">
-              <span>▶ Xem Video Kênh Thân Tâm</span>
-            </button>
-          </div>
-        </div>
-      </div>
-
-      <!-- PROJECT 3: THÂN TÂM HOME HEALTHCARE -->
-      <div class="case-card">
-        <div class="case-media-header" onclick="openLightbox('workflow')">
-          <img class="case-media-img" src="data:image/jpeg;base64,{workflow_b64}" alt="Case study Kênh Thân Tâm Y Tế Gia Đình">
-          <div class="case-media-overlay">🔍 Bấm xem ảnh minh chứng</div>
-        </div>
-        <div class="case-body">
-          <div class="case-meta-row">
-            <span class="case-category-tag">Home Healthcare &amp; Video Media</span>
-            <span class="case-timeline">06/2025 – Hiện tại</span>
-          </div>
-          <h3 class="case-title" onclick="openVideoModal('than_tam')" title="Bấm xem chi tiết video Thân Tâm">Kênh Thân Tâm — Chăm Sóc Sức Khỏe &amp; Người Cao Tuổi</h3>
-          <div class="case-brands">🩺 Dịch Vụ Điều Dưỡng &amp; Y Tế Gia Đình (TP. Hồ Chí Minh)</div>
-          <ul class="case-bullets">
-            <li><strong>Insight:</strong> Dịch vụ điều dưỡng tại gia đòi hỏi niềm tin tuyệt đối; người nhà e ngại về sự an toàn và tay nghề chuyên môn khi gửi gắm cha mẹ.</li>
-            <li><strong>Thực thi:</strong> Tự chủ 100% quy trình sản xuất media: Lên kịch bản storyboard, thu âm mic Rode, dựng CapCut Pro tái hiện quy trình chăm sóc tại gia.</li>
-            <li><strong>Tác động:</strong> Minh bạch hóa thao tác y tế giúp xóa bỏ rào cản tâm lý, định vị uy tín thương hiệu và tăng trưởng tỷ lệ inbox tư vấn đặt lịch dịch vụ.</li>
-          </ul>
-          <div class="case-metrics-banner">
-            <span class="metric-item">🩺 Định vị: <strong class="metric-badge">Chăm Sóc Y Tế Tại Gia</strong></span>
-            <span class="metric-item">🎬 Quy trình: <strong class="metric-badge">Tự chủ 100% Media</strong></span>
-            <span class="metric-item">📍 Địa bàn: <strong class="metric-badge">TP. Hồ Chí Minh</strong></span>
-          </div>
-          <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-top: 14px;">
-            <button type="button" onclick="openVideoModal('than_tam')" class="btn btn-secondary" style="padding: 8px 14px; font-size: 0.82rem; cursor: pointer;">
-              <span>▶ Xem Chi Tiết Video Thân Tâm</span>
-            </button>
-            <button type="button" onclick="openLightbox('workflow')" class="btn btn-outline" style="padding: 8px 14px; font-size: 0.82rem; cursor: pointer;">
-              <span>🎬 Xem Minh Chứng Quy Trình</span>
+            <button type="button" onclick="openLightbox('medtv')" class="btn btn-outline" style="padding: 8px 14px; font-size: 0.82rem; cursor: pointer;">
+              <span>📈 Xem Báo Cáo Tăng Trưởng</span>
             </button>
           </div>
         </div>
@@ -2346,12 +2345,12 @@ portfolio_html = f'''<!DOCTYPE html>
             <div class="dual-timeline-dot"></div>
             <div class="dual-timeline-card">
               <div class="dual-timeline-top">
-                <span class="dual-timeline-role">Freelance Marketing Executive &amp; KOC Creator</span>
+                <span class="dual-timeline-role">Content Creator &amp; KOC Reviewer</span>
                 <span class="dual-timeline-date">09/2024 – HIỆN TẠI</span>
               </div>
-              <div class="dual-timeline-company">Hợp tác: L’Oréal • Vichy • Eucerin • SVR</div>
+              <div class="dual-timeline-company">Độc Lập • Hợp tác: L’Oréal • Vichy • Eucerin • SVR</div>
               <p class="dual-timeline-desc">
-                Tự chủ kịch bản, quay dựng video ngắn review mỹ phẩm trên iPhone; duy trì đều đặn 15.000+ views/tháng và 800 lượt truy cập trang hồ sơ; vận hành affiliate đạt GMV 239M đ.
+                Creator &amp; KOC là một: Tự chủ kịch bản, quay dựng video ngắn review mỹ phẩm trên iPhone; hợp tác nhận PR kit cùng các nhãn hàng da liễu; duy trì 15.000+ views/tháng và vận hành Affiliate TikTok Shop đạt GMV 239M đ.
               </p>
             </div>
           </div>
@@ -2361,12 +2360,12 @@ portfolio_html = f'''<!DOCTYPE html>
             <div class="dual-timeline-dot"></div>
             <div class="dual-timeline-card">
               <div class="dual-timeline-top">
-                <span class="dual-timeline-role">Chuyên viên Digital Marketing</span>
+                <span class="dual-timeline-role">Chuyên viên Content &amp; Quản Trị Kênh</span>
                 <span class="dual-timeline-date">03/2026 – 09/2026</span>
               </div>
               <div class="dual-timeline-company">Công ty TNHH Đào tạo &amp; Chăm sóc Sức khỏe Thân Tâm</div>
               <p class="dual-timeline-desc">
-                Quản trị 2 fanpage MEDDC &amp; Thân Tâm, điều phối chiến dịch B2B kênh MEDTV đạt 98.474 views, tương tác tăng trưởng +880.5% và follower tăng +547%.
+                Trực tiếp quản lý và tự chủ 100% media cho kênh chính Thân Tâm (Y tế tại nhà); đồng thời tham gia khởi tạo và phát triển kênh mới MEDDC (dự án truyền thông số kết nối BV Nhi Đồng 1, BV 175); đạt 98.4K lượt xem và tương tác tăng +880.5%.
               </p>
             </div>
           </div>
@@ -2381,7 +2380,7 @@ portfolio_html = f'''<!DOCTYPE html>
               </div>
               <div class="dual-timeline-company">Công ty Cổ phần Dược phẩm OPV</div>
               <p class="dual-timeline-desc">
-                Lập kế hoạch nội dung chuẩn SEO y dược, trực tiếp quản lý và chăm sóc Fanpage OPV; tối ưu tương tác cộng đồng giúp độ tiếp cận tự nhiên (Reach) của trang tăng 25–30%.
+                Lập kế hoạch nội dung chuẩn SEO y dược, trực tiếp quản lý và chăm sóc Fanpage OPV; tối ưu tương tác cộng đồng giúp độ tiếp cận tự nhiên (Reach) của trang tăng 25–30%. (Không phụ trách Brand Mkt).
               </p>
             </div>
           </div>
